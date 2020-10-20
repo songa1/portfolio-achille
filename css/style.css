@@ -8,6 +8,9 @@ body, html {
     scroll-behavior: smooth;
     margin: 0;
 }
+
+/* css for navigation */
+
 .navigation {
     width: 15%;
     float: left;
@@ -38,6 +41,9 @@ body, html {
 .links a.active {
     border-left: 2px solid blue;
 }
+
+/* css for pages */
+
 .content {
     width: 85%;
     float: left;
