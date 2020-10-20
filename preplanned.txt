@@ -1,0 +1,106 @@
+<!-- Codes for content section-->
+
+    <div class="content">
+        <!-- Codes for landing page-->
+
+        <div class="landing">
+            <img src="img/back-photo.jpg">
+            <h2>There is no Perfection,<br>But we still look for it.</h2>
+        </div>
+
+        <!-- This is a section for codes of skills section-->
+
+        <section class="skills" id="skills">
+            <h2 class="title">Skills</h2>
+            <h3>Front-end Languages</h3>
+            <div class="skill">
+                <img src="img/html-xl.png">
+                <h2>HTML</h2>
+            </div>
+            <div class="skill">
+                <img src="img/css-xxl.png">
+                <h2>CSS</h2>
+            </div>
+            <div class="skill">
+                <img src="img/js-xl.png">
+                <h2>JAVASCRIPT</h2>
+            </div>
+            <h3>Back-end Languages</h3>
+            <div class="skill">
+                <img src="img/logo-php-xl.png">
+                <h2>PHP</h2>
+            </div>
+            <div class="skill">
+                <img src="img/fb icon.png">
+                <h2>Node.js</h2>
+            </div>
+            <h3>CMS</h3>
+            <div class="skill">
+                <img src="img/wordpress-2-xl.png">
+                <h2>WordPress</h2>
+            </div>
+            <div class="skill">
+                <img src="img/fb icon.png">
+                <h2>Drupal</h2>
+            </div>
+        </section> 
+        
+        <!-- Codes for My Story section -->
+
+        <section id="myStory" class="mystory">
+            <h2 class="title">My Story</h2>
+            <h5 class="story-cont"><i>"There is no Perfection, but we still look for it."</i></h5><br>
+            <p class="story-cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis est quos commodi corrupti distinctio perferendis obcaecati excepturi consectetur, voluptas voluptatem esse dolorem, assumenda rem voluptate rerum. Voluptate veritatis inventore quibusdam!<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quod aliquid quidem quaerat, soluta cum? Eum reiciendis quisquam fuga itaque facilis nam id corporis omnis adipisci. Doloremque id quos repellendus.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis similique inventore autem quos consectetur aliquid est, consequuntur recusandae expedita ipsum voluptas eum suscipit, earum delectus fuga error sed explicabo cumque!</p>
+        </section>
+
+        <!-- Codes for blog section-->
+
+        <section id="blog">
+            <h2 class="title">Blog</h2>
+            <div class="post">
+                <h2><a href="#">This is a blog title</a></h2>
+                <h6>This is a small description of a blog post.</h6>
+            </div>
+            <div class="post">
+                <h2><a href="#">This is a blog title</a></h2>
+                <h6>This is a small description of a blog post.</h6>
+            </div>
+            <div class="post">
+                <h2><a href="#">This is a blog title</a></h2>
+                <h6>This is a small description of a blog post.</h6>
+            </div>
+        </section>
+
+        <!-- Codes for contact details and contact form -->
+
+        <section id="contactMe">
+            <h2 class="title">Contact me</h2>
+            <div class="contactDetails">
+                <div class="contact">
+                    <p><span><img src="img/instagram-6-xxl.png"></span> songachillethe1her@gmail.com</p>
+                </div>
+                <div class="contact">
+                    <p><span><img src="img/instagram-6-xxl.png"></span> @achille_songa</p>
+                </div>
+                <div class="contact">
+                    <p><span><img src="img/logo-php-xl.png"></span> @mindinmiddle</p>
+                </div>
+                <div class="contact">
+                    <p><span><img src="img/facebook-xxl.png"></span> Achille Songa</p>
+                </div>
+                <div class="contact">
+                    <p><span><img src="img/phone-xl.png"></span> +(250) 780 630 465</p>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form method="POST">
+                    <label>Name</label>
+                    <input type="text" >
+                    <label>E-mail</label>
+                    <input type="email" >
+                    <label>Message</label>
+                    <textarea></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
