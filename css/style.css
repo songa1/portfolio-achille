@@ -79,9 +79,6 @@ body, html {
 
 /*skills page styling*/
 
-.skills {
-
-}
 .skills h2 {
     width: 100%;
     background-color: #008073;
@@ -123,6 +120,56 @@ body, html {
 .skill h3 {
     padding: 20px;
     margin: 0;
+}
+
+/* css for contact page */
+.contact h2 {
+    width: 100%;
+    background-color: #008073;
+    color: #ffffff;
+    padding: 30px;
+}
+.contact-1 {
+    width: 40%;
+    align-items: flex-start;
+    text-align: left;
+}
+.contact-2 {
+    width: 40%;
+}
+.contact-2 form {
+    width: 100%;
+}
+.contact-2 form input, textarea, label, button {
+    width: 100%;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+}
+/*responsive contact page */
+@media (max-width:992px){
+    .contact-s {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-1 {
+        width:100%;
+        align-items: flex-end;
+        text-align: left;
+    }
+    .contact-2 {
+        width: 100%;
+    }
+    .contact-2 form {
+    
+    }
+    .contact-2 form input, textarea, label, button {
+        width: 100%;
+        margin: 10px 20px 10px 20px;
+        padding: 10px;
+    }
+    .content {
+        margin-left: 0;
+    }
 }
 /* css for pages */
 
