@@ -48,6 +48,8 @@ body, html {
     width: 85%;
     float: left;
     margin-left: 15%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* landing page */
@@ -66,7 +68,7 @@ body, html {
     top: 17px; 
     left: 50px;
     width: auto;
-    background-color: darkgreen;
+    background-color: #008073;
     opacity: 60%;
     padding: 10px;
     color: aliceblue;
