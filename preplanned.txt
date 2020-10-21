@@ -104,3 +104,258 @@
                 </form>
             </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- This is a section for codes of skills section-->
+
+        <section class="skills" id="skills">
+            <h2 class="title">Skills</h2>
+            <h3>Front-end Languages</h3>
+            <div class="skill">
+                <img src="img/html-xl.png">
+                <h2>HTML</h2>
+            </div>
+            <div class="skill">
+                <img src="img/css-xxl.png">
+                <h2>CSS</h2>
+            </div>
+            <div class="skill">
+                <img src="img/js-xl.png">
+                <h2>JAVASCRIPT</h2>
+            </div>
+            <h3>Back-end Languages</h3>
+            <div class="skill">
+                <img src="img/logo-php-xl.png">
+                <h2>PHP</h2>
+            </div>
+            <div class="skill">
+                <img src="img/fb icon.png">
+                <h2>Node.js</h2>
+            </div>
+            <h3>CMS</h3>
+            <div class="skill">
+                <img src="img/wordpress-2-xl.png">
+                <h2>WordPress</h2>
+            </div>
+            <div class="skill">
+                <img src="img/fb icon.png">
+                <h2>Drupal</h2>
+            </div>
+        </section> 
+
+        <!-- Codes for My Story section -->
+
+        <section id="myStory" class="mystory">
+            <h2 class="title">My Story</h2>
+            <h5 class="story-cont"><i>"There is no Perfection, but we still look for it."</i></h5><br>
+            <p class="story-cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis est quos commodi corrupti distinctio perferendis obcaecati excepturi consectetur, voluptas voluptatem esse dolorem, assumenda rem voluptate rerum. Voluptate veritatis inventore quibusdam!<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quod aliquid quidem quaerat, soluta cum? Eum reiciendis quisquam fuga itaque facilis nam id corporis omnis adipisci. Doloremque id quos repellendus.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis similique inventore autem quos consectetur aliquid est, consequuntur recusandae expedita ipsum voluptas eum suscipit, earum delectus fuga error sed explicabo cumque!</p>
+        </section>
+
+        <!-- Codes for blog section-->
+
+        <section id="blog">
+            <h2 class="title">Blog</h2>
+            <div class="post">
+                <h2><a href="#">This is a blog title</a></h2>
+                <h6>This is a small description of a blog post.</h6>
+            </div>
+            <div class="post">
+                <h2><a href="#">This is a blog title</a></h2>
+                <h6>This is a small description of a blog post.</h6>
+            </div>
+            <div class="post">
+                <h2><a href="#">This is a blog title</a></h2>
+                <h6>This is a small description of a blog post.</h6>
+            </div>
+        </section>
+
+        <!-- Codes for contact details and contact form -->
+
+        <section id="contactMe">
+            <h2 class="title">Contact me</h2>
+            <div class="contactDetails">
+                <div class="contact">
+                    <p><span><img src="img/instagram-6-xxl.png"></span> songachillethe1her@gmail.com</p>
+                </div>
+                <div class="contact">
+                    <p><span><img src="img/instagram-6-xxl.png"></span> @achille_songa</p>
+                </div>
+                <div class="contact">
+                    <p><span><img src="img/logo-php-xl.png"></span> @mindinmiddle</p>
+                </div>
+                <div class="contact">
+                    <p><span><img src="img/facebook-xxl.png"></span> Achille Songa</p>
+                </div>
+                <div class="contact">
+                    <p><span><img src="img/phone-xl.png"></span> +(250) 780 630 465</p>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form method="POST">
+                    <label>Name</label>
+                    <input type="text" >
+                    <label>E-mail</label>
+                    <input type="email" >
+                    <label>Message</label>
+                    <textarea></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>    
+
+
+
+
+
+        CSS
+
+        
+.title {
+    background-color: paleturquoise;
+    padding: 10px;
+    width: 100%;
+}
+.skills h3 {
+    text-align: justify;
+    padding: 10px;
+    background-color: papayawhip;
+}
+.skill {
+    display: inline-block;
+    position: sticky;
+    border: 1px solid #fff;
+    text-align: center;
+    width: 20%;
+    padding: 10px;
+}
+.skill img {
+    width: 64px;
+}
+
+.story-cont {
+    text-align: center;
+    margin: 0 20% 0 20%;
+    background-color: gainsboro;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+.post {
+    padding: 10px;
+    text-align: center;
+}
+
+.contactDetails, .contactForm {
+    display: inline-block;
+    align-items: center;
+    width: 30%;
+    margin: 0 9% 0 9%;
+}
+.contactForm form {
+    width: 100%;
+    padding: 10px;
+}
+.contactForm form label, input, button, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.contact {
+    display: inline-block;
+}
+.contact p img {
+    width: 18px;
+}
+.contact p {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.login {
+    width: 50%;
+    margin: 0 24% 0 24%;
+}
+.login h2 {
+    text-align: center;
+}
+.login img {
+    width: 15px;
+}
+.goto {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achille Songa - Web Developer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+     Codes for Navigation
+
+    <div class="nav">
+        <div class="branding">
+            <h2>Achille Songa</h2>
+            <p>Web developer</p>
+        </div>
+
+         JS for nav--> 
+
+    
+
+        <!-- Nav to be collapsed 
+
+        <div class="nav-pages" id="myNav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">My CV</a></li>
+        </div>
+
+         Collapsing nav's button
+
+    </div>
+
+    <div class="content">
+         Codes for landing page
+        There is content here
+        <div class="landing"> 
+            
+        </div>
+
+        
+    </div>
+</body>
+</html>
+-->
