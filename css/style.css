@@ -34,6 +34,7 @@ body, html {
     padding: 10px;
     display: block;
 }
+<<<<<<< HEAD
 .links a:hover {
     border-left: 2px solid blue;
     background-color: #f1f1f1;
@@ -83,4 +84,27 @@ body, html {
     background-color: #008073;
     color: #ffffff;
     padding: 30px;
+}
+.links {
+    display: block;
+}
+.links a {
+    padding: 10px;
+    display: block;
+}
+.links a:hover {
+    border-left: 2px solid blue;
+    background-color: #f1f1f1;
+}
+.links a.active {
+    border-left: 2px solid blue;
+}
+
+/* css for pages */
+
+.content {
+    width: 85%;
+    float: left;
+    margin-left: 15%;
+
 }
