@@ -18,6 +18,7 @@ body, html {
     margin: 0;
     position: fixed;
     box-shadow: #f1f1f1;
+<<<<<<< HEAD
 }
 .navigation a {
     text-decoration: none;
@@ -31,9 +32,19 @@ body, html {
     display: block;
 }
 .links a {
+=======
+}
+.navigation a {
+    text-decoration: none;
+    color: black;
+}
+.branding {
+    background-color: #f1f1f1;
+>>>>>>> 5562b7b89b1d0fd59d9ced676362218e3f6a57fe
     padding: 10px;
     display: block;
 }
+<<<<<<< HEAD
 .links a:hover {
     border-left: 2px solid blue;
     background-color: #f1f1f1;
@@ -70,4 +81,27 @@ body, html {
     opacity: 60%;
     padding: 10px;
     color: aliceblue;
+=======
+.links {
+    display: block;
+}
+.links a {
+    padding: 10px;
+    display: block;
+}
+.links a:hover {
+    border-left: 2px solid blue;
+    background-color: #f1f1f1;
+}
+.links a.active {
+    border-left: 2px solid blue;
+}
+
+/* css for pages */
+
+.content {
+    width: 85%;
+    float: left;
+    margin-left: 15%;
+>>>>>>> 5562b7b89b1d0fd59d9ced676362218e3f6a57fe
 }

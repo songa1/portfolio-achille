@@ -1,15 +1,66 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous">
+    <style>
+        body, html {
+            width: 100%;
+            font-family: roboto, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-image: linear-gradient(rgb(134,108,108), #777098);
+        }
+        .login {
+            width: 50%;
+            margin: 0 25% 0 25%;
+        }
+        .login h2 {
+            text-align: center;
+        }
+        .login img {
+            width: 15px;
+        }.goto {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .login form label, input, button {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+        .login form input {
+            border: none;
+            margin-top: 2px;
+        }
+        .login form label {
+            font-weight: bolder;
+            color: aliceblue;
+        }
+        .login form button {
+            background-color: rgb(134,108,108);
+            color: aliceblue;
+            font-weight: bolder;
+        }
+        @media only screen and (max-width: 800px;) {
+            .login {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="login">
         <div class="goto">
              
-            <p><a href="../" style="text-decoration: none;color:aliceblue;"><span><img src="../img/arrow-91-xl.png"></span>  Go to website</a></p>
+            <p><a href="../index.html" style="text-decoration: none;color:aliceblue;"><span><img src="../img/arrow-91-xl.png"></span>  Go to website</a></p>
         </div>
         
         <form method="POST">
