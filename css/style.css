@@ -7,6 +7,7 @@ body, html {
     height: 100%;
     scroll-behavior: smooth;
     margin: 0;
+    background-color: #f1f1f1;
 }
 
 /* css for navigation */
@@ -29,12 +30,13 @@ body, html {
 }
 .links {
     display: block;
+    background-color: #ffffff;
+    height: 100%;
 }
 .links a {
     padding: 10px;
     display: block;
 }
-<<<<<<< HEAD
 .links a:hover {
     border-left: 2px solid blue;
     background-color: #f1f1f1;
@@ -68,7 +70,8 @@ body, html {
     top: 17px; 
     left: 50px;
     width: auto;
-    background-color: darkgreen;
+    background-color: #008073;
+    ;
     opacity: 60%;
     padding: 10px;
     color: aliceblue;
@@ -77,7 +80,7 @@ body, html {
 /*skills page styling*/
 
 .skills {
-    margin: 0;
+
 }
 .skills h2 {
     width: 100%;
@@ -96,10 +99,31 @@ body, html {
     border-left: 2px solid blue;
     background-color: #f1f1f1;
 }
-.links a.active {
-    border-left: 2px solid blue;
+.skill {
+    width: 80%;
+    margin: 0;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 10% 40px 10%;
 }
-
+.skill div {
+    display: inline-block;
+    flex-direction: row;
+    padding: 20px;
+    
+}
+.skill div img, p {
+    text-align: center;
+}
+.skill hr {
+    color: grey;
+    margin: 0 20px 0 20px;
+}
+.skill h3 {
+    padding: 20px;
+    margin: 0;
+}
 /* css for pages */
 
 .content {
