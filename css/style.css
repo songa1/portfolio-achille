@@ -197,6 +197,41 @@ body, html {
     color: #0d302e;
     font-size: 20px;
 }
+/*css for blog page */
+.blog h2 {
+    width: 100%;
+    background-color: #008073;
+    color: #ffffff;
+    padding: 30px;
+}
+.post-wrapper {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 1em;
+    margin: 0 10px 0 10px;
+    justify-content: center;
+}
+.post-item {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.post-item img {
+    width: 100%;
+    border-radius: 10px;
+    padding: 3px;
+}
+.post-item h1, h5 {
+    padding: 15px;
+    margin: 0;
+}
+.post-item p {
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    padding-left: 15px;
+    text-decoration: underline;
+}
 /* css for projects page */
 .projects h2 {
     width: 100%;
