@@ -51,6 +51,8 @@ body, html {
     width: 85%;
     float: left;
     margin-left: 15%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* landing page */
