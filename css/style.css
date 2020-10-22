@@ -173,6 +173,27 @@ body, html {
 .contact {
     height: 100%;
 }
+
+/* css for about page */
+.about h2 {
+    width: 100%;
+    background-color: #008073;
+    color: #ffffff;
+    padding: 30px;
+}
+.about div {
+    display: grid;
+    margin: 0 10px 0 10px;
+}
+.about div h1 {
+    border-left: 10px solid #008073;
+    padding: 10px;
+    text-align: start;
+}
+.about div p {
+    text-align: start;
+    padding: 10px;
+}
 /* css for pages */
 
 .content {
