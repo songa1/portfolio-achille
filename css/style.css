@@ -206,6 +206,7 @@ body, html {
     grid-template-columns: 30% 30% 30%;
     grid-gap: 1em;
     margin: 0 10px 0 10px;
+    justify-content: center;
 }
 .wrap-item {
     width: 100%;
