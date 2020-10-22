@@ -9,7 +9,7 @@
     .branding {
         width: 100%;
         text-align: center;
-        height: auto;
+        height: 100px;
         background-color: #ffffff;
     }
     .branding a {
