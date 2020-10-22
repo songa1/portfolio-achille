@@ -7,6 +7,7 @@ body, html {
     height: 100%;
     scroll-behavior: smooth;
     margin: 0;
+    background-color: #f1f1f1;
 }
 
 /* css for navigation */
@@ -29,6 +30,8 @@ body, html {
 }
 .links {
     display: block;
+    background-color: #ffffff;
+    height: 100%;
 }
 .links a {
     padding: 10px;
@@ -49,4 +52,132 @@ body, html {
     float: left;
     margin-left: 15%;
     display: flex;
+    flex-direction: column;
+}
+
+/* landing page */
+.landing {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.landing img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+}
+.landing-text {
+    font-size: 30px;
+    position: absolute; 
+    top: 17px; 
+    left: 50px;
+    width: auto;
+    background-color: #008073;
+    ;
+    opacity: 60%;
+    padding: 10px;
+    color: aliceblue;
+}
+
+/*skills page styling*/
+
+.skills h2 {
+    width: 100%;
+    background-color: #008073;
+    color: #ffffff;
+    padding: 30px;
+}
+.links {
+    display: block;
+}
+.links a {
+    padding: 10px;
+    display: block;
+}
+.links a:hover {
+    border-left: 2px solid blue;
+    background-color: #f1f1f1;
+}
+.skill {
+    width: 80%;
+    margin: 0;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 10% 40px 10%;
+}
+.skill div {
+    display: inline-block;
+    flex-direction: row;
+    padding: 20px;
+    
+}
+.skill div img, p {
+    text-align: center;
+}
+.skill hr {
+    color: grey;
+    margin: 0 20px 0 20px;
+}
+.skill h3 {
+    padding: 20px;
+    margin: 0;
+}
+
+/* css for contact page */
+.contact h2 {
+    width: 100%;
+    background-color: #008073;
+    color: #ffffff;
+    padding: 30px;
+}
+.contact-1 {
+    width: 40%;
+    align-items: flex-start;
+    text-align: left;
+}
+.contact-2 {
+    width: 40%;
+}
+.contact-2 form {
+    width: 100%;
+}
+.contact-2 form input, textarea, label, button {
+    width: 100%;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+}
+/*responsive contact page */
+@media (max-width:992px){
+    .contact-s {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-1 {
+        width:100%;
+        align-items: flex-end;
+        text-align: left;
+    }
+    .contact-2 {
+        width: 100%;
+    }
+    .contact-2 form {
+    
+    }
+    .contact-2 form input, textarea, label, button {
+        width: 100%;
+        margin: 10px 20px 10px 20px;
+        padding: 10px;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
+/* css for pages */
+
+.content {
+    width: 85%;
+    float: left;
+    margin-left: 15%;
+
 }

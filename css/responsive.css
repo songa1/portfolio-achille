@@ -21,5 +21,7 @@
     .links {
         display: none;
     }
-
+    .landing {
+        margin-top: 100px;
+    }
 }
