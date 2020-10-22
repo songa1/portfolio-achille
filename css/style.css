@@ -61,6 +61,7 @@ body, html {
 .landing img {
     width: 100%;
     height: auto;
+    margin-bottom: 0;
 }
 .landing-text {
     font-size: 30px;
@@ -72,4 +73,39 @@ body, html {
     opacity: 60%;
     padding: 10px;
     color: aliceblue;
+}
+
+/*skills page styling*/
+
+.skills {
+    margin: 0;
+}
+.skills h2 {
+    width: 100%;
+    background-color: #008073;
+    color: #ffffff;
+    padding: 30px;
+}
+.links {
+    display: block;
+}
+.links a {
+    padding: 10px;
+    display: block;
+}
+.links a:hover {
+    border-left: 2px solid blue;
+    background-color: #f1f1f1;
+}
+.links a.active {
+    border-left: 2px solid blue;
+}
+
+/* css for pages */
+
+.content {
+    width: 85%;
+    float: left;
+    margin-left: 15%;
+
 }
