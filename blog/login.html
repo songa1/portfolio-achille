@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modify posts - Achille Songa</title>
+    <title>Login</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
@@ -55,6 +55,14 @@
                 margin-bottom: 10px;
 
             }
+            .login form {
+                width: 100%;
+            }
+            .login {
+                display: flex;
+                margin: 0 10px 0 10px;
+                justify-content: center;
+            }
         }
         .goto {
             width: 100%;
@@ -99,28 +107,9 @@
             padding: 10px;
             margin-top: 20px;
         }
-        .sub-1 {
-            display: grid;
-            justify-content: center;
-            color: aliceblue;
-            align-items: center;
-            text-align: center;
-        }
-        .sub-1 form {
-            border: 1px solid aliceblue;
-            padding: 10px;
-            justify-items: center;
-        }
-        .sub-1 form input {
-            display: inline-block;
-            padding: 10px;
-            border-radius: 10px;
-            color: aliceblue;
-        }
         .foot {
             display:flex;
-            flex-wrap: wrap;
-            background-color:rgb(29, 28, 28);
+            flex-wrap: wrap;;
             width: 100%;
             margin: 0;
             height: auto;
@@ -149,13 +138,28 @@
         .foot div {
             display: inline-block;
         }
-        .post-item div {
-            display: grid;
-            grid-template-columns: 15% 15% 15% 15%;
+        .login {
+            display: flex;
+            margin: 0 10px 0 10px;
             justify-content: center;
-            grid-gap: 2em;
-            margin-bottom: 10px;
-
+        }
+        .login form {
+            width: 50%;
+        }
+        .login form input {
+            width: 100%;
+            border: 1px solid #008073;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .login form label {
+            color: #008073;
+            
+        }
+        .login form h3 {
+            color: #517c79;
+            text-align: center;
         }
         </style>
 
@@ -179,53 +183,20 @@
                 <a href="../index.html" style="text-decoration: none;color:aliceblue;"><span><img src="../img/arrow-91-xl.png"></span> &nbsp;&nbsp;&nbsp;Blog</a>
             </div>
         </h2>
-        <div class="post-wrapper">
-            <div class="post-item">
-                <img src="../img/andela.png">
-                <h1><a href="#" style="color: #008073;">Post title</a></h1>
-                <p>10 october 2020  |  Achille Songa</p>
-                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                <hr style="color: #008073;">
-                <div>
-                    <img src="../img/andela.png">
-                    <img src="../img/andela.png">
-                    <img src="../img/andela.png">
-                    <img src="../img/andela.png">
-                </div>
-            </div>
-            <div class="post-item">
-                <img src="../img/andela.png">
-                <h1><a href="#" style="color: #008073;">Post title</a></h1>
-                <p>10 october 2020  |  Achille Songa</p>
-                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                <hr style="color: #008073;">
-                <div>
-                    <img src="../img/andela.png">
-                    <img src="../img/andela.png">
-                    <img src="../img/andela.png">
-                    <img src="../img/andela.png">
-                </div>
-            </div>
-            <div class="post-item">
-                <img src="../img/andela.png">
-                <h1><a href="#" style="color: #008073;">Post title</a></h1>
-                <p>10 october 2020  |  Achille Songa</p>
-                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                <hr style="color: #008073;">
-                <div>
-                    <img src="../img/andela.png">
-                    <img src="../img/andela.png">
-                    <img src="../img/andela.png">
-                    <img src="../img/andela.png">
-                </div>
-            </div>
+        <div class="login">
+            
+            <form method="POST">
+                <h3>Log in to manage a blog</h3>
+                <label>E-mail</label>
+                <input type="email">
+                <label>Password</label>
+                <input type="password">
+                <input type="submit" value="Login" style="background-color:#008073;color: aliceblue;">
+            </form>
         </div>
+    
+            
         <div class="footer">
-            <div class="sub-1">
-                <form>
-                    <h1>Subscribers: 50</h1>
-                </form>
-            </div >
             <div class="foot">
                 <div class="copyright">
                     <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">Achille Songa</a></p>
