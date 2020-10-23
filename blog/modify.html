@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Achille Songa</title>
+    <title>Modify posts - Achille Songa</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
@@ -48,6 +48,13 @@
             .sms {
                 width: 100%;
             }
+            .post-item div {
+            display: grid;
+            grid-template-columns: 15% 15% 15% 15%;
+            justify-content: center;
+            margin-bottom: 10px;
+
+        }
         }
         .goto {
             width: 100%;
@@ -118,6 +125,7 @@
             margin: 0;
             height: auto;
             align-items: center;
+            word-wrap: normal;
         }
         .copyright {
             color: aliceblue;
@@ -141,6 +149,14 @@
         .foot div {
             display: inline-block;
         }
+        .post-item div {
+            display: grid;
+            grid-template-columns: 15% 15% 15% 15%;
+            justify-content: center;
+            grid-gap: 2em;
+            margin-bottom: 10px;
+
+        }
         </style>
 
 </head>
@@ -150,7 +166,7 @@
     <div id="blog" class="blog">
         <div class="top">
             <div class="branding">
-                <h1>Achille Songa Blog</h1>
+                <h1><a href="feeds.html" style="color: #008073;text-decoration: none;">Achille Songa Blog</a></h1>
             </div>
             <div class="searchBar">
                 <form><input type="text" placeholder="Search blog ..." id="input"><input type="submit" value="Search" id="button"></form>
@@ -166,54 +182,53 @@
         <div class="post-wrapper">
             <div class="post-item">
                 <img src="../img/andela.png">
-                <h1><a href="#">Post title</a></h1>
+                <h1><a href="#" style="color: #008073;">Post title</a></h1>
                 <p>10 october 2020  |  Achille Songa</p>
                 <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+                <hr style="color: #008073;">
+                <div>
+                    <img src="../img/andela.png">
+                    <img src="../img/andela.png">
+                    <img src="../img/andela.png">
+                    <img src="../img/andela.png">
+                </div>
             </div>
             <div class="post-item">
                 <img src="../img/andela.png">
-                <h1><a href="#">Post title</a></h1>
+                <h1><a href="#" style="color: #008073;">Post title</a></h1>
                 <p>10 october 2020  |  Achille Songa</p>
                 <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+                <hr style="color: #008073;">
+                <div>
+                    <img src="../img/andela.png">
+                    <img src="../img/andela.png">
+                    <img src="../img/andela.png">
+                    <img src="../img/andela.png">
+                </div>
             </div>
             <div class="post-item">
                 <img src="../img/andela.png">
-                <h1><a href="#">Post title</a></h1>
+                <h1><a href="#" style="color: #008073;">Post title</a></h1>
                 <p>10 october 2020  |  Achille Songa</p>
                 <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+                <hr style="color: #008073;">
+                <div>
+                    <img src="../img/andela.png">
+                    <img src="../img/andela.png">
+                    <img src="../img/andela.png">
+                    <img src="../img/andela.png">
+                </div>
             </div>
-                <div class="post-item">
-                    <img src="../img/andela.png">
-                    <h1><a href="#">Post title</a></h1>
-                    <p>10 october 2020  |  Achille Songa</p>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                </div>
-                <div class="post-item">
-                    <img src="../img/andela.png">
-                    <h1><a href="#">Post title</a></h1>
-                    <p>10 october 2020  |  Achille Songa</p>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                </div>
-                <div class="post-item">
-                    <img src="../img/andela.png">
-                    <h1><a href="#">Post title</a></h1>
-                    <p>10 october 2020  |  Achille Songa</p>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                </div>
         </div>
         <div class="footer">
             <div class="sub-1">
                 <form>
-                    <h1>Subscribe to my news letter</h1>
-                    <p>Fill in your email, so you will be getting new posts in your email.
-                    </p>
-                    <input type="email" placeholder="example@email.com" style="width: 75%;border: 1px solid #008073;color: #2f3037;">
-                    <input type="submit" value="Subscribe" style="width: 24%;background-color: #008073;border: 0;">
+                    <h1>Subscribers: 50</h1>
                 </form>
             </div >
             <div class="foot">
                 <div class="copyright">
-                    <p>(c) Achille Songa</p>
+                    <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">Achille Songa</a></p>
                 </div>
                 <div class="sms">
                     <a href="https://instagram.com/achille_songa">Instagram</a>
