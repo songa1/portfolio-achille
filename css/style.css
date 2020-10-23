@@ -87,6 +87,9 @@ body, html {
     color: #ffffff;
     padding: 30px;
 }
+.skills {
+    height: 100%;
+}
 .links {
     display: block;
 }
@@ -130,6 +133,9 @@ body, html {
     background-color: #008073;
     color: #ffffff;
     padding: 30px;
+}
+.contact {
+    height: 100%;
 }
 .contact-s {
     display: grid;
@@ -181,6 +187,9 @@ body, html {
     color: #ffffff;
     padding: 30px;
 }
+.about {
+    height: 100%;
+}
 .about div {
     display: grid;
     margin: 0 10px 0 10px;
@@ -203,6 +212,9 @@ body, html {
     background-color: #008073;
     color: #ffffff;
     padding: 30px;
+}
+.blog {
+    height: 100%;
 }
 .post-wrapper {
     display: grid;
@@ -238,6 +250,9 @@ body, html {
     background-color: #008073;
     color: #ffffff;
     padding: 30px;
+}
+.projects {
+    height: 100%;
 }
 .wrapper {
     display: grid;
