@@ -8,7 +8,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <style>
-        @media(max-width: 800px) {
+        @media(max-width: 920px) {
             .post-wrapper {
                 display: flex;
                 flex-wrap: wrap;
@@ -32,6 +32,22 @@
             .post-item {
                 margin: 0 15px 0 15px;
             }
+            #button {
+                display: none;
+            }
+            .top {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .foot {
+            display: flex;
+            }
+            .copyright {
+                width: 100%;
+            }
+            .sms {
+                width: 100%;
+            }
         }
         .goto {
             width: 100%;
@@ -42,13 +58,105 @@
         .goto img {
             width: 15px;
         }
-    </style>
+        .blog h2 {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .searchBar {
+            display: grid;
+            justify-content: end;
+            margin: 35px 10px 10px 10px;
+            grid-gap: 1em;
+        }
+        .searchBar input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #008073;
+        }
+        .top {
+            display: grid;
+            grid-template-columns: 70% 30%;
+        }
+        .branding {
+            color: #008073;
+
+        }
+        #button {
+            background-color: #008073;
+            color: aliceblue;
+        }
+        .footer {
+            width: 100%;
+            display: grid;
+            background-color: #2f3037;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .sub-1 {
+            display: grid;
+            justify-content: center;
+            color: aliceblue;
+            align-items: center;
+            text-align: center;
+        }
+        .sub-1 form {
+            border: 1px solid aliceblue;
+            padding: 10px;
+            justify-items: center;
+        }
+        .sub-1 form input {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            color: aliceblue;
+        }
+        .foot {
+            display:flex;
+            flex-wrap: wrap;
+            background-color:rgb(29, 28, 28);
+            width: 100%;
+            margin: 0;
+            height: auto;
+            align-items: center;
+        }
+        .copyright {
+            color: aliceblue;
+            padding: 10px;
+            flex: 2;
+        }
+        .sms {
+            display: flex;
+            justify-content: end;
+            padding: 0;
+            text-align: center;
+            justify-items: end;
+            flex: 3;
+        }
+        .sms a {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 10px;
+            justify-items: end;
+        }
+        .foot div {
+            display: inline-block;
+        }
+        </style>
 
 </head>
 <body>
     
     <!--Blog page-->
     <div id="blog" class="blog">
+        <div class="top">
+            <div class="branding">
+                <h1>Achille Songa Blog</h1>
+            </div>
+            <div class="searchBar">
+                <form><input type="text" placeholder="Search blog ..." id="input"><input type="submit" value="Search" id="button"></form>
+            </div>
+        </div>
+        
         <h2>
             <div class="goto">
              
@@ -73,6 +181,46 @@
                 <h1><a href="#">Post title</a></h1>
                 <p>10 october 2020  |  Achille Songa</p>
                 <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+            </div>
+                <div class="post-item">
+                    <img src="../img/andela.png">
+                    <h1><a href="#">Post title</a></h1>
+                    <p>10 october 2020  |  Achille Songa</p>
+                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+                </div>
+                <div class="post-item">
+                    <img src="../img/andela.png">
+                    <h1><a href="#">Post title</a></h1>
+                    <p>10 october 2020  |  Achille Songa</p>
+                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+                </div>
+                <div class="post-item">
+                    <img src="../img/andela.png">
+                    <h1><a href="#">Post title</a></h1>
+                    <p>10 october 2020  |  Achille Songa</p>
+                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+                </div>
+        </div>
+        <div class="footer">
+            <div class="sub-1">
+                <form>
+                    <h1>Subscribe to my news letter</h1>
+                    <p>Fill in your email, so you will be getting new posts in your email.
+                    </p>
+                    <input type="email" placeholder="example@email.com" style="width: 75%;border: 1px solid #008073;color: #2f3037;">
+                    <input type="submit" value="Subscribe" style="width: 24%;background-color: #008073;border: 0;">
+                </form>
+            </div >
+            <div class="foot">
+                <div class="copyright">
+                    <p>(c) Achille Songa</p>
+                </div>
+                <div class="sms">
+                    <a href="https://instagram.com/achille_songa">Instagram</a>
+                    <a href="https://fb.me/songa.achille.9">Facebook</a>
+                    <a href="https://twitter.com/mindinmiddle">Twitter</a>
+                </div>
+                
             </div>
         </div>
     </div>
