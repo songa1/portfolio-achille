@@ -1,4 +1,4 @@
-@media(max-width:800px){
+@media(max-width:1000px){
     .branding {
         display:grid;
         grid-template-columns: 20% 50%;
@@ -65,14 +65,41 @@
         width: 70%;
         margin: 0 15% 0 15%;
     }
-    
+    .wrap-item h5 {
+        font-size: 20px;
+    }
+    .wrap-item h1 {
+        font-size: 25px;
+    }
 
 }
 .branding a p {
     text-align: left;
-}@media(min-width: 800px) {
+}
+@media(max-width:1000px){
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 15% 0 15%;
+    }
+    .wrap-item h5 {
+        font-size: 20px;
+    }
+    .wrap-item h1 {
+        font-size: 25px;
+    }
+    .contact-s {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-2 {
+        width: 100%;
+    }
+}
+@media(min-width: 1000px) {
     .menu-button {
         display: none;
     }
-    
 }
