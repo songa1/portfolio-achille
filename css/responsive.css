@@ -102,4 +102,7 @@
     .menu-button {
         display: none;
     }
+    #closeButton {
+        display: none;
+    }
 }
