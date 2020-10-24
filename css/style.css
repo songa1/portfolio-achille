@@ -8,6 +8,7 @@ body, html {
     scroll-behavior: smooth;
     margin: 0;
     background-color: #f1f1f1;
+    display: grid;
 }
 
 /* css for navigation */
@@ -43,6 +44,9 @@ body, html {
 }
 .links a.active {
     border-left: 2px solid blue;
+}
+#mySidebar {
+    background-color: #fff;
 }
 
 /* css for pages */
@@ -168,10 +172,8 @@ body, html {
 }
 .contact-1 div img {
     width: 15px;
-    color:  #008073;
     display: grid;
     position: relative;
-    background-color: #008073;
 }
 .contact-1 div img, h5 {
     display: inline-block;

@@ -7,19 +7,24 @@
 <body>
 <!--Navigation-->
 <section class="navigation">
-    <div class="nav-item branding">
+    <div class="nav-item branding" style="border-right: aliceblue;">
+        <div class="menu-button">
+            <img src="img/menu-button-of-three-horizontal-lines.png" onclick="openNav()" id="main">
+        </div>
         <a href="#landing">
-            <h2>Achille Songa</h2>
+            <h2 style="color: #008073;">Achille Songa</h2>
             <p>Web developer</p>
         </a>
     </div>
-    <div class="nav-item links">
-        <a href="#skills" >Skills</a>
-        <a href="#about" >About me</a>
-        <a href="#projects">Projects</a>
-        <a href="#">Experience</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact me</a>
+    
+    <div class="nav-item links" id="mySidebar" style="background-color: aliceblue;">
+        <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
+        <a href="#skills" onclick="hideDiv()">Skills</a>
+        <a href="#about" onclick="hideDiv()">About me</a>
+        <a href="#projects" onclick="hideDiv()">Projects</a>
+        <a href="#"  onclick="hideDiv()">Experience</a>
+        <a href="#blog" onclick="hideDiv()">Blog</a>
+        <a href="#contact" onclick="hideDiv()" id="li-1">Contact me</a>
     </div>
 </section>
 <!--Contents and pages-->
@@ -144,11 +149,11 @@
         <div class="contact-s">
             <div class="contact-1">
                 <div>
-                    <h5><span><img src=""></span> 
+                    <h5><span><img src="img/email-xxl.png"></span> 
                     songachillethe1her@gmail.com</h5>
                 </div>
                 <div>
-                    <h5><span><img src="img/fb icon.png"></span> 
+                    <h5><span><img src="img/facebook-4-xxl.png"></span> 
                     Achille Songa</h5>
                 </div>
                 <div>
@@ -156,7 +161,7 @@
                     @achille_songa</h5>
                 </div>
                 <div>
-                    <h5><span><img src="img/phone-xl.png"></span> 
+                    <h5><span><img src="img/phone-xxl.png"></span> 
                     +(250) 780 630 465</h5>
                 </div>
             </div>
@@ -202,13 +207,14 @@
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
             document.getElementById("main").style.display = "block";
+            document.getElementById("li-1").style.display = "none";
         }
         
     </script>
 
     <!--Navigation-->
     <section class="navigation">
-        <div class="nav-item branding">
+        <div class="nav-item branding" style="border-right: aliceblue;">
             <div class="menu-button">
                 <img src="img/menu-button-of-three-horizontal-lines.png" onclick="openNav()" id="main">
             </div>
@@ -218,14 +224,14 @@
             </a>
         </div>
         
-        <div class="nav-item links" id="mySidebar">
+        <div class="nav-item links" id="mySidebar" style="background-color: aliceblue;">
             <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
             <a href="#skills" onclick="hideDiv()">Skills</a>
             <a href="#about" onclick="hideDiv()">About me</a>
             <a href="#projects" onclick="hideDiv()">Projects</a>
             <a href="#"  onclick="hideDiv()">Experience</a>
             <a href="#blog" onclick="hideDiv()">Blog</a>
-            <a href="#contact" onclick="hideDiv()">Contact me</a>
+            <a href="#contact" onclick="hideDiv()" id="li-1">Contact me</a>
         </div>
     </section>
     <!--Contents and pages-->
