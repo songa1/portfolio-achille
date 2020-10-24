@@ -165,9 +165,6 @@ body, html {
     .contact-2 {
         width: 100%;
     }
-    .contact-2 form {
-    
-    }
     .contact-2 form input, textarea, label, button {
         width: 100%;
         margin: 10px 20px 10px 20px;
@@ -176,12 +173,18 @@ body, html {
     .content {
         margin-left: 0;
     }
+    .branding {
+        display: inline-block;
+    }
+    .brand p {
+        text-align: center;
+        margin-top: 0;
+    }
 }
 /* css for pages */
 
 .content {
     width: 85%;
-    float: left;
     margin-left: 15%;
 
 }
