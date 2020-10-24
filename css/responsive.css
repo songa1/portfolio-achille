@@ -17,6 +17,8 @@
     }
     .menu-button {
         width: fit-content;
+        font-size: 20px;
+        cursor: pointer;
     }
     .branding a h2 {
         text-align: center;
@@ -24,8 +26,23 @@
         cursor: progress;
     }
     .links {
-        display: none;
-    }
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    } 
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
     .branding a p {
         text-align: center;
         display: none;
@@ -38,6 +55,11 @@
         margin: 0;padding: 0;
         margin-top: 50px;
     }
+    #main {
+        transition: margin-left .5s; /* If you want a transition effect */
+        padding: 20px;
+    }
+    
 
 }
 .branding a p {
@@ -46,4 +68,5 @@
     .menu-button {
         display: none;
     }
+    
 }
