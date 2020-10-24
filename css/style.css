@@ -46,9 +46,6 @@ body, html {
 .links a.active {
     border-left: 2px solid blue;
 }
-#mySidebar {
-    background-color: #fff;
-}
 
 /* css for pages */
 
