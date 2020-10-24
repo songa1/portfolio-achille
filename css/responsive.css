@@ -59,6 +59,12 @@
         transition: margin-left .5s; /* If you want a transition effect */
         padding: 20px;
     }
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: 0 15% 0 15%;
+    }
     
 
 }
