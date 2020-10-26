@@ -1,27 +1,125 @@
-@media(max-width:800px){
-    .navigation {
-        display: flex;
-        width: 100%;
-    }
-    .nav-item {
-        display: ;
-    }
+@media(max-width:1000px){
     .branding {
-        width: 100%;
-        text-align: center;
-        height: 100px;
-        background-color: #ffffff;
+        display:grid;
+        grid-template-columns: 20% 50%;
+        align-items: center;
     }
     .branding a {
-        width: 100%;
+        width: fit-content;
+        text-align: center;
     }
-    .branding a h2, p {
-        padding: 0;
+    .branding a, .menu-button {
+        display: inline-block;
+    }
+    .navigation {
+        width: 100%;
+        display: block;
+    }
+    .menu-button {
+        width: fit-content;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .branding a h2 {
+        text-align: center;
+<<<<<<< HEAD
+        height: 100px;
+        background-color: #ffffff;
+=======
+        width: fit-content;
+        cursor: progress;
+>>>>>>> main
     }
     .links {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    } 
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+    .branding a p {
+        text-align: center;
         display: none;
     }
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content {
+        margin: 0;
+        padding: 0;
+        margin-top: 50px;
+    }
+    #main {
+        transition: margin-left .5s; /* If you want a transition effect */
+        padding: 20px;
+    }
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: 0 15% 0 15%;
+    }
+    .wrap-item h5 {
+        font-size: 20px;
+    }
+    .wrap-item h1 {
+        font-size: 25px;
+    }
+<<<<<<< HEAD
     .landing {
         margin-top: 100px;
     }
 }
+=======
+
+}
+.branding a p {
+    text-align: left;
+}
+@media(max-width:1000px){
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 15% 0 15%;
+    }
+    .wrap-item h5 {
+        font-size: 20px;
+    }
+    .wrap-item h1 {
+        font-size: 25px;
+    }
+    .contact-s {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-2 {
+        width: 80%;
+    }
+    #about div {
+        width: 80%;
+        margin: 0 10% 0 10%;
+    }
+}
+@media(min-width: 1000px) {
+    .menu-button {
+        display: none;
+    }
+    #closeButton {
+        display: none;
+    }
+}
+>>>>>>> main

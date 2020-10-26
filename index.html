@@ -6,9 +6,32 @@
 </head>
 <body>
 <!--Navigation-->
+<!--JS for responsiveness-->
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("main").style.display = "none";
+    }
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("main").style.display = "block";
+    }
+    function hideDiv() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("main").style.display = "block";
+        document.getElementById("li-1").style.display = "none";
+    }
+    
+</script>
+
+<!--Navigation-->
 <section class="navigation">
     <div class="nav-item branding">
         <div class="menu-button">
+<<<<<<< HEAD
             <img src="img/menu-button-of-three-horizontal-lines.png">
         </div>
         <a href="#landing" class="brand">
@@ -23,6 +46,24 @@
         <a href="#">Blog</a>
         <a href="#contact">Contact me</a>
         <a href="blog/login.htmml">Log in</a>
+=======
+            <img src="img/menu-button-of-three-horizontal-lines.png" onclick="openNav()" id="main">
+        </div>
+        <a href="#landing">
+            <h2 style="color: #008073;">Achille Songa</h2>
+            <p>Web developer</p>
+        </a>
+    </div>
+    
+    <div class="nav-item links" id="mySidebar" style="background-color: aliceblue;">
+        <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
+        <a href="#skills" onclick="hideDiv()">Skills</a>
+        <a href="#about" onclick="hideDiv()">About me</a>
+        <a href="#projects" onclick="hideDiv()">Projects</a>
+        <a href="#"  onclick="hideDiv()">Experience</a>
+        <a href="#blog" onclick="hideDiv()">Blog</a>
+        <a href="#contact" onclick="hideDiv()" id="li-1">Contact me</a>
+>>>>>>> main
     </div>
 </section>
 <!--Contents and pages-->
@@ -30,7 +71,7 @@
     <!--Landing page-->
     <div class="landing" id="landing">
         <img src="img/songa.jpg" alt="">
-        <h2 class="landing-text">There is no Perfection,<br>But we still try!</h2>
+        <h2 class="landing-text">Imagination is more important<br>than knowledge.<br><i style="font-size: 15px;">-Albert Einstein</i></h2>
     </div>
     <!--Skills page-->
     <div class="skills" id="skills">
@@ -84,39 +125,96 @@
             </div>
         </div>
     </div>
+
+    <!--About page-->
+    <div id="about" class="about">
+        <h2>About me</h2>
+        <div>
+            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quisquam corrupti excepturi? Sit illo velit dolorem provident saepe. Voluptate, totam?</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo cupiditate repellat vel odit officiis, id eaque iusto in veritatis consequatur nam. Neque ipsum consequatur quia earum delectus iusto minus ad dolore, voluptatem eveniet, fugiat repellendus. Voluptas, placeat. Sit porro aspernatur magni molestias, deserunt cupiditate iusto? Vitae quidem dicta ab, voluptatum, accusantium facilis veniam, at doloremque autem ea est nesciunt cumque.</p>
+        </div>
+    </div>
+    <!--Projects page-->
+    <div id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="wrapper">
+            <div class="wrap-item">
+                <img src="img/andela.png">
+                <h1>Project's name</h1>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+            </div>
+            <div class="wrap-item">
+                <img src="img/andela.png">
+                <h1>Project's name</h1>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+            </div>
+            <div class="wrap-item">
+                <img src="img/andela.png">
+                <h1>Project's name</h1>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+            </div>
+        </div>
+    </div>
+
+    <!--Blog page-->
+    <div id="blog" class="blog">
+        <h2>Blog</h2>
+        <div class="post-wrapper">
+            <div class="post-item">
+                <img src="img/andela.png">
+                <h1><a href="#">Post title</a></h1>
+                <p>10 october 2020  |  Achille Songa</p>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+            </div>
+            <div class="post-item">
+                <img src="img/andela.png">
+                <h1><a href="#">Post title</a></h1>
+                <p>10 october 2020  |  Achille Songa</p>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+            </div>
+            <div class="post-item">
+                <img src="img/andela.png">
+                <h1><a href="#">Post title</a></h1>
+                <p>10 october 2020  |  Achille Songa</p>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+            </div>
+        </div>
+    </div>
+
     <!--Contact page-->
     <div id="contact" class="contact">
         <h2>Contact me</h2>
-        <div class="contact-s" style="display: flex;justify-content: center;align-items: flex-start;">
-        <div class="contact-1">
-            <div>
-                <img src="">
-                <p>songachillethe1her@gmail.com</p>
+        <div class="contact-s">
+            <div class="contact-1">
+                <div>
+                    <h5><span><img src="img/email-xxl.png"></span> 
+                    songachillethe1her@gmail.com</h5>
+                </div>
+                <div>
+                    <h5><span><img src="img/facebook-4-xxl.png"></span> 
+                    Achille Songa</h5>
+                </div>
+                <div>
+                    <h5><span><img src="img/instagram-6-xxl.png"></span> 
+                    @achille_songa</h5>
+                </div>
+                <div>
+                    <h5><span><img src="img/phone-xxl.png"></span> 
+                    +(250) 780 630 465</h5>
+                </div>
             </div>
-            <div>
-                <img src="">
-                <p>Achille Songa</p>
-            </div>
-            <div>
-                <img src="">
-                <p>@achille_songa</p>
-            </div>
-            <div>
-                <img src="">
-                <p>@mindinmiddle</p>
-            </div>
-        </div>
-        <div class="contact-2">
+            <div class="contact-2">
                 <form method="POST">
                     <label>Name</label>
                     <input type="text" >
                     <label>E-mail</label>
                     <input type="email" >
                     <label>Message</label>
-                    <textarea></textarea>
+                    <textarea style="height: auto;font-family: roboto,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"></textarea>
                     <button type="submit">Send</button>
                 </form>
-        </div>
+            </div>
         </div>
     </div>
 </section>
@@ -132,17 +230,45 @@
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 <body>
+    <!--JS for responsiveness-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("main").style.display = "none";
+        }
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("main").style.display = "block";
+        }
+        function hideDiv() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("main").style.display = "block";
+            document.getElementById("li-1").style.display = "none";
+        }
+        
+    </script>
+
     <!--Navigation-->
     <section class="navigation">
         <div class="nav-item branding">
             <div class="menu-button">
+<<<<<<< HEAD
                 <img src="img/menu-button-of-three-horizontal-lines.png">
             </div>
             <a href="#landing" class="brand">
+=======
+                <img src="img/menu-button-of-three-horizontal-lines.png" onclick="openNav()" id="main">
+            </div>
+            <a href="#landing">
+>>>>>>> main
                 <h2 style="color: #008073;">Achille Songa</h2>
                 <p>Web developer</p>
             </a>
         </div>
+<<<<<<< HEAD
         <div class="nav-item links">
             <a href="#skills">Skills</a>
             <a href="#">Projects</a>
@@ -150,6 +276,17 @@
             <a href="#">Blog</a>
             <a href="#contact">Contact me</a>
             <a href="blog/login.htmml">Log in</a>
+=======
+        
+        <div class="nav-item links" id="mySidebar" style="background-color: aliceblue;">
+            <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
+            <a href="#skills" onclick="hideDiv()">Skills</a>
+            <a href="#about" onclick="hideDiv()">About me</a>
+            <a href="#projects" onclick="hideDiv()">Projects</a>
+            <a href="#"  onclick="hideDiv()">Experience</a>
+            <a href="#blog" onclick="hideDiv()">Blog</a>
+            <a href="#contact" onclick="hideDiv()" id="li-1">Contact me</a>
+>>>>>>> main
         </div>
     </section>
     <!--Contents and pages-->
