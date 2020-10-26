@@ -7,7 +7,9 @@ body, html {
     height: 100%;
     scroll-behavior: smooth;
     margin: 0;
+    background: url("../img/bg.jpg");
     background-color: #f1f1f1;
+    display: grid;
 }
 
 /* css for navigation */
@@ -18,7 +20,8 @@ body, html {
     height: 100%;
     margin: 0;
     position: fixed;
-    box-shadow: #f1f1f1;
+    border-right: #f1f1f1;
+    box-sizing: border-box;
 }
 .navigation a {
     text-decoration: none;
@@ -90,6 +93,9 @@ body, html {
     color: #ffffff;
     padding: 30px;
 }
+.skills {
+    height: 100%;
+}
 .links {
     display: block;
 }
@@ -134,6 +140,9 @@ body, html {
     color: #ffffff;
     padding: 30px;
 }
+.contact {
+    height: 100%;
+}
 .contact-s {
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -165,10 +174,8 @@ body, html {
 }
 .contact-1 div img {
     width: 15px;
-    color:  #008073;
     display: grid;
     position: relative;
-    background-color: #008073;
 }
 .contact-1 div img, h5 {
     display: inline-block;
@@ -183,6 +190,9 @@ body, html {
     background-color: #008073;
     color: #ffffff;
     padding: 30px;
+}
+.about {
+    height: 100%;
 }
 .about div {
     display: grid;
@@ -206,6 +216,9 @@ body, html {
     background-color: #008073;
     color: #ffffff;
     padding: 20px;
+}
+.blog {
+    height: 100%;
 }
 .post-wrapper {
     display: grid;
@@ -242,6 +255,9 @@ body, html {
     color: #ffffff;
     padding: 30px;
 }
+.projects {
+    height: 100%;
+}
 .wrapper {
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -267,7 +283,6 @@ body, html {
 
 .content {
     width: 85%;
-    float: left;
     margin-left: 15%;
 
 }

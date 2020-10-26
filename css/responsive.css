@@ -1,0 +1,78 @@
+@media(max-width:1000px){
+    .branding {
+        display:grid;
+        grid-template-columns: 20% 50%;
+        align-items: center;
+    }
+    .branding a {
+        width: fit-content;
+        text-align: center;
+    }
+    .branding a, .menu-button {
+        display: inline-block;
+    }
+    .navigation {
+        width: 100%;
+        display: block;
+    }
+    .menu-button {
+        width: fit-content;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .branding a h2 {
+        text-align: center;
+        width: fit-content;
+        cursor: progress;
+    }
+    .links {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    } 
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+    .branding a p {
+        text-align: center;
+        display: none;
+    }
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content {
+        margin: 0;
+        padding: 0;
+        margin-top: 50px;
+    }
+    #main {
+        transition: margin-left .5s; /* If you want a transition effect */
+        padding: 20px;
+    }
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: 0 15% 0 15%;
+    }
+    .wrap-item h5 {
+        font-size: 20px;
+    }
+    .wrap-item h1 {
+        font-size: 25px;
+    }
+    .landing {
+        margin-top: 100px;
+    }
+}
