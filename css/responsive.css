@@ -54,8 +54,6 @@
     .content {
         margin: 0;
         padding: 0;
-        margin-top: 50px;
-        margin-right: 0;
     }
     #main {
         transition: margin-left .5s; /* If you want a transition effect */
@@ -75,5 +73,11 @@
     }
     .landing {
         margin-top: 100px;
+    }
+    #landing {
+        margin-bottom: 0;
+    }
+    #skills {
+        margin-top: 0;
     }
 }
