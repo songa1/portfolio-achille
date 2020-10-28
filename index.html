@@ -3,30 +3,13 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/experience.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/feeds.css">
+<script src="js/nav-responsive.js"></script>
 </head>
 <body>
 <!--Navigation-->
-<!--JS for responsiveness-->
-<script>
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        document.getElementById("main").style.display = "none";
-    }
-    function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-        document.getElementById("main").style.display = "block";
-    }
-    function hideDiv() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-        document.getElementById("main").style.display = "block";
-        document.getElementById("li-1").style.display = "none";
-    }
-    
-</script>
-<link rel="stylesheet" type="text/css" href="../personal-website/css/main-nav.css">
 <!--Navigation-->
 <section class="navigation">
     <div class="nav-item branding">
@@ -34,21 +17,21 @@
 =======
             <img src="img/menu-button-of-three-horizontal-lines.png" onclick="openNav()" id="main">
         </div>
-        <a href="#landing">
+        <a href="#">
             <h2 style="color: #008073;">Achille Songa</h2>
             <p>Web developer</p>
         </a>
     </div>
     
-    <div class="nav-item links" id="mySidebar" style="background-color: #fff;">
+    <div class="nav-item links" id="mySidebar" style="background-color: #ffffff">
         <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
-        <a href="#skills" onclick="hideDiv()">Skills</a>
-        <a href="#about" onclick="hideDiv()">About me</a>
-        <a href="#projects" onclick="hideDiv()">Projects</a>
-        <a href="#"  onclick="hideDiv()">Experience</a>
-        <a href="blog/feeds.html" onclick="hideDiv()">Blog</a>
-        <a href="#contact" onclick="hideDiv()" id="li-1">Contact me</a>
-        <a href="user/login.html">Log in</a>
+        <a href="#skills" onclick="hideDiv()"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
+        <a href="#about" onclick="hideDiv()"><span><img src="../img/about.png"></span>  About me</a>
+        <a href="#projects" onclick="hideDiv()"><span><img src="../img/project-xxl.png"></span>  Projects</a>
+        <a href="#experience"  onclick="hideDiv()"><span><img src="../img/experience.png"></span>  Experience</a>
+        <a href="blog/feeds.html" onclick="hideDiv()"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
+        <a href="#contact" onclick="hideDiv()" id="li-1"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
+        <a href="users/login.html" onclick="hideDiv()"><span><img src="../img/login-xxl.png"></span>  Log in</a>
     </div>
 </section>
 <!--Contents and pages-->
@@ -141,7 +124,11 @@
             </div>
         </div>
     </div>
+    <!--Experience page-->
+    <div id="experience">
+        <h2>Experience</h2>
 
+    </div>
     <!--Contact page-->
     <div id="contact" class="contact">
         <h2>Contact me</h2>
@@ -225,23 +212,23 @@
     <section class="navigation">
         <div class="nav-item branding">
             <div class="menu-button">
-                <img src="img/menu-button-of-three-horizontal-lines.png">
+                <img src="img/menu-button-of-three-horizontal-lines.png" onclick="openNav()" id="main">
             </div>
-            <a href="#landing" class="brand">
+            <a href="#landing">
                 <h2 style="color: #008073;">Achille Songa</h2>
                 <p>Web developer</p>
             </a>
         </div>
         
-        <div class="nav-item links" id="mySidebar" style="background-color: #fff;">
+        <div class="nav-item links" id="mySidebar" style="background-color: #ffffff">
             <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
-            <a href="#skills" onclick="hideDiv()">Skills</a>
-            <a href="#about" onclick="hideDiv()">About me</a>
-            <a href="#projects" onclick="hideDiv()">Projects</a>
-            <a href="#"  onclick="hideDiv()">Experience</a>
-            <a href="blog/feeds.html" onclick="hideDiv()">Blog</a>
-            <a href="#contact" onclick="hideDiv()" id="li-1">Contact me</a>
-            <a href="user/login.html" onclick="hideDiv()">Log in</a>
+            <a href="#skills" onclick="hideDiv()"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
+            <a href="#about" onclick="hideDiv()"><span><img src="../img/about.png"></span>  About me</a>
+            <a href="#projects" onclick="hideDiv()"><span><img src="../img/project-xxl.png"></span>  Projects</a>
+            <a href="#experience"  onclick="hideDiv()"><span><img src="../img/experience.png"></span>  Experience</a>
+            <a href="blog/feeds.html" onclick="hideDiv()"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
+            <a href="#contact" onclick="hideDiv()" id="li-1"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
+            <a href="users/login.html" onclick="hideDiv()"><span><img src="../img/login-xxl.png"></span>  Log in</a>
         </div>
     </section>
     <!--Contents and pages-->

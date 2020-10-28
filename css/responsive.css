@@ -36,7 +36,7 @@
         padding-top: 60px;
         transition: 0.5s;
     } 
-    .closebtn {
+    #closeButton {
         position: absolute;
         top: 0;
         right: 25px;
@@ -52,7 +52,7 @@
         flex-wrap: wrap;
     }
     .content {
-        margin: 0;
+        margin: -10px;
         padding: 0;
     }
     #main {
@@ -80,4 +80,12 @@
     #skills {
         margin-top: 0;
     }
+}
+@media(min-width: 1000px){
+#closeButton {
+    display: none;
+}
+#main {
+    display: none;
+}
 }
