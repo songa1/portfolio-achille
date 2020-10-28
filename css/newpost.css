@@ -48,7 +48,7 @@
     display: grid;
     grid-template-columns: 70% 30%;
 }
-.branding {
+.brandin {
     color: #008073;
 
 }
@@ -100,6 +100,10 @@
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
+}
+.post textarea {
+    margin-left: 0%;
+    margin: 10px;
 }
 .post form {
     width: 80%;
