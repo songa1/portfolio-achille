@@ -39,6 +39,9 @@ body, html {
     background-color: #ffffff;
     height: 100%;
 }
+.links a img {
+    width: 20px;
+}
 .links a {
     padding: 10px;
     display: block;
@@ -133,56 +136,7 @@ body, html {
     margin: 0;
 }
 
-/* css for contact page */
-.contact h2 {
-    width: 100%;
-    background-color: #008073;
-    color: #ffffff;
-    padding: 30px;
-}
-.contact {
-    height: 100%;
-}
-.contact-s {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-column-gap: 1em;
-    justify-items: center;
-}
-.contact-1 {
-    text-align: start;
-    align-items: center;
-}
-.contact-2 {
-    width:50%;
-    padding: 1em;
-}
-.contact-2 form input, textarea, label, button {
-    width: 100%;
-    margin: 10px 20px 10px 20px;
-    padding: 10px;
-}
-.contact-2 form input, textarea {
-    border: 1px solid #008073;
-    border-radius: 10px;
-}
-.contact form button {
-    border-radius: 10px;
-    border: 1px solid #008073;
-    background-color: #008073;
-    color: aliceblue;
-}
-.contact-1 div img {
-    width: 15px;
-    display: grid;
-    position: relative;
-}
-.contact-1 div img, h5 {
-    display: inline-block;
-}
-.contact {
-    height: 100%;
-}
+
 
 /* css for about page */
 .about h2 {
@@ -210,44 +164,7 @@ body, html {
     color: #0d302e;
     font-size: 20px;
 }
-/*css for blog page */
-.blog h2 {
-    width: 100%;
-    background-color: #008073;
-    color: #ffffff;
-    padding: 20px;
-}
-.blog {
-    height: 100%;
-}
-.post-wrapper {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 1em;
-    margin: 0 10px 0 10px;
-    justify-content: center;
-}
-.post-item {
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-.post-item img {
-    width: 100%;
-    border-radius: 10px;
-    padding: 3px;
-}
-.post-item h1, h5 {
-    padding: 15px;
-    margin: 0;
-}
-.post-item p {
-    padding: 0;
-    margin: 0;
-    text-align: start;
-    padding-left: 15px;
-    text-decoration: underline;
-}
+
 /* css for projects page */
 .projects h2 {
     width: 100%;
