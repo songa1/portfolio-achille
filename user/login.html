@@ -1,0 +1,192 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        @media(max-width: 920px) {
+            .blog h2 {
+                font-size: 35px;
+            }
+            
+            #button {
+                display: none;
+            }
+            .top {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .foot {
+            display: flex;
+            }
+            .copyright {
+                width: 100%;
+            }
+            .sms {
+                width: 100%;
+            }
+            .post-item div {
+                display: grid;
+                grid-template-columns: 15% 15% 15% 15%;
+                justify-content: center;
+                margin-bottom: 10px;
+
+            }
+            .login form {
+                width: 100%;
+            }
+            .login {
+                display: flex;
+                margin: 0 10px 0 10px;
+                justify-content: center;
+            }
+        }
+        .goto {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .goto img {
+            width: 15px;
+        }
+        .blog h2 {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .searchBar {
+            display: grid;
+            justify-content: end;
+            margin: 35px 10px 10px 10px;
+            grid-gap: 1em;
+        }
+        .searchBar input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #008073;
+        }
+        .top {
+            display: grid;
+            grid-template-columns: 70% 30%;
+        }
+        .branding {
+            color: #008073;
+
+        }
+        #button {
+            background-color: #008073;
+            color: aliceblue;
+        }
+        .footer {
+            width: 100%;
+            display: grid;
+            background-color: #193835;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .foot {
+            display:flex;
+            flex-wrap: wrap;;
+            width: 100%;
+            margin: 0;
+            height: auto;
+            align-items: center;
+            word-wrap: normal;
+        }
+        .copyright {
+            color: aliceblue;
+            padding: 10px;
+            flex: 2;
+        }
+        .sms {
+            display: flex;
+            justify-content: end;
+            padding: 0;
+            text-align: center;
+            justify-items: end;
+            flex: 3;
+        }
+        .sms a {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 10px;
+            justify-items: end;
+        }
+        .foot div {
+            display: inline-block;
+        }
+        .login {
+            display: flex;
+            margin: 0 10px 0 10px;
+            justify-content: center;
+        }
+        .login form {
+            width: 50%;
+        }
+        .login form input {
+            width: 100%;
+            border: 1px solid #008073;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .login form label {
+            color: #008073;
+            
+        }
+        .login form h3 {
+            color: #517c79;
+            text-align: center;
+        }
+        </style>
+
+</head>
+<body>
+    
+    <!--Blog page-->
+    <div id="blog" class="blog">
+        <div class="top">
+            <div class="branding">
+                <h1><a href="../index.html" style="color: #008073;text-decoration: none;">Achille Songa</a></h1>
+            </div>
+        </div>
+        
+        <h2>
+            <div class="goto">
+             
+                <a href="../index.html" style="text-decoration: none;color:aliceblue;"><span><img src="../img/arrow-91-xl.png"></span> &nbsp;&nbsp;&nbsp;Home</a>
+            </div>
+        </h2>
+        <div class="login">
+            
+            <form method="POST">
+                <h3>Log in to manage a blog</h3>
+                <label>E-mail</label>
+                <input type="email">
+                <label>Password</label>
+                <input type="password">
+                <input type="submit" value="Login" style="background-color:#008073;color: aliceblue;">
+            </form>
+        </div>
+    
+            
+        <div class="footer">
+            <div class="foot">
+                <div class="copyright">
+                    <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">Achille Songa</a></p>
+                </div>
+                <div class="sms">
+                    <a href="https://instagram.com/achille_songa">Instagram</a>
+                    <a href="https://fb.me/songa.achille.9">Facebook</a>
+                    <a href="https://twitter.com/mindinmiddle">Twitter</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
