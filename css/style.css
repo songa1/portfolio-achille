@@ -39,6 +39,9 @@ body, html {
     background-color: #ffffff;
     height: 100%;
 }
+.links a img {
+    width: 20px;
+}
 .links a {
     padding: 10px;
     display: block;
@@ -162,37 +165,6 @@ body, html {
     margin: 10px 20px 10px 20px;
     padding: 10px;
 }
-<<<<<<< HEAD
-/*responsive contact page */
-@media (max-width:992px){
-    .contact-s {
-        display: flex;
-        flex-direction: column;
-    }
-    .contact-1 {
-        width:100%;
-        align-items: flex-end;
-        text-align: left;
-    }
-    .contact-2 {
-        width: 100%;
-    }
-    .contact-2 form input, textarea, label, button {
-        width: 100%;
-        margin: 10px 20px 10px 20px;
-        padding: 10px;
-    }
-    .content {
-        margin-left: 0;
-    }
-    .branding {
-        display: inline-block;
-    }
-    .brand p {
-        text-align: center;
-        margin-top: 0;
-    }
-=======
 .contact-2 form input, textarea {
     border: 1px solid #008073;
     border-radius: 10px;
@@ -309,7 +281,6 @@ body, html {
 .wrap-item h1, h5 {
     padding: 15px;
     margin: 0;
->>>>>>> main
 }
 /* css for pages */
 
