@@ -1,0 +1,239 @@
+@media(max-width: 1000px) {
+    .blog h2 {
+        font-size: 35px;
+    }
+    
+    #button {
+        display: none;
+    }
+    .top {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .foot {
+    display: flex;
+    }
+    .copyright {
+        width: 100%;
+    }
+    .sms {
+        width: 100%;
+    }
+    .post {
+        margin: 0;
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    .post p {
+        display: flex;
+        justify-content: start;
+        margin-top: 0;
+        padding: 0 5px 0 5px;
+        flex-wrap: wrap;
+    }
+    .post h1 {
+        margin-bottom: 15px;
+        padding: 0 15px 0 15px;
+        color: #008073;
+    }
+    .post-details {
+        padding: 10px;
+    }
+    .post-details img {
+        width: 100%;
+    }
+    .post-details p {
+        text-align: start;
+        padding: 10px;
+        font-size: 25px;
+        text-decoration: wavy;
+        word-spacing: 2px;
+    }
+    .sh-buttons input {
+        width: 80px;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #008073;
+    }
+    #share {
+        background-color: #008073;
+        color: #ffffff;
+    }
+    #like {
+        background-color: aliceblue;
+        color: #008073;
+    }
+    .comment-form {
+        width: 80%;
+    }
+    .comment-form label {
+        color: #008073;
+    
+    }
+    .comment-form input {
+        width: 100%;
+        border: 1px solid #008073;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .comment-form textarea {
+        width: 100%;
+        margin-left: 0;
+        height: 100px;
+        font-family: roboto, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .comment-form button {
+        margin-left: 0%;
+        width: 40%;
+        background-color: #008073;
+        color: #ffffff;
+        border: 1px solid #008073;
+        border-radius: 10px;
+    }
+}
+.goto {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.goto img {
+    width: 15px;
+}
+.blog h2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.searchBar {
+    display: grid;
+    justify-content: end;
+    margin: 35px 10px 10px 10px;
+    grid-gap: 1em;
+}
+.searchBar input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #008073;
+}
+.top {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.branding {
+    color: #008073;
+
+}
+.footer {
+    width: 100%;
+    display: grid;
+    background-color: #193835;
+    padding: 10px;
+    margin-top: 20px;
+}
+.foot {
+    display:flex;
+    flex-wrap: wrap;;
+    width: 100%;
+    margin: 0;
+    height: auto;
+    align-items: center;
+    word-wrap: normal;
+}
+.copyright {
+    color: aliceblue;
+    padding: 10px;
+    flex: 2;
+}
+.sms {
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    text-align: center;
+    justify-items: end;
+    flex: 3;
+}
+.sms a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px;
+    justify-items: end;
+}
+.foot div {
+    display: inline-block;
+}
+.post {
+    display: block;
+    margin: 0% 20% 0% 20%;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.post p {
+    display: inline-block;
+    justify-content: start;
+    margin-top: 0;
+    padding: 0 15px 0 15px;
+}
+.post h1 {
+    margin-bottom: 15px;
+    padding: 0 15px 0 15px;
+    color: #008073;
+}
+.post-details {
+    padding: 10px;
+}
+.post-details img {
+    width: 50%;
+}
+.post-details p {
+    text-align: start;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: wavy;
+    word-spacing: 2px;
+}
+.sh-buttons input {
+    width: 100px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #008073;
+}
+#share {
+    background-color: #008073;
+    color: #ffffff;
+}
+#like {
+    background-color: aliceblue;
+    color: #008073;
+}
+.comment-form {
+    width: 80%;
+    margin: 0 0% 0 10%;
+}
+.comment-form label {
+    color: #008073;
+
+}
+.comment-form input {
+    width: 100%;
+    border: 1px solid #008073;
+    border-radius: 10px;
+    padding: 10px;
+}
+.comment-form textarea {
+    width: 100%;
+    margin-left: 0;
+    height: 100px;
+    font-family: roboto, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.comment-form button {
+    margin-left: 0%;
+    width: 20%;
+    background-color: #008073;
+    color: #ffffff;
+    border: 1px solid #008073;
+    border-radius: 10px;
+}
