@@ -22,13 +22,8 @@
     }
     .branding a h2 {
         text-align: center;
-<<<<<<< HEAD
-        height: 100px;
-        background-color: #ffffff;
-=======
         width: fit-content;
         cursor: progress;
->>>>>>> main
     }
     .links {
         height: 100%;
@@ -77,49 +72,7 @@
     .wrap-item h1 {
         font-size: 25px;
     }
-<<<<<<< HEAD
     .landing {
         margin-top: 100px;
     }
 }
-=======
-
-}
-.branding a p {
-    text-align: left;
-}
-@media(max-width:1000px){
-    .wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 15% 0 15%;
-    }
-    .wrap-item h5 {
-        font-size: 20px;
-    }
-    .wrap-item h1 {
-        font-size: 25px;
-    }
-    .contact-s {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
-    .contact-2 {
-        width: 80%;
-    }
-    #about div {
-        width: 80%;
-        margin: 0 10% 0 10%;
-    }
-}
-@media(min-width: 1000px) {
-    .menu-button {
-        display: none;
-    }
-    #closeButton {
-        display: none;
-    }
-}
->>>>>>> main

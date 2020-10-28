@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify posts - Achille Songa</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        @media(max-width: 920px) {
+            .post-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .blog h2 {
+                font-size: 35px;
+            }
+            .post-item h1, h5 {
+                padding: 15px;
+                margin: 0;
+                font-size: 26px;
+            }
+            .post-item p {
+                padding: 0;
+                margin: 0;
+                text-align: start;
+                padding-left: 15px;
+                text-decoration: underline;
+                font-size: 20px;
+            }
+            .post-item {
+                margin: 0 15px 0 15px;
+            }
+            #button {
+                display: none;
+            }
+            .top {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .foot {
+            display: flex;
+            }
+            .copyright {
+                width: 100%;
+            }
+            .sms {
+                width: 100%;
+            }
+            .post-item div {
+            display: grid;
+            grid-template-columns: 15% 15% 15% 15%;
+            justify-content: center;
+            margin-bottom: 10px;
+
+        }
+        }
+        .goto {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .goto img {
+            width: 15px;
+        }
+        .blog h2 {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .searchBar {
+            display: grid;
+            justify-content: end;
+            margin: 35px 10px 10px 10px;
+            grid-gap: 1em;
+        }
+        .searchBar input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #008073;
+        }
+        .top {
+            display: grid;
+            grid-template-columns: 70% 30%;
+        }
+        .branding {
+            color: #008073;
+
+        }
+        #button {
+            background-color: #008073;
+            color: aliceblue;
+        }
+        .footer {
+            width: 100%;
+            display: grid;
+            background-color: #2f3037;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .sub-1 {
+            display: grid;
+            justify-content: center;
+            color: aliceblue;
+            align-items: center;
+            text-align: center;
+        }
+        .sub-1 form {
+            border: 1px solid aliceblue;
+            padding: 10px;
+            justify-items: center;
+        }
+        .sub-1 form input {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            color: aliceblue;
+        }
+        .foot {
+            display:flex;
+            flex-wrap: wrap;
+            background-color:rgb(29, 28, 28);
+            width: 100%;
+            margin: 0;
+            height: auto;
+            align-items: center;
+            word-wrap: normal;
+        }
+        .copyright {
+            color: aliceblue;
+            padding: 10px;
+            flex: 2;
+        }
+        .sms {
+            display: flex;
+            justify-content: end;
+            padding: 0;
+            text-align: center;
+            justify-items: end;
+            flex: 3;
+        }
+        .sms a {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 10px;
+            justify-items: end;
+        }
+        .foot div {
+            display: inline-block;
+        }
+        .post-item div {
+            display: grid;
+            grid-template-columns: 10% 10% 10% 10%;
+            justify-content: center;
+            grid-gap: 2em;
+            margin-bottom: 10px;
+
+        }
+        .goto a:hover {
+            color: rgb(161, 59, 59);
+        }
+        </style>
+
+</head>
+<body>
+    
+    <!--Blog page-->
+    <div id="blog" class="blog">
+        <div class="top">
+            <div class="branding">
+                <h1><a href="feeds.html" style="color: #008073;text-decoration: none;">Achille Songa Blog</a></h1>
+            </div>
+            <div class="searchBar">
+                <form><input type="text" placeholder="Search blog ..." id="input"><input type="submit" value="Search" id="button"></form>
+            </div>
+        </div>
+        
+        <h2>
+            <div class="goto">
+             
+                <a href="../user/profile.html" style="text-decoration: none;color:aliceblue;"><span><img src="../img/arrow-91-xl.png"></span> &nbsp;&nbsp;&nbsp;Back</a>
+                <a href="newpost.html" style="text-decoration: none;color:aliceblue;"> &nbsp;&nbsp;&nbsp;Create new post</a>
+            </div>
+        </h2>
+        <div class="post-wrapper">
+            <div class="post-item">
+                <img src="../img/andela.png">
+                <h1><a href="#" style="color: #008073;">Post title</a></h1>
+                <p>10 october 2020  |  Achille Songa</p>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+                <hr style="color: #008073;">
+                <div>
+                    <img src="../img/eye-3-xl.png" style="background-color: #008073;">
+                    <img src="../img/edit-7-xl.png" style="background-color: #008073;">
+                    <img src="../img/comments-xl.png" style="background-color: #008073;">
+                    <img src="../img/delete-xl.png" style="background-color: #008073;">
+                </div>
+            </div>
+            <div class="post-item">
+                <img src="../img/andela.png">
+                <h1><a href="#" style="color: #008073;">Post title</a></h1>
+                <p>10 october 2020  |  Achille Songa</p>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+                <hr style="color: #008073;">
+                <div>
+                    <img src="../img/eye-3-xl.png" style="background-color: #008073;">
+                    <img src="../img/edit-7-xl.png" style="background-color: #008073;">
+                    <img src="../img/comments-xl.png" style="background-color: #008073;">
+                    <img src="../img/delete-xl.png" style="background-color: #008073;">
+                </div>
+            </div>
+            <div class="post-item">
+                <img src="../img/andela.png">
+                <h1><a href="#" style="color: #008073;">Post title</a></h1>
+                <p>10 october 2020  |  Achille Songa</p>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
+                <hr style="color: #008073;">
+                <div>
+                    <img src="../img/eye-3-xl.png" style="background-color: #008073;">
+                    <img src="../img/edit-7-xl.png" style="background-color: #008073;">
+                    <img src="../img/comments-xl.png" style="background-color: #008073;">
+                    <img src="../img/delete-xl.png" style="background-color: #008073;">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="sub-1">
+                <form>
+                    <h1>Subscribers: 50</h1>
+                </form>
+            </div >
+            <div class="foot">
+                <div class="copyright">
+                    <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">Achille Songa</a></p>
+                </div>
+                <div class="sms">
+                    <a href="https://instagram.com/achille_songa">Instagram</a>
+                    <a href="https://fb.me/songa.achille.9">Facebook</a>
+                    <a href="https://twitter.com/mindinmiddle">Twitter</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
