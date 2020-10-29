@@ -1,0 +1,134 @@
+@media(max-width: 920px) {
+    .blog h2 {
+        font-size: 35px;
+    }
+    
+    #button {
+        display: none;
+    }
+    .top {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .foot {
+    display: flex;
+    }
+    .copyright {
+        width: 100%;
+    }
+    .sms {
+        width: 100%;
+    }
+    .post-item div {
+        display: grid;
+        grid-template-columns: 15% 15% 15% 15%;
+        justify-content: center;
+        margin-bottom: 10px;
+
+    }
+    .login form {
+        width: 100%;
+    }
+    .login {
+        display: flex;
+        margin: 0 10px 0 10px;
+        justify-content: center;
+    }
+}
+.goto {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.goto img {
+    width: 15px;
+}
+.blog h2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.searchBar {
+    display: grid;
+    justify-content: end;
+    margin: 35px 10px 10px 10px;
+    grid-gap: 1em;
+}
+.searchBar input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #008073;
+}
+.top {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.branding {
+    color: #008073;
+
+}
+#button {
+    background-color: #008073;
+    color: aliceblue;
+}
+.footer {
+    width: 100%;
+    display: grid;
+    background-color: #193835;
+    padding: 10px;
+    margin-top: 20px;
+}
+.foot {
+    display:flex;
+    flex-wrap: wrap;;
+    width: 100%;
+    margin: 0;
+    height: auto;
+    align-items: center;
+    word-wrap: normal;
+}
+.copyright {
+    color: aliceblue;
+    padding: 10px;
+    flex: 2;
+}
+.sms {
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    text-align: center;
+    justify-items: end;
+    flex: 3;
+}
+.sms a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px;
+    justify-items: end;
+}
+.foot div {
+    display: inline-block;
+}
+.login {
+    display: flex;
+    margin: 0 10px 0 10px;
+    justify-content: center;
+}
+.login form {
+    width: 50%;
+}
+.login form input {
+    width: 100%;
+    border: 1px solid #008073;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.login form label {
+    color: #008073;
+    
+}
+.login form h3 {
+    color: #517c79;
+    text-align: center;
+}
