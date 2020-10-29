@@ -9,7 +9,7 @@
 @media(max-width:960px){
     /* responsiveness for navigation page */
     .navigation {
-        display: ;
+        display: fixed;
         position: fixed;
         width: 100%;
         margin: 0%;
@@ -33,7 +33,6 @@
         flex: 1;
     }
     .branding a {
-        flex: ;
         text-align: center;
         font-weight: bolder;
         margin: 0 35%;
