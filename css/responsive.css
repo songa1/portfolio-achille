@@ -1,105 +1,81 @@
-@media(max-width:1000px){
-    .branding {
-        display:grid;
-        grid-template-columns: 20% 50%;
-        align-items: center;
+/* css for large screens */
+
+@media(min-width:960px){
+    #main {
+        display: none;
     }
-    .branding a {
-        width: fit-content;
-        text-align: center;
-    }
-    .branding a, .menu-button {
-        display: inline-block;
-    }
+}
+/* styling small screens */
+@media(max-width:960px){
+    /* responsiveness for navigation page */
     .navigation {
+        display: ;
+        position: fixed;
+        width: 100%;
+    }
+    .branding {
+        display: grid;
         width: 100%;
         display: block;
     }
-    .menu-button {
-        width: fit-content;
-        font-size: 20px;
-        cursor: pointer;
-    }
-    .branding a h2 {
-        text-align: center;
-        width: fit-content;
-        cursor: progress;
-    }
     .links {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        overflow-x: hidden;
-        padding-top: 60px;
-        transition: 0.5s;
-    } 
-    #closeButton {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-      }
-    .branding a p {
-        text-align: center;
-        display: none;
+        width: 150px;
     }
-    body {
+    /* global content configuration */
+    .content {
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 0%;
+        width: fit-content;
+        margin-top: 100px;
+    }
+    /* responsive contact page */
+    .contact-s {
+        width: 90%;
+        margin: 0;
         display: flex;
         flex-wrap: wrap;
+
     }
-    .content {
-        margin: -10px;
+    .contact-2 {
+        width: 100%;
+        margin: 0;
         padding: 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> contact
-        margin-top: 50px;
-        margin-right: 0;
-=======
->>>>>>> blog
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> contact
     }
-    #main {
-        transition: margin-left .5s; /* If you want a transition effect */
-        padding: 20px;
+    .contact-1 div h5{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 15px;
+        font-weight: lighter;
+        width: fit-content;
+        word-wrap: break-word;
     }
+    #contact {
+        height: 100%;
+    }
+    .contact-1 {
+        padding: 5%;
+    }
+    /* responsive experience page */
+    #expert{
+        width: 90%;
+    }
+    #expert h1 {
+        font-weight: bolder;
+    }
+    /* projects page responsive codes */
     .wrapper {
         display: flex;
         flex-wrap: wrap;
-        width: 70%;
-        margin: 0 15% 0 15%;
     }
-    .wrap-item h5 {
-        font-size: 20px;
+    .wrap-item {
+        width: 90%;
     }
-    .wrap-item h1 {
+    /* responsive codes for about page */
+    #about div {
+        width: 90%;
+    }
+    #about div p {
         font-size: 25px;
     }
-    .landing {
-        margin-top: 100px;
-    }
-    #landing {
-        margin-bottom: 0;
-    }
-    #skills {
-        margin-top: 0;
-    }
-}
-@media(min-width: 1000px){
-#closeButton {
-    display: none;
-}
-#main {
-    display: none;
-}
 }

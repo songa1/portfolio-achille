@@ -150,15 +150,6 @@
         <h2>Contact me</h2>
         <div class="contact-s">
             <!--Css for responsive contact page-->
-
-            <style>
-                @media (max-width: 800px) {
-                    .contact-s {
-                        display: flex;
-                        flex-wrap: wrap;
-                    }
-                }
-            </style>
             <div class="contact-1">
                 <div>
                     <h5><span><img src="img/email-xxl.png"></span> 
@@ -202,27 +193,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
-<body>
-    <!--JS for responsiveness-->
-    <script>
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.getElementById("main").style.display = "none";
-        }
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-            document.getElementById("main").style.display = "block";
-        }
-        function hideDiv() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-            document.getElementById("main").style.display = "block";
-            document.getElementById("li-1").style.display = "none";
-        }
-        
-    </script>
+<body>    
 
     <!--Navigation-->
     <section class="navigation">
@@ -237,7 +208,6 @@
         </div>
         
         <div class="nav-item links" id="mySidebar" style="background-color: #ffffff">
-            <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
             <a href="#skills" onclick="hideDiv()"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
             <a href="#about" onclick="hideDiv()"><span><img src="../img/about.png"></span>  About me</a>
             <a href="#projects" onclick="hideDiv()"><span><img src="../img/project-xxl.png"></span>  Projects</a>
