@@ -168,41 +168,6 @@ body, html {
     font-size: 20px;
 }
 
-/* css for projects page */
-.projects h2 {
-    width: 100%;
-    background-color: #008073;
-    color: #ffffff;
-    padding: 30px;
-}
-#projects {
-    height: 100%;
-}
-.wrapper {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 1em;
-    margin: 0 10px 0 10px;
-    justify-content: center;
-}
-.wrap-item {
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
-        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
-        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
-        0 100px 80px rgba(59, 59, 59, 0.12);
-}
-.wrap-item img {
-    width: 100%;
-    border-radius: 10px;
-    padding: 3px;
-}
-.wrap-item h1, h5 {
-    padding: 15px;
-    margin: 0;
-}
 /* css for pages */
 
 .content {
