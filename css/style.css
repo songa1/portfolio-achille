@@ -39,6 +39,9 @@ body, html {
     background-color: #ffffff;
     height: 100%;
 }
+.links a img {
+    width: 20px;
+}
 .links a {
     padding: 10px;
     display: block;
@@ -85,53 +88,7 @@ body, html {
     color: aliceblue;
 }
 
-/*skills page styling*/
 
-.skills h2 {
-    width: 100%;
-    background-color: #008073;
-    color: #ffffff;
-    padding: 30px;
-}
-#skills {
-    height: 100%;
-}
-.links {
-    display: block;
-}
-.links a {
-    padding: 10px;
-    display: block;
-}
-.links a:hover {
-    border-left: 2px solid blue;
-    background-color: #f1f1f1;
-}
-.skill {
-    width: 80%;
-    margin: 0;
-    background-color: #ffffff;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 10% 40px 10%;
-}
-.skill div {
-    display: inline-block;
-    flex-direction: row;
-    padding: 20px;
-    
-}
-.skill div img, p {
-    text-align: center;
-}
-.skill hr {
-    color: grey;
-    margin: 0 20px 0 20px;
-}
-.skill h3 {
-    padding: 20px;
-    margin: 0;
-}
 
 /* css for contact page */
 .contact h2 {
@@ -210,44 +167,7 @@ body, html {
     color: #0d302e;
     font-size: 20px;
 }
-/*css for blog page */
-.blog h2 {
-    width: 100%;
-    background-color: #008073;
-    color: #ffffff;
-    padding: 20px;
-}
-.blog {
-    height: 100%;
-}
-.post-wrapper {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 1em;
-    margin: 0 10px 0 10px;
-    justify-content: center;
-}
-.post-item {
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-.post-item img {
-    width: 100%;
-    border-radius: 10px;
-    padding: 3px;
-}
-.post-item h1, h5 {
-    padding: 15px;
-    margin: 0;
-}
-.post-item p {
-    padding: 0;
-    margin: 0;
-    text-align: start;
-    padding-left: 15px;
-    text-decoration: underline;
-}
+
 /* css for projects page */
 .projects h2 {
     width: 100%;
