@@ -55,10 +55,13 @@
         margin: -10px;
         padding: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
         margin-top: 50px;
         margin-right: 0;
 =======
 >>>>>>> blog
+=======
+>>>>>>> main
     }
     #main {
         transition: margin-left .5s; /* If you want a transition effect */
@@ -78,6 +81,12 @@
     }
     .landing {
         margin-top: 100px;
+    }
+    #landing {
+        margin-bottom: 0;
+    }
+    #skills {
+        margin-top: 0;
     }
 }
 @media(min-width: 1000px){
