@@ -12,22 +12,58 @@
         display: ;
         position: fixed;
         width: 100%;
+        margin: 0%;
+        padding: 0%;
+        top: 0%;
     }
     .branding {
-        display: grid;
         width: 100%;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 64px;
+        top: 0%;
+        border: 1px solid black;
+
     }
-    .links {
-        width: 150px;
+    .nav-item {
+        position: absolute;
+    }
+    .branding div {
+        flex: 1;
+    }
+    .branding a {
+        flex: ;
+        text-align: center;
+        font-weight: bolder;
+        margin: 0 35%;
+    }
+    .branding a p {
+        text-align: center;
+        padding: 0%;
+        margin-top: -12px;
+    }
+    #mySidebar {
+        height: 100%;
+        position: absolute;
+        display: none;
+        z-index: 1;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        padding: 0;
+        transition: 0.5s;
+    }
+    #main {
+        padding: 10px;
     }
     /* global content configuration */
-    .content {
+    #content {
         margin-left: 0%;
         margin-right: 0%;
         padding: 0%;
         width: fit-content;
-        margin-top: 100px;
+        margin-top: 64px;
     }
     /* responsive contact page */
     .contact-s {
