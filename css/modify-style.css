@@ -22,9 +22,6 @@
     .post-item {
         margin: 0 15px 0 15px;
     }
-    #button {
-        display: none;
-    }
     .post-item div {
         display: grid;
         grid-template-columns: 15% 15% 15% 15%;
