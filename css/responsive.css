@@ -141,6 +141,34 @@
         justify-content: center;
         margin: 0 5% 0 5%;
     }
+    /*responsiveness for blog watch page */
+    .post {
+        width: 90%;
+        margin: 0 5% 0 5%;
+    }
+    .post p {
+        font-size: 15px;
+    }
+    .post h1 {
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    .post-details p {
+        font-size: 25px;
+    }
+    .post-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .comment-form button {
+        margin-left: 0%;
+        width: 40%;
+        background-color: #008073;
+        color: #ffffff;
+        border: 1px solid #008073;
+        border-radius: 10px;
+        margin: 10px;
+    }
 }
 /*responsiveness of login page */
 @media(max-width: 750px){

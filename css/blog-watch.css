@@ -118,14 +118,6 @@
     border-radius: 10px;
     border: 1px solid #008073;
 }
-.top {
-    display: grid;
-    grid-template-columns: 70% 30%;
-}
-.brandin {
-    color: #008073;
-
-}
 .footer {
     width: 100%;
     display: grid;
