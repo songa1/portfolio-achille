@@ -1,45 +1,4 @@
-@media(max-width: 920px) {
-    .blog h2 {
-        font-size: 35px;
-    }
-    
-    #button {
-        display: none;
-    }
-    .top {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .foot {
-    display: flex;
-    }
-    .copyright {
-        width: 100%;
-    }
-    .sms {
-        width: 100%;
-    }
-    .profile {
-    width: 100%;
-    border: 1px solid black;
-    padding: 1em;
-    display: flex;
-    flex-wrap: wrap;
 
-}
-.namepic {
-    display: grid;
-    color: #008073;
-}
-.namepic img {
-    width: 100px;
-}
-.namepic a {
-    text-decoration: none;
-    background-color: ;
-    color: #008073;
-}
-}
 .goto {
     width: 100%;
     padding: 10px;
@@ -63,14 +22,6 @@
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #008073;
-}
-.top {
-    display: grid;
-    grid-template-columns: 70% 30%;
-}
-.branding {
-    color: #008073;
-
 }
 #button {
     background-color: #008073;
@@ -121,35 +72,15 @@
     width: 100%;
     flex-wrap: wrap;
 }
-.post form {
-    width: 80%;
-}
-.post form input {
-    width: 100%;
-    border: 1px solid #008073;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    word-wrap: normal;
-}
-.post form label {
-    color: #008073;
-    
-}
-.post form textarea {
-    width: 100%;
-    height: auto;
-}
-.post form h3 {
-    color: #517c79;
-    text-align: center;
-}
+
+
 /*css for profile section */
 .profile {
-    width: 100%;
+    width: 50%;
     border: 1px solid black;
     padding: 1em;
     justify-content: center;
+    margin: 0 25% 0 25%;
 }
 .profile div h1 {
     justify-self: start;

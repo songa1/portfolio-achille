@@ -1,105 +1,226 @@
-@media(max-width:1000px){
+/* css for large screens */
+
+@media(min-width:960px){
+    #main {
+        display: none;
+    }
+}
+@media(max-width:510px){
+    /* responsiveness for navigation page */
+    .branding a{
+        position: absolute;
+        font-size: 10px;
+    }
     .branding {
-        display:grid;
-        grid-template-columns: 20% 50%;
+        height: 100px;
+    }
+}
+@media(max-width:490px){
+    /* responsiveness for navigation page */
+    .branding a{
+        
+        position: absolute;
+    }
+}
+/* styling small screens */
+@media(max-width:960px){
+    /* responsiveness for navigation page */
+    .navigation {
+        position: fixed;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+        z-index:1;
+    }
+    .branding {
+        width: 100%;
+        display: flex;
+        justify-content: center;
         align-items: center;
+        height: 64px;
+        top: 0%;
+        position: absolute;
+        z-index: 1;
+    }
+    .landing{
+        z-index: auto;
+        position: relative;
+    }
+    .nav-item {
+        position: absolute;
+    }
+    .branding div {
+        flex: 1;
     }
     .branding a {
-        width: fit-content;
         text-align: center;
+        font-weight: bolder;
+        position: absolute;
     }
-    .branding a, .menu-button {
-        display: inline-block;
-    }
-    .navigation {
-        width: 100%;
-        display: block;
-    }
-    .menu-button {
-        width: fit-content;
-        font-size: 20px;
-        cursor: pointer;
-    }
-    .branding a h2 {
+    .branding a p {
         text-align: center;
-        width: fit-content;
-        cursor: progress;
+        padding: 0%;
+        margin-top: -12px;
     }
     .links {
         height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
+        position: absolute;
+        display: none;
+        cursor: pointer;
         top: 0;
         left: 0;
-        overflow-x: hidden;
-        padding-top: 60px;
+        bottom: 0;
         transition: 0.5s;
-    } 
-    #closeButton {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-      }
-    .branding a p {
-        text-align: center;
-        display: none;
-    }
-    body {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .content {
-        margin: -10px;
-        padding: 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> contact
-        margin-top: 50px;
-        margin-right: 0;
-=======
->>>>>>> blog
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> contact
+        z-index: 2;
     }
     #main {
-        transition: margin-left .5s; /* If you want a transition effect */
-        padding: 20px;
+        padding: 10px;
     }
+    /* global content configuration */
+    #content {
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 0%;
+        width: fit-content;
+        margin-top: 64px;
+    }
+    /* responsive contact page */
+    .contact-s {
+        width: 90%;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .contact-2 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .contact-1 div h5{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 15px;
+        font-weight: lighter;
+        width: fit-content;
+        word-wrap: break-word;
+    }
+    #contact {
+        height: 100%;
+    }
+    .contact-1 {
+        padding: 5%;
+    }
+    /* responsive experience page */
+    #expert{
+        width: 90%;
+    }
+    #expert h1 {
+        font-weight: bolder;
+    }
+    /* projects page responsive codes */
     .wrapper {
         display: flex;
         flex-wrap: wrap;
-        width: 70%;
-        margin: 0 15% 0 15%;
     }
-    .wrap-item h5 {
-        font-size: 20px;
+    .wrap-item {
+        width: 90%;
     }
-    .wrap-item h1 {
+    /* responsive codes for about page */
+    #about div {
+        width: 90%;
+    }
+    #about div p {
         font-size: 25px;
     }
-    .landing {
-        margin-top: 100px;
+    /*responsiveness for profile page */
+    .profile {
+        width: 90%;
+        border: 1px solid black;
+        padding: 1em;
+        justify-content: center;
+        margin: 0 5% 0 5%;
     }
-    #landing {
-        margin-bottom: 0;
+    /*responsiveness for blog watch page */
+    .post {
+        width: 90%;
+        margin: 0 5% 0 5%;
     }
-    #skills {
-        margin-top: 0;
+    .post p {
+        font-size: 15px;
+    }
+    .post h1 {
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    .post-details p {
+        font-size: 25px;
+    }
+    .post-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .comment-form button {
+        margin-left: 0%;
+        width: 40%;
+        background-color: #008073;
+        color: #ffffff;
+        border: 1px solid #008073;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    /*responsiveness for new post page */
+    .post form {
+        width: 90%;
+        margin: 0%;
+        padding:0;
+    }
+    .post form input {
+        margin: 0%;
+    }
+    .post form textarea {
+        margin: 0%;
     }
 }
-@media(min-width: 1000px){
-#closeButton {
-    display: none;
+/*responsiveness of login page */
+@media(max-width: 750px){
+    /*css for branding*/
+   .top {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0%;
+   }
 }
-#main {
-    display: none;
+@media(max-width: 550px){
+    /*css for footer */
+    .foot {
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         flex-wrap: wrap;
+         flex-direction: column;;
+    }
+    .copyright {
+        width: 100%;
+    }
+    .sms {
+        width: 100%;
+        padding: 20px;
+    }
+ }
+ .foot {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
+@media(max-width:700px){
+    /*css for login form */
+    .login form {
+        width: 90%;
+    }
+
 }
