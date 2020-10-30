@@ -133,6 +133,14 @@
     #about div p {
         font-size: 25px;
     }
+    /*responsiveness for profile page */
+    .profile {
+        width: 90%;
+        border: 1px solid black;
+        padding: 1em;
+        justify-content: center;
+        margin: 0 5% 0 5%;
+    }
 }
 /*responsiveness of login page */
 @media(max-width: 750px){
