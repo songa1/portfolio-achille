@@ -25,19 +25,6 @@
     #button {
         display: none;
     }
-    .top {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .foot {
-    display: flex;
-    }
-    .copyright {
-        width: 100%;
-    }
-    .sms {
-        width: 100%;
-    }
     .post-item div {
         display: grid;
         grid-template-columns: 15% 15% 15% 15%;
@@ -71,12 +58,8 @@
     border: 1px solid #008073;
 }
 .top {
-    display: grid;
-    grid-template-columns: 70% 30%;
-}
-.brandin {
-    color: #008073;
-
+    display: flex;
+    flex-wrap: wrap;
 }
 #button {
     background-color: #008073;

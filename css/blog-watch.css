@@ -67,7 +67,8 @@
         color: #008073;
     }
     .comment-form {
-        width: 80%;
+        width: 90%;
+        margin: 0 5% 0 5%;
     }
     .comment-form label {
         color: #008073;
@@ -244,4 +245,32 @@
         0 22.3px 17.9px rgba(110, 110, 110, 0.072),
         0 41.8px 33.4px rgba(110, 110, 110, 0.086),
         0 100px 80px rgba(59, 59, 59, 0.12);
+}
+.comments-pub {
+    display: grid;
+    width: 80%;
+    grid-row: 2;
+}
+.comment {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
+}
+.comment h4 {
+    display: inline-block;
+    padding: 10px;
+    margin: 0%;
+}
+.comment p {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0%;
+}
+#comments-pub h5 {
+    text-decoration: none;
+    margin-top: 10px;
 }

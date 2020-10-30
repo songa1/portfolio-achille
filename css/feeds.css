@@ -22,21 +22,21 @@
     .post-item {
         margin: 0 15px 0 15px;
     }
-    #button {
-        display: none;
-    }
     .top {
         display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
         flex-wrap: wrap;
     }
-    .foot {
-    display: flex;
+    #input {
+        width: 70%;
+        padding: 10px;
     }
-    .copyright {
-        width: 100%;
-    }
-    .sms {
-        width: 100%;
+    #button {
+        width: 20%;
+        padding: 10px;
+        border: 0;
     }
 }
 .goto {
@@ -49,16 +49,30 @@
     width: 15px;
 }
 .blog h2 {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: inline-block;
+    position: relative;
 }
-.searchBar {
+.blog h2 a {
+    display: inline-block;
+    align-items: center;
+}
+.blog h2 #log {
+    float: right;
+    text-align: right;
+    margin-top: 0%;
+    padding-top: 0%;
+    padding: 3px 10px 3px 10px;
+    background-color: #455755;
+    font-weight: bolder;
+    color: #ffffff;
+    border-radius: 10px;
+}
+#searchBar {
     display: grid;
-    justify-content: end;
     margin: 35px 10px 10px 10px;
     grid-gap: 1em;
 }
-.searchBar input {
+#searchBar input {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #008073;
@@ -67,8 +81,8 @@
     display: grid;
     grid-template-columns: 70% 30%;
 }
-.brandin {
-    color: #008073;
+#brandi {
+    padding: 10px;
 }
 #button {
     background-color: #008073;
