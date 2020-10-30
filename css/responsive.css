@@ -169,6 +169,18 @@
         border-radius: 10px;
         margin: 10px;
     }
+    /*responsiveness for new post page */
+    .post form {
+        width: 90%;
+        margin: 0%;
+        padding:0;
+    }
+    .post form input {
+        margin: 0%;
+    }
+    .post form textarea {
+        margin: 0%;
+    }
 }
 /*responsiveness of login page */
 @media(max-width: 750px){
