@@ -113,3 +113,45 @@
         font-size: 25px;
     }
 }
+/*responsiveness of login page */
+@media(max-width: 750px){
+    /*css for branding*/
+   .top {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0%;
+   }
+}
+@media(max-width: 550px){
+    /*css for footer */
+    .foot {
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         flex-wrap: wrap;
+         flex-direction: column;;
+    }
+    .copyright {
+        width: 100%;
+    }
+    .sms {
+        width: 100%;
+        padding: 20px;
+    }
+ }
+ .foot {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media(max-width:700px){
+    /*css for login form */
+    .login form {
+        width: 90%;
+    }
+
+}
