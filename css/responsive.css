@@ -5,16 +5,32 @@
         display: none;
     }
 }
+@media(max-width:510px){
+    /* responsiveness for navigation page */
+    .branding a{
+        position: absolute;
+        font-size: 10px;
+    }
+    .branding {
+        height: 100px;
+    }
+}
+@media(max-width:490px){
+    /* responsiveness for navigation page */
+    .branding a{
+        
+        position: absolute;
+    }
+}
 /* styling small screens */
 @media(max-width:960px){
     /* responsiveness for navigation page */
     .navigation {
-        display: fixed;
         position: fixed;
         width: 100%;
         margin: 0%;
         padding: 0%;
-        top: 0%;
+        z-index:1;
     }
     .branding {
         width: 100%;
@@ -23,7 +39,12 @@
         align-items: center;
         height: 64px;
         top: 0%;
-
+        position: absolute;
+        z-index: 1;
+    }
+    .landing{
+        z-index: auto;
+        position: relative;
     }
     .nav-item {
         position: absolute;
@@ -34,23 +55,23 @@
     .branding a {
         text-align: center;
         font-weight: bolder;
-        margin: 0 35%;
+        position: absolute;
     }
     .branding a p {
         text-align: center;
         padding: 0%;
         margin-top: -12px;
     }
-    #mySidebar {
+    .links {
         height: 100%;
         position: absolute;
         display: none;
-        z-index: 1;
         cursor: pointer;
         top: 0;
         left: 0;
-        padding: 0;
+        bottom: 0;
         transition: 0.5s;
+        z-index: 2;
     }
     #main {
         padding: 10px;
