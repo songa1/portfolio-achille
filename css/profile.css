@@ -76,11 +76,25 @@
 
 /*css for profile section */
 .profile {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    width: 50%;
+    border: 1px solid black;
+    padding: 1em;
+    justify-content: center;
+    margin: 0 25% 0 25%;
+=======
+>>>>>>> responsive-ui
     width: 90%;
     border: 1px solid #008073;
     padding: 1em;
     justify-content: center;
     margin: 0 5% 0 5%;
+<<<<<<< HEAD
+=======
+>>>>>>> login
+>>>>>>> responsive-ui
 }
 .profile div h1 {
     justify-self: start;

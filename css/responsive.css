@@ -4,6 +4,9 @@
     #main {
         display: none;
     }
+    #closeButton {
+        display: none;
+    }
 }
 @media(max-width:510px){
     /* responsiveness for navigation page */
@@ -42,6 +45,14 @@
         position: absolute;
         z-index: 1;
     }
+    #closeButton {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: #008073;
+    }
     .landing{
         z-index: auto;
         position: relative;
@@ -71,7 +82,8 @@
         left: 0;
         bottom: 0;
         transition: 0.5s;
-        z-index: 2;
+        z-index: 99990;
+        padding-top: 50px;
     }
     #main {
         padding: 10px;
@@ -223,4 +235,14 @@
         width: 90%;
     }
 
+}
+@media(max-width:500px){
+    .goto a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+}
+.goto a:hover {
+    border-bottom: 1px solid #23302e;
 }

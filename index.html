@@ -16,30 +16,11 @@
 <body>
 
 <!--Navigation-->
-<section class="navigation">
-    <div class="nav-item branding">
-        <div class="menu-button">
-            <img src="img/menu-button-of-three-horizontal-lines.png" onclick="openNav()" id="main">
-        </div>
-        <a href="#">
-            <h2 style="color: #008073;">Achille Songa</h2>
-            <p>Web developer</p>
-        </a>
-    </div>
-    
-    <div class="nav-item links" id="mySidebar" style="background-color: #ffffff">
-        <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
-        <a href="#skills" onclick="hideDiv()"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
-        <a href="#about" onclick="hideDiv()"><span><img src="../img/about.png"></span>  About me</a>
-        <a href="#projects" onclick="hideDiv()"><span><img src="../img/project-xxl.png"></span>  Projects</a>
-        <a href="#experience"  onclick="hideDiv()"><span><img src="../img/experience.png"></span>  Experience</a>
-        <a href="blog/feeds.html" onclick="hideDiv()"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
-        <a href="#contact" onclick="hideDiv()" id="li-1"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
-        <a href="user/login.html" onclick="hideDiv()"><span><img src="../img/login-xxl.png"></span>  Log in</a>
-    </div>
+
 </section>
 <!--Contents and pages-->
-<section class="content" id="content">
+<div id="minute">
+<section class="content" id="content" onclick="closeDiv()">
     <!--Landing page-->
     <div class="landing" id="landing">
         <img src="img/songa.jpg" alt="">
@@ -181,6 +162,7 @@
         </div>
     </div>
 </section>
+</div>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -193,8 +175,13 @@
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 <body>    
+    <style>
+        .js-is-hidden {
+            display: none;
+        }
+    </style>
     <!--Navigation-->
-    <section class="navigation">
+    <section class="navigation" id="nav">
         <div class="nav-item branding">
             <div class="menu-button">
                 <img src="img/menu-button-of-three-horizontal-lines.png" onclick="openNav()" id="main">
@@ -206,13 +193,14 @@
         </div>
         
         <div class="nav-item links" id="mySidebar" style="background-color: #ffffff">
-            <a href="#skills" onclick="hideDiv()"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
-            <a href="#about" onclick="hideDiv()"><span><img src="../img/about.png"></span>  About me</a>
-            <a href="#projects" onclick="hideDiv()"><span><img src="../img/project-xxl.png"></span>  Projects</a>
-            <a href="#experience"  onclick="hideDiv()"><span><img src="../img/experience.png"></span>  Experience</a>
-            <a href="blog/feeds.html" onclick="hideDiv()"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
-            <a href="#contact" onclick="hideDiv()" id="li-1"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
-            <a href="user/login.html" onclick="hideDiv()"><span><img src="../img/login-xxl.png"></span>  Log in</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="closeButton">&times;</a>
+            <a href="#skills" onclick="hideDiv()" id="skillsection"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
+            <a href="#about" onclick="hideDiv()" id="aboutsection"><span><img src="../img/about.png"></span>  About me</a>
+            <a href="#projects" onclick="hideDiv()" id="projectsection"><span><img src="../img/project-xxl.png"></span>  Projects</a>
+            <a href="#experience"  onclick="hideDiv()"><span><img src="../img/experience.png" id="experiencesection"></span>  Experience</a>
+            <a href="blog/feeds.html" onclick="hideDiv()" id="blogsection"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
+            <a href="#contact" onclick="hideDiv()" id="li-1"><span><img src="../img/contacts-2-xxl.png" id="contactsection"></span>  Contact me</a>
+            <a href="user/login.html" onclick="hideDiv()" id="logsection"><span><img src="../img/login-xxl.png"></span>  Log in</a>
         </div>
     </section>
     <!--Contents and pages-->
