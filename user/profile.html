@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/feeds.css">
     <link rel="stylesheet" type="text/css" href="../css/responsive.css">
     <link rel="stylesheet" type="text/css" href="../css/blog-watch.css">
+    <script src="../js/profile-sections.js"></script>
     
 </head>
 <body>
@@ -27,14 +28,243 @@
         <div class="profile">
             <div class="namepic">
                 <h3>Cishahayo Songa Achille</h3>
-                <a href="../blog/modify.html">Manage a blog</a>
                 <img src="../img/songa.jpg">
                 <button>Log out</button>
                 <h4>Views: 67      |      Visitors: 10</h4>
                 
             </div>
-            
+            <div class="hhh">
+            <div class="manageweb">
+                <div class="man-nav">
+                    <a href="#man-main" onclick="mainPage()" id="mainpage">Main page</a>
+                    <a href="#man-skills" onclick="skillsPage()" id="skillpage">Skills</a>
+                    <a href="#man-about" onclick="aboutPage()" id="aboutpage">About</a>
+                    <a href="#man-project" onclick="projectPage()" id="projectpage">Projects</a>
+                    <a href="#man-experience" onclick="expertPage()" id="expertpage">Experience</a>
+                    <a href="#man-contact" onclick="contactPage()" id="contactpage">Contacts</a>
+                    <a href="../blog/modify.html" onclick="contactPage()">Manage a blog</a>
+                </div>
+                <section id="man-main">             
+                    <div style="display: flex;flex-wrap: wrap;" class="man-main-div1">
+                        <img src="../img/songa.jpg">
+                        <div style="padding: 10px;width: 80%;">
+                        <label>Update the image</label><input type="file"><button id="update-text" style="padding: 10px;">Update Image</button></div>
+                    </div>
+                    <div class="man-main-div1">
+                        <h4 style="padding: 0px;"><i>"Imagination is more important than knowledge."</i></h4>
+                        <div style="padding: 10px;width: 100%;display: inline-block;">
+                        <input type="text" style="padding: 10px;width: 100%;"><button id="update-text" style="padding: 10px;">Update text</button></div>
+                    </div>
+                </section>
+                <section id="man-skills">             
+                    <div style="display: flex;flex-wrap: wrap;" class="man-skills-div2">
+                        <div class="skill-added">
+                            <p><b>1</b></p>
+                            <p><b>JS</b></p>
+                            <p><b>Front-end</b></p>
+                            <img src="../img/javascript.png">
+                            <p><button>Edit</button></p>
+                        </div>
+                        <div class="skill-added">
+                            <p><b>2</b></p>
+                            <p><b>HTML</b></p>
+                            <p><b>Front-end</b></p>
+                            <img src="../img/html (1).png">
+                            <p><button>Edit</button></p>
+                        </div>
+                        <div class="skill-added">
+                            <p><b>1</b></p>
+                            <p><b>JS</b></p>
+                            <p><b>Front-end</b></p>
+                            <img src="../img/javascript.png">
+                            <p><button>Edit</button></p>
+                        </div>
+                        <div class="skill-added">
+                            <p><b>2</b></p>
+                            <p><b>HTML</b></p>
+                            <p><b>Front-end</b></p>
+                            <img src="../img/html (1).png">
+                            <p><button>Edit</button></p>
+                        </div>
+                        <div class="skill-added">
+                            <p><b>1</b></p>
+                            <p><b>JS</b></p>
+                            <p><b>Front-end</b></p>
+                            <img src="../img/javascript.png">
+                            <p><button>Edit</button></p>
+                        </div>
+                        <div class="skill-added">
+                            <p><b>2</b></p>
+                            <p><b>HTML</b></p>
+                            <p><b>Front-end</b></p>
+                            <img src="../img/html (1).png">
+                            <p><button>Edit</button></p>
+                        </div>
+                    </div>
+                    <div class="man-skills-div2">
+                        <form>
+                            <label>Skills title</label>
+                            <input type="text">
+                            <label>Choose category</label>
+                            <select>
+                                <option>Front-end</option>
+                                <option>Back-end</option>
+                                <option>CMS</option>
+                                <option>Other skills</option>
+                            </select>
+                            <label>Add an image</label>
+                            <input type="file">
+                            <button id="skill-add">Add skill</button>
+                        </form>
+                    </div>
+                </section>
+                <section id="man-about">             
+                    <div style="display: flex;flex-wrap: wrap;" class="man-about-div3">
+                        <div class="about-added">
+                            <h1>This is the heading</h1>
+                            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum rem nam sed, deleniti assumenda, enim esse ipsa incidunt voluptas reprehenderit earum alias, facere quis! Distinctio exercitationem dolorum nulla! Facere fugiat error totam. Odit eius temporibus dicta atque, incidunt illo eos!</h4>
+                            <p>Edit</p>
+                        </div>
+                    </div>
+                    <div class="man-about-div3">
+                        <form>
+                            <label>Heading</label>
+                            <input type="text">
+                            <label>Main about</label>
+                            <textarea></textarea>
+                            <button id="skill-add">Update about</button>
+                        </form>
+                    </div>
+                </section>
+                <section id="man-project">             
+                    <div style="display: flex;flex-wrap: wrap;" class="man-project-div4">
+                        <div class="project-added">
+                            <p><b>1</b></p>
+                            <p><b><a href="#">Manwel</a></b></p>
+                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error repellat aliquid libero exercitationem rerum similique non deserunt, vitae quam, ea maxime voluptates quod veniam tenetur culpa sequi eligendi magni!</b></p>
+                            <img src="../img/andela.png">
+                            <p><button>Edit</button></p>
+                        </div>
+                        <div class="project-added">
+                            <p><b>2</b></p>
+                            <p><b><a href="#">Manwel</a></b></p>
+                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error repellat aliquid libero exercitationem rerum similique non deserunt, vitae quam, ea maxime voluptates quod veniam tenetur culpa sequi eligendi magni!</b></p>
+                            <img src="../img/andela.png">
+                            <p><button>Edit</button></p>
+                        </div>
+                    </div>
+                    <div class="man-project-div4">
+                        <form>
+                            <label>Project title</label>
+                            <input type="text">
+                            <label>Project link</label>
+                            <input type="url">
+                            <label>Add an image</label>
+                            <input type="file">
+                            <label>Description</label>
+                            <textarea></textarea>
+                            <button id="skill-add">Add a project</button>
+                        </form>
+                    </div>
+                </section>
+                <section id="man-experience">             
+                    <div style="display: flex;flex-wrap: wrap;" class="man-project-div4">
+                        <div class="project-added">
+                            <p><b>1</b></p>
+                            <p><b><a href="#">Software engineer</a></b></p>
+                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error repellat aliquid libero exercitationem rerum similique non deserunt, vitae quam, ea maxime voluptates quod veniam tenetur culpa sequi eligendi magni!</b></p>
+                            <img src="../img/andela.png">
+                            <p><button>Edit</button></p>
+                        </div>
+                        <div class="project-added">
+                            <p><b>2</b></p>
+                            <p><b><a href="#">Graphic designer</a></b></p>
+                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error repellat aliquid libero exercitationem rerum similique non deserunt, vitae quam, ea maxime voluptates quod veniam tenetur culpa sequi eligendi magni!</b></p>
+                            <img src="../img/andela.png">
+                            <p><button>Edit</button></p>
+                        </div>
+                    </div>
+                    <div class="man-project-div4">
+                        <form>
+                            <label>Experience heading</label>
+                            <input type="text">
+                            <label>A link if any</label>
+                            <input type="url">
+                            <label>Add an image</label>
+                            <input type="file">
+                            <label>Description</label>
+                            <textarea></textarea>
+                            <button id="skill-add">Add experience</button>
+                        </form>
+                    </div>
+                </section>
+                <section id="man-contact">             
+                    <div style="display: flex;flex-wrap: wrap;" class="man-project-div4">
+                        <div class="contact-added">
+                            <p><b>1</b></p>
+                            <p><b>Jane Doe</b></p>
+                            <p><b>janedoe@example.com</b></p>
+                            <p><button>Check</button></p>
+                        </div>
+                        <div class="contact-added">
+                            <p><b>2</b></p>
+                            <p><b>Jane Doe</b></p>
+                            <p><b>janedoe@example.com</b></p>
+                            <p><button>Check</button></p>
+                        </div>
+                        <div class="contact-added">
+                            <p><b>3</b></p>
+                            <p><b>Jane Doe</b></p>
+                            <p><b>janedoe@example.com</b></p>
+                            <p><button>Check</button></p>
+                        </div>
+                        <div class="contact-added">
+                            <p><b>4</b></p>
+                            <p><b>Jane Doe</b></p>
+                            <p><b>janedoe@example.com</b></p>
+                            <p><button>Check</button></p>
+                        </div>
+                        <div class="contact-added">
+                            <p><b>5</b></p>
+                            <p><b>Jane Doe</b></p>
+                            <p><b>janedoe@example.com</b></p>
+                            <p><button>Check</button></p>
+                        </div>
+                        <div class="contact-added">
+                            <p><b>6</b></p>
+                            <p><b>Jane Doe</b></p>
+                            <p><b>janedoe@example.com</b></p>
+                            <p><button>Check</button></p>
+                        </div>
+                        <div class="contact-added">
+                            <p><b>7</b></p>
+                            <p><b>Jane Doe</b></p>
+                            <p><b>janedoe@example.com</b></p>
+                            <p><button>Check</button></p>
+                        </div>
+                        <div class="contact-added">
+                            <p><b>8</b></p>
+                            <p><b>Jane Doe</b></p>
+                            <p><b>janedoe@example.com</b></p>
+                            <p><button>Check</button></p>
+                        </div>
+                    </div>
+                    <div class="man-project-div4">
+                        <div class="message-con">
+                            <div class="name-date"><p>Jane Doe &nbsp; - &nbsp; 10 october 2020</p></div>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem porro aperiam asperiores accusamus maiores iusto?</p>
+                        </div>
+                        <div class="message-con">
+                            <div class="name-date"><p>Jane Doe &nbsp; - &nbsp; 10 october 2020</p></div>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem porro aperiam asperiores accusamus maiores iusto?</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>   
+    </div>
         <!--Footer section-->
         <div class="footer" style="position: absolute;">
             <div class="foot">
