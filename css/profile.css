@@ -146,11 +146,11 @@
 }
 /*css for profile section */
 .profile {
-    width: 80%;
+    width: 90%;
     border: 1px solid black;
     padding: 1em;
     justify-content: center;
-    margin: 0 10% 0 10%;
+    margin: 0 5% 0 5%;
 }
 .profile div h1 {
     justify-self: start;
