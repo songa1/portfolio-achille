@@ -5,34 +5,17 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://cdn.zinggrid.com/zinggrid.min.js"></script>
 <script src="js/scrollaware.js"></script>
+<link rel="stylesheet" type="text/css" href="css/experience.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/feeds.css">
+<script src="js/nav-responsive.js"></script>
 </head>
 <body>
-<!--Navigation-->
-<!--JS for responsiveness-->
-<script>
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        document.getElementById("main").style.display = "none";
-    }
-    function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-        document.getElementById("main").style.display = "block";
-    }
-    function hideDiv() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-        document.getElementById("main").style.display = "block";
-        document.getElementById("li-1").style.display = "none";
-    }
-    
-</script>
-
 <!--Navigation-->
 <section class="navigation">
     <div class="nav-item branding">
         <div class="menu-button">
+=======
             <img src="img/menu-button-of-three-horizontal-lines.png" onclick="openNav()" id="main">
         </div>
         <a href="#">
@@ -40,15 +23,14 @@
             <p>Web developer</p>
         </a>
     </div>
-    
     <div class="nav-item links" id="mySidebar" style="background-color: #ffffff">
         <a href="#skills" class="skillsSection navItems"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
-        <a href="#about" class="aboutSection navItems"><span><img src="../img/about.png"></span>  About me</a>
-        <a href="#projects" class="projectSection navItems"><span><img src="../img/project-xxl.png"></span>  Projects</a>
-        <a href="#experience" class="expertSection navItems"><span><img src="../img/experience.png"></span>  Experience</a>
-        <a href="blog/feeds.html" class="blogSection navItems"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
-        <a href="#contact" id="li-1" class="contactSection navItems"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
-        <a href="users/login.html" class="logSection navItems"><span><img src="../img/login-xxl.png"></span>  Log in</a>
+        <a href="#about" class="aboutSection navItem"><span><img src="../img/about.png"></span>  About me</a>
+        <a href="#projects" class="projectSection navItem"><span><img src="../img/project-xxl.png"></span>  Projects</a>
+        <a href="#experience" class="expertSection navItem"><span><img src="../img/experience.png"></span>  Experience</a>
+        <a href="blog/feeds.html" class="blogSection navItem"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
+        <a href="#contact" class="contactSenavItem"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
+        <a href="users/login.html" class="logSection navItem"><span><img src="../img/login-xxl.png"></span>  Log in</a>
     </div>
 </section>
 <!--Contents and pages-->
@@ -141,12 +123,36 @@
             </div>
         </div>
     </div>
-
-
+    <!--Experience page-->
+    <div id="experience" class="experience">
+        <h2>Experience</h2>
+        <div class="expert">
+            <h1>Software engineer</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto a saepe sint odio nam ratione quidem excepturi labore, corporis eos inventore cupiditate maxime dolores necessitatibus laboriosam eaque! Pariatur, nesciunt quod.
+            </p>
+        </div>
+        <div class="expert">
+            <h1>Graphic designer</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto a saepe sint odio nam ratione quidem excepturi labore, corporis eos inventore cupiditate maxime dolores necessitatibus laboriosam eaque! Pariatur, nesciunt quod.
+            </p>
+        </div>
+    </div>
     <!--Contact page-->
     <div id="contact" class="contact">
         <h2>Contact me</h2>
         <div class="contact-s">
+            <!--Css for responsive contact page-->
+
+            <style>
+                @media (max-width: 800px) {
+                    .contact-s {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            </style>
             <div class="contact-1">
                 <div>
                     <h5><span><img src="img/email-xxl.png"></span> 
@@ -223,16 +229,70 @@
                 <p>Web developer</p>
             </a>
         </div>
-        
+        <script>
+
+function selectElementByClass(className) {
+    return document.querySelector(`.${className}`);
+  }
+  
+  const sections = [
+    selectElementByClass("skills"),
+    selectElementByClass("about"),
+    selectElementByClass("projects"),
+    selectElementByClass("experience"),
+    selectElementByClass("expert"),
+    selectElementByClass("contact")
+  ];
+  
+  const navItems = {
+    skills: selectElementByClass("skillsSection"),
+    about: selectElementByClass("aboutSection"),
+    projects: selectElementByClass("projectSection"),
+    experience: selectElementByClass("expertSection"),
+    contact: selectElementByClass("contactSection")
+
+  };
+  
+  // intersection observer setup
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.7
+  };
+  
+  function observerCallback(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // get the nav item corresponding to the id of the section
+        // that is currently in view
+        const navItem = navItems[entry.target.id];
+        // add 'active' class on the navItem
+        navItem.classList.add("active");
+        // remove 'active' class from any navItem that is not
+        // same as 'navItem' defined above
+        Object.values(navItems).forEach((item) => {
+          if (item != navItem) {
+            item.classList.remove("active");
+          }
+        });
+      }
+    });
+  }
+  
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  
+  sections.forEach((sec) => observer.observe(sec));
+  
+  
+        </script>
         <div class="nav-item links" id="mySidebar" style="background-color: #ffffff">
-            <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
-            <a href="#skills" onclick="hideDiv()"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
-            <a href="#about" onclick="hideDiv()"><span><img src="../img/about.png"></span>  About me</a>
-            <a href="#projects" onclick="hideDiv()"><span><img src="../img/project-xxl.png"></span>  Projects</a>
-            <a href="#experience"  onclick="hideDiv()"><span><img src="../img/experience.png"></span>  Experience</a>
-            <a href="blog/feeds.html" onclick="hideDiv()"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
-            <a href="#contact" onclick="hideDiv()" id="li-1"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
-            <a href="users/login.html" onclick="hideDiv()"><span><img src="../img/login-xxl.png"></span>  Log in</a>
+            <a href="#skills" class="skillsSection navItems"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
+            <a href="#about" class="aboutSection navItem"><span><img src="../img/about.png"></span>  About me</a>
+            <a href="#projects" class="projectSection navItem"><span><img src="../img/project-xxl.png"></span>  Projects</a>
+            <a href="#experience" class="expertSection navItem"><span><img src="../img/experience.png"></span>  Experience</a>
+            <a href="blog/feeds.html" class="blogSection navItem"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
+            <a href="#contact" class="contactSection navItem"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
+            <a href="users/login.html" class="logSection navItem"><span><img src="../img/login-xxl.png"></span>  Log in</a>
         </div>
     </section>
     <!--Contents and pages-->

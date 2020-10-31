@@ -46,13 +46,6 @@ body, html {
     padding: 10px;
     display: block;
 }
-.links a:hover {
-    border-left: 2px solid blue;
-    background-color: #f1f1f1;
-}
-.links a.active {
-    border-left: 2px solid blue;
-}
 
 /* css for pages */
 
@@ -96,7 +89,7 @@ body, html {
     color: #ffffff;
     padding: 30px;
 }
-.skills {
+#skills {
     height: 100%;
 }
 .links {
@@ -105,10 +98,6 @@ body, html {
 .links a {
     padding: 10px;
     display: block;
-}
-.links a:hover {
-    border-left: 2px solid blue;
-    background-color: #f1f1f1;
 }
 .skill {
     width: 80%;
@@ -143,7 +132,7 @@ body, html {
     color: #ffffff;
     padding: 30px;
 }
-.contact {
+#contact {
     height: 100%;
 }
 .contact-s {
@@ -194,7 +183,7 @@ body, html {
     color: #ffffff;
     padding: 30px;
 }
-.about {
+#about {
     height: 100%;
 }
 .about div {
@@ -258,7 +247,7 @@ body, html {
     color: #ffffff;
     padding: 30px;
 }
-.projects {
+#projects {
     height: 100%;
 }
 .wrapper {
@@ -272,6 +261,10 @@ body, html {
     width: 100%;
     background-color: #ffffff;
     border-radius: 10px;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
 }
 .wrap-item img {
     width: 100%;
@@ -288,4 +281,12 @@ body, html {
     width: 85%;
     margin-left: 15%;
 
+}
+.active {
+    border-left: 5px solid #008073;
+    color: #008073;
+}
+.links a:hover {
+    border-left: 5px solid #008073;
+    color: #008073;
 }
