@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://cdn.zinggrid.com/zinggrid.min.js"></script>
+<script src="js/scrollaware.js"></script>
 </head>
 <body>
 <!--Navigation-->
@@ -40,14 +42,13 @@
     </div>
     
     <div class="nav-item links" id="mySidebar" style="background-color: #ffffff">
-        <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
-        <a href="#skills" onclick="hideDiv()"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
-        <a href="#about" onclick="hideDiv()"><span><img src="../img/about.png"></span>  About me</a>
-        <a href="#projects" onclick="hideDiv()"><span><img src="../img/project-xxl.png"></span>  Projects</a>
-        <a href="#experience"  onclick="hideDiv()"><span><img src="../img/experience.png"></span>  Experience</a>
-        <a href="blog/feeds.html" onclick="hideDiv()"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
-        <a href="#contact" onclick="hideDiv()" id="li-1"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
-        <a href="users/login.html" onclick="hideDiv()"><span><img src="../img/login-xxl.png"></span>  Log in</a>
+        <a href="#skills" class="skillsSection navItems"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
+        <a href="#about" class="aboutSection navItems"><span><img src="../img/about.png"></span>  About me</a>
+        <a href="#projects" class="projectSection navItems"><span><img src="../img/project-xxl.png"></span>  Projects</a>
+        <a href="#experience" class="expertSection navItems"><span><img src="../img/experience.png"></span>  Experience</a>
+        <a href="blog/feeds.html" class="blogSection navItems"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
+        <a href="#contact" id="li-1" class="contactSection navItems"><span><img src="../img/contacts-2-xxl.png"></span>  Contact me</a>
+        <a href="users/login.html" class="logSection navItems"><span><img src="../img/login-xxl.png"></span>  Log in</a>
     </div>
 </section>
 <!--Contents and pages-->
