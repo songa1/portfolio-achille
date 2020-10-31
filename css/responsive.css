@@ -224,3 +224,13 @@
     }
 
 }
+@media(max-width:500px){
+    .goto a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+}
+.goto a:hover {
+    border-bottom: 1px solid #23302e;
+}
