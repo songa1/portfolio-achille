@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/profile.css">
     <link rel="stylesheet" type="text/css" href="../css/feeds.css">
     <link rel="stylesheet" type="text/css" href="../css/blog-watch.css">
+    <script src="../js/profile-sections.js"></script>
     
 </head>
 <body>
@@ -28,20 +29,21 @@
         <div class="profile">
             <div class="namepic">
                 <h3>Cishahayo Songa Achille</h3>
-                <a href="../blog/modify.html">Manage a blog</a>
                 <img src="../img/songa.jpg">
                 <button>Log out</button>
                 <h4>Views: 67      |      Visitors: 10</h4>
                 
             </div>
+            <div class="hhh">
             <div class="manageweb">
                 <div class="man-nav">
-                    <a href="#man-main">Main page</a>
-                    <a href="#man-skills">Skills</a>
-                    <a href="#man-about">About</a>
-                    <a href="#man-project">Projects</a>
-                    <a href="#man-experience">Experience</a>
-                    <a href="#man-contact">Contacts</a>
+                    <a href="#man-main" onclick="mainPage()" id="mainpage">Main page</a>
+                    <a href="#man-skills" onclick="skillsPage()" id="skillpage">Skills</a>
+                    <a href="#man-about" onclick="aboutPage()" id="aboutpage">About</a>
+                    <a href="#man-project" onclick="projectPage()" id="projectpage">Projects</a>
+                    <a href="#man-experience" onclick="expertPage()" id="expertpage">Experience</a>
+                    <a href="#man-contact" onclick="contactPage()" id="contactpage">Contacts</a>
+                    <a href="../blog/modify.html" onclick="contactPage()">Manage a blog</a>
                 </div>
                 <section id="man-main">             
                     <div style="display: flex;flex-wrap: wrap;" class="man-main-div1">
@@ -263,6 +265,7 @@
                 </section>
             </div>
         </div>   
+    </div>
         <!--Footer section-->
         <div class="footer">
             <div class="foot">

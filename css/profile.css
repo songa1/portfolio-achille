@@ -146,10 +146,11 @@
 }
 /*css for profile section */
 .profile {
-    width: 100%;
+    width: 80%;
     border: 1px solid black;
     padding: 1em;
     justify-content: center;
+    margin: 0 10% 0 10%;
 }
 .profile div h1 {
     justify-self: start;
@@ -199,7 +200,7 @@
 }
 .man-nav {
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10%;
     justify-content: center;
     background-color:grey;
 }
@@ -534,4 +535,7 @@
     background-color: #008073;
     color: #ffffff;
     border-radius: 10px;
+}
+#man-main, #man-skills, #man-about, #man-project, #man-experience, #man-contact {
+    display: none;
 }
