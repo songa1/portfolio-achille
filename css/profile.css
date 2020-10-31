@@ -76,11 +76,19 @@
 
 /*css for profile section */
 .profile {
+<<<<<<< HEAD
     width: 50%;
     border: 1px solid black;
     padding: 1em;
     justify-content: center;
     margin: 0 25% 0 25%;
+=======
+    width: 90%;
+    border: 1px solid black;
+    padding: 1em;
+    justify-content: center;
+    margin: 0 5% 0 5%;
+>>>>>>> login
 }
 .profile div h1 {
     justify-self: start;
@@ -121,4 +129,351 @@
 }
 .namepic h4 {
     grid-row: 4;
+}
+/*css for page manage landing page*/
+.manageweb {
+    width: 100%;
+    display: block;
+
+}
+.man-nav {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10%;
+    justify-content: center;
+    background-color:grey;
+}
+.man-nav a {
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: bolder;
+    padding: 20px;
+    text-align: center;
+}
+.man-nav a:hover {
+    background-color: #008073;
+}
+#man-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
+}
+.man-main-div1 {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+#man-main img {
+    width: 20%;
+}
+.man-main-div1 label {
+    width: 100%;
+    text-align: start;
+    color: #008073;
+}
+.man-main-div1 input {
+    width: 100%;
+    border: 1px solid #008073;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+
+}
+.man-main-div1 button {
+    padding: 0;
+    text-align: center;
+    margin: 0%;
+    width: 50%;
+}
+* {
+    background-origin: border-box;
+}
+#update-text {
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid #008073;
+    background-color: #008073;
+    color: #ffffff;
+    border-radius: 10px;
+}
+/*css for skills management*/
+#man-skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
+}
+.man-skills-div2 select {
+    width: 100%;
+    border: 1px solid #008073;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+
+}
+#skill-add {
+    margin-top: 5px;
+    padding: 20px;
+    border: 1px solid #008073;
+    background-color: #008073;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.skill-added {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #008073;
+    margin: 0;
+}
+.skill-added img {
+    width: 10%;
+}
+.man-skills-div2 label {
+    width: 100%;
+    text-align: start;
+    color: #008073;
+}
+.man-skills-div2 input {
+    width: 100%;
+    border: 1px solid #008073;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+
+}
+.man-skills-div2 button {
+    padding: 0;
+    text-align: center;
+    margin: 0%;
+    width: 100%;
+}
+.man-skills-div2 {
+    width: 90%;
+    padding: 10px;
+}
+/* css for about management */
+.man-about-div3 {
+    width: 90%;
+    padding: 10px;
+}
+#man-about {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
+}
+.man-about-div3 input {
+    width: 100%;
+    border: 1px solid #008073;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+
+}
+.man-about-div3 textarea {
+    width: 100%;
+    border: 1px solid #008073;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0;
+
+}
+.man-about-div3 label {
+    width: 100%;
+    text-align: start;
+    color: #008073;
+    margin-top: 4px;
+}
+.man-about-div3 button {
+    padding: 0;
+    text-align: center;
+    margin: 0%;
+    width: 100%;
+}
+.about-added {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+.about-added h1 {
+    border-bottom: 1px solid #008073;
+    padding: 10px;
+}
+.about-added h4 {
+    word-wrap: break-word;
+    padding: 10px;
+}
+.about-added p {
+    background-color: #008073;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+/*css for project management page */
+
+#man-project {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
+}
+.man-project-div4 {
+    width: 90%;
+    padding: 10px;
+}
+.man-project-div4 input {
+    width: 100%;
+    border: 1px solid #008073;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+
+}
+.man-project-div4 textarea {
+    width: 100%;
+    border: 1px solid #008073;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0;
+
+}
+.man-project-div4 label {
+    width: 100%;
+    text-align: start;
+    color: #008073;
+    margin-top: 4px;
+}
+.man-project-div4 button {
+    padding: 0;
+    text-align: center;
+    margin: 0%;
+    width: 100%;
+}
+.project-added {
+    display: grid;
+    grid-template-columns: 5% 12% 35% 30% 13%;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    border-bottom: 1px solid #008073;
+    margin: 0;
+    grid-gap: 1%;
+    padding: 5px;
+}
+.project-added p {
+    text-align: start;
+}
+.project-added p, img {
+    width: fit-content;
+}
+.project-added img {
+    width: 100%;
+    margin-top: 15px;
+}
+#man-experience {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
+}
+/*css for contacts managements page */
+#man-contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
+}
+.message-con {
+    width: fit-content;
+    padding: 20px;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
+    margin-top: 1em;
+    border-radius: 1em;
+}
+.name-date {
+    display: inline-block;
+}
+.message-con p {
+    padding: 10px;
+    text-align: start;
+    margin: 0;
+}
+.contact-added {
+    display: grid;
+    grid-template-columns: 10% 35% 35% 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    border-bottom: 1px solid #008073;
+    margin: 0;
+    grid-gap: 1%;
+    padding: 5px;
+}
+.contact-added button {
+    padding: 5px;border: 1px solid #008073;
+    background-color: #008073;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.skill-added button {
+    padding: 5px;border: 1px solid #008073;
+    background-color: #008073;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.project-added button {
+    padding: 5px;border: 1px solid #008073;
+    background-color: #008073;
+    color: #ffffff;
+    border-radius: 10px;
+}
+#man-main, #man-skills, #man-about, #man-project, #man-experience, #man-contact {
+    display: none;
 }
