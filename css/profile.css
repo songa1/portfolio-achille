@@ -76,19 +76,11 @@
 
 /*css for profile section */
 .profile {
-<<<<<<< HEAD
-    width: 50%;
-    border: 1px solid black;
-    padding: 1em;
-    justify-content: center;
-    margin: 0 25% 0 25%;
-=======
     width: 90%;
-    border: 1px solid black;
+    border: 1px solid #008073;
     padding: 1em;
     justify-content: center;
     margin: 0 5% 0 5%;
->>>>>>> login
 }
 .profile div h1 {
     justify-self: start;
@@ -97,6 +89,7 @@
     display: grid;
     grid-template-columns: 100%;
 }
+
 .namepic {
     display: grid;
     color: #008073;
@@ -138,7 +131,7 @@
 }
 .man-nav {
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10%;
     justify-content: center;
     background-color:grey;
 }
@@ -244,7 +237,8 @@
     margin: 0;
 }
 .skill-added img {
-    width: 10%;
+    width: 100%;
+    padding: 10px;
 }
 .man-skills-div2 label {
     width: 100%;
