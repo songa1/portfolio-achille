@@ -154,11 +154,9 @@
         justify-content: center;
         margin: 0 5% 0 5%;
     }
-
-
-
-
-
+    #profile {
+        text-align: center;
+    }
 
 
     /*responsiveness for blog watch page */
@@ -333,7 +331,7 @@
         }
         .project-added {
             display: grid;
-            grid-template-columns: 3% 20% 35% 25% 13%;
+            grid-template-columns: 3% 25% 35% 20% 13%;
             width: 100%;
             justify-content: center;
             align-items: start;

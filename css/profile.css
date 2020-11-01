@@ -471,3 +471,6 @@
 #man-main, #man-skills, #man-about, #man-project, #man-experience, #man-contact {
     display: none;
 }
+#profile {
+    margin-bottom: 120px;
+}
