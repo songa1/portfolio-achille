@@ -131,7 +131,7 @@
 }
 .man-nav {
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10%;
     justify-content: center;
     background-color:grey;
 }
