@@ -47,11 +47,11 @@ body, html {
     display: block;
 }
 .links a:hover {
-    border-left: 2px solid blue;
+    border-left: 5px solid #008073;
     background-color: #f1f1f1;
 }
 .links a.active {
-    border-left: 2px solid blue;
+    border-left: 5px solid #008073;
 }
 
 /* css for pages */
@@ -91,14 +91,10 @@ body, html {
     width: 85%;
     margin-left: 15%;
 
-<<<<<<< HEAD
 }
-=======
-}
-<<<<<<< HEAD
-=======
 .active-pro {
     background-color: #008073;
 }
->>>>>>> login
->>>>>>> responsive-ui
+textarea {
+    font-family: roboto,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
