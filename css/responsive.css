@@ -7,6 +7,7 @@
     #closeButton {
         display: none;
     }
+    
 }
 @media(max-width:510px){
     /* responsiveness for navigation page */
@@ -148,11 +149,18 @@
     /*responsiveness for profile page */
     .profile {
         width: 90%;
-        border: 1px solid black;
+        border: 1px solid #008073;
         padding: 1em;
         justify-content: center;
         margin: 0 5% 0 5%;
     }
+
+
+
+
+
+
+
     /*responsiveness for blog watch page */
     .post {
         width: 90%;
@@ -245,4 +253,133 @@
 }
 .goto a:hover {
     border-bottom: 1px solid #23302e;
+}
+@media(min-width: 1400px){
+    #maina {
+        display: none;
+    }
+}
+@media(max-width: 1400px) {
+    /*  responsiveness of additional pages on profile page */
+    .man-nav {
+        display: none;
+    }
+    .man-nav div img{
+        width: 40px;
+        padding: 10px;
+        }
+        #pro-links {
+            display: none;
+        }
+        #mainpage, #skillpage, #aboutpage, #projectpage, #expertpage, #contactpage, #managepage {
+            display: none;
+            float: left;
+        }
+        #man-main {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+            justify-content: center;
+            background-color: #ffffff;
+            box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+                0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+                0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+                0 100px 80px rgba(59, 59, 59, 0.12);
+        }
+        #man-skills {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+            justify-content: center;
+            background-color: #ffffff;
+            box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+                0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+                0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+                0 100px 80px rgba(59, 59, 59, 0.12);
+        }
+        .skill-added {
+            display: grid;
+            grid-template-columns: 10% 20% 20% 25% 20%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #008073;
+            margin: 0;
+        }
+        .skill-added {
+            word-wrap: break-word;
+        }
+        #man-about {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+            justify-content: center;
+            background-color: #ffffff;
+            box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+                0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+                0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+                0 100px 80px rgba(59, 59, 59, 0.12);
+        }
+        #man-project {
+            width: 100%;
+            display:block;
+            margin-top: 10px;
+            justify-content: center;
+            background-color: #ffffff;
+            box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+                0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+                0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+                0 100px 80px rgba(59, 59, 59, 0.12);
+        }
+        .project-added {
+            display: grid;
+            grid-template-columns: 3% 20% 35% 25% 13%;
+            width: 100%;
+            justify-content: center;
+            align-items: start;
+            border-bottom: 1px solid #008073;
+            margin: 0;
+            grid-gap: 1%;
+            padding: 5px;
+        }
+        .project-added p {
+            word-wrap: break-word;
+        }
+        #man-experience {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+            justify-content: center;
+            background-color: #ffffff;
+            box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+                0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+                0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+                0 100px 80px rgba(59, 59, 59, 0.12);
+        }
+        #man-contact {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+            justify-content: center;
+            background-color: #ffffff;
+            box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+                0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+                0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+                0 100px 80px rgba(59, 59, 59, 0.12);
+        }
+        .contact-added {
+            display: grid;
+            grid-template-columns: 10% 25% 50% 15%;
+            width: 100%;
+            justify-content: center;
+            align-items: start;
+            border-bottom: 1px solid #008073;
+            margin: 0;
+            grid-gap: 1%;
+            padding: 5px;
+        }
+        .contact-added p {
+            word-wrap: break-word;
+        }
+    
 }

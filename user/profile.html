@@ -36,15 +36,19 @@
             <div class="hhh">
             <div class="manageweb">
                 <div class="man-nav">
+                    <div class="menu-button">
+                        <img src="../img/menu-4-xxl.png" id="maina" onclick="openBar()"> 
+                    </div>
                     <a href="#man-main" onclick="mainPage()" id="mainpage">Main page</a>
                     <a href="#man-skills" onclick="skillsPage()" id="skillpage">Skills</a>
                     <a href="#man-about" onclick="aboutPage()" id="aboutpage">About</a>
                     <a href="#man-project" onclick="projectPage()" id="projectpage">Projects</a>
                     <a href="#man-experience" onclick="expertPage()" id="expertpage">Experience</a>
                     <a href="#man-contact" onclick="contactPage()" id="contactpage">Contacts</a>
-                    <a href="../blog/modify.html" onclick="contactPage()">Manage a blog</a>
+                    <a href="../blog/modify.html" onclick="contactPage()" id="managepage">Manage a blog</a>
                 </div>
-                <section id="man-main">             
+                <h2 id="main-titles">Manage main page</h2>  
+                <section id="man-main">           
                     <div style="display: flex;flex-wrap: wrap;" class="man-main-div1">
                         <img src="../img/songa.jpg">
                         <div style="padding: 10px;width: 80%;">
@@ -56,6 +60,7 @@
                         <input type="text" style="padding: 10px;width: 100%;"><button id="update-text" style="padding: 10px;">Update text</button></div>
                     </div>
                 </section>
+                <h2 id="skills-titles">Manage skills</h2> 
                 <section id="man-skills">             
                     <div style="display: flex;flex-wrap: wrap;" class="man-skills-div2">
                         <div class="skill-added">
@@ -118,6 +123,7 @@
                         </form>
                     </div>
                 </section>
+                <h2 id="about-titles">Manage about</h2> 
                 <section id="man-about">             
                     <div style="display: flex;flex-wrap: wrap;" class="man-about-div3">
                         <div class="about-added">
@@ -136,6 +142,7 @@
                         </form>
                     </div>
                 </section>
+                <h2 id="project-titles">Manage projects</h2> 
                 <section id="man-project">             
                     <div style="display: flex;flex-wrap: wrap;" class="man-project-div4">
                         <div class="project-added">
@@ -167,6 +174,7 @@
                         </form>
                     </div>
                 </section>
+                <h2 id="expert-titles">Manage experience</h2> 
                 <section id="man-experience">             
                     <div style="display: flex;flex-wrap: wrap;" class="man-project-div4">
                         <div class="project-added">
@@ -198,6 +206,7 @@
                         </form>
                     </div>
                 </section>
+                <h2 id="contact-titles">Manage contacts</h2> 
                 <section id="man-contact">             
                     <div style="display: flex;flex-wrap: wrap;" class="man-project-div4">
                         <div class="contact-added">
