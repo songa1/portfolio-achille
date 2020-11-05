@@ -1,0 +1,50 @@
+/* css for contact page */
+.contact h2 {
+    width: 100%;
+    background-color: #008073;
+    color: #ffffff;
+    padding: 30px;
+}
+.contact {
+    height: 100%;
+}
+.contact-s {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-column-gap: 1em;
+    justify-items: center;
+}
+.contact-1 {
+    text-align: start;
+    align-items: center;
+}
+.contact-2 {
+    width:50%;
+    padding: 1em;
+}
+.contact-2 form input, textarea, label, button {
+    width: 100%;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+}
+.contact-2 form input, textarea {
+    border: 1px solid #008073;
+    border-radius: 10px;
+}
+.contact form button {
+    border-radius: 10px;
+    border: 1px solid #008073;
+    background-color: #008073;
+    color: aliceblue;
+}
+.contact-1 div img {
+    width: 15px;
+    display: grid;
+    position: relative;
+}
+.contact-1 div img, h5 {
+    display: inline-block;
+}
+.contact {
+    height: 100%;
+}
