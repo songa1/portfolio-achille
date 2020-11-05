@@ -78,12 +78,18 @@
         </div>
         <div class="footer">
             <div class="sub-1">
-                <form>
+                <form id="subscribeForm">
                     <h1>Subscribe to my news letter</h1>
                     <p>Fill in your email, so you will be getting new posts in your email.
                     </p>
-                    <input type="email" placeholder="example@email.com" style="width: 75%;border: 1px solid #008073;color: #2f3037;">
-                    <input type="submit" value="Subscribe" style="width: 24%;background-color: #008073;border: 0;">
+                    <input type="email" placeholder="example@email.com" style="width: 75%;border: 1px solid #008073;color: #2f3037;" id="subscriber-email" name="subscribe">
+                    <input type="submit" value="Subscribe" style="width: 24%;background-color: #008073;border: 0;" id="sub-btn" onclick="subs()">
+                    <p style="width: 100%;background-color: #008073;padding: 10px;" id="thankyou">Thank you for subscribing!</p>
+                    <style>
+                        #thankyou {
+                            display: none;
+                        }
+                    </style>
                 </form>
             </div >
             <div class="foot">
@@ -99,5 +105,10 @@
             </div>
         </div>
     </div>
+    <!--Reference to my firebase console-->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script  src="../js/subscribe.js"></script>
 </body>
 </html>

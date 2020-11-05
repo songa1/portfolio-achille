@@ -20,12 +20,12 @@
 <link rel="stylesheet" type="text/css" href="css/about.css">
 </head>
 <body>
-
+     
 <!--Navigation-->
 
 <!--Contents and pages-->
 <div id="minute">
-<section class="content" id="content" onclick="closeDiv()">
+<section class="content" id="content">
     <!--Landing page-->
     <div class="landing" id="landing">
         <img src="img/songa.jpg" alt="">
@@ -158,15 +158,25 @@
                 </div>
             </div>
             <div class="contact-2">
-                <form method="POST">
+                <form id="contactForm">
+                    <!--Name-->
                     <label>Name</label>
-                    <input type="text" >
+                    <input type="text" id="name">
+                    <!--Email-->
                     <label>E-mail</label>
-                    <input type="email" >
+                    <input type="email" id="email">
+                    <!--Message-->
                     <label>Message</label>
-                    <textarea style="height: auto;font-family: roboto,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"></textarea>
-                    <button type="submit">Send</button>
+                    <textarea style="height: auto;font-family: roboto,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" id="message"></textarea>
+                    <!--Button-->
+                    <button type="submit" id="idbtn">Send</button>
                 </form>
+                <div id="feedback"><p>Thank you!<br><br>Please wait for a reply which will be delivered to your email very soon!</p></div>
+                <style>
+                    #feedback {
+                        display: none;
+                    }
+                </style>
             </div>
         </div>
     </div>
@@ -218,5 +228,9 @@
     <section class="content">
         
     </section>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    <script  src="js/contact.js"></script>
 </body>
 </html>

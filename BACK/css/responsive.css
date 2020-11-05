@@ -246,7 +246,6 @@
     .goto a {
         display: block;
         padding: 10px;
-        width: 100%;
     }
 }
 .goto a:hover {
@@ -366,8 +365,6 @@
                 0 100px 80px rgba(59, 59, 59, 0.12);
         }
         .contact-added {
-            display: grid;
-            grid-template-columns: 10% 25% 50% 15%;
             width: 100%;
             justify-content: center;
             align-items: start;
@@ -378,6 +375,14 @@
         }
         .contact-added p {
             word-wrap: break-word;
+        }
+        #cont-div4 {
+            width: 100%;
+            scrollbar-shadow-color: black;
+            scrollbar-track-color: black;
+            margin-right: 10px;
+            word-wrap: break-word;
+            scrollbar-width: 20px;
         }
     
 }

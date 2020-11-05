@@ -98,3 +98,10 @@ body, html {
 textarea {
     font-family: roboto,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+#feedback {
+    width: 100%;
+    background-color: #008073;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
