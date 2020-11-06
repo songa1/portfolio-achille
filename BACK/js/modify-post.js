@@ -8,10 +8,6 @@ function displayPost(title, author, summary, date, imageURL) {
     let h1= document.createElement('h1');
     let p = document.createElement('p');
     let h5 = document.createElement('h5');
-    let btn = document.createElement('button')
-    btn.setAttribute('class','btnreadmore');
-    btn.innerHTML ='Read more';
-    btn.onclick = 'watchPost()';
 
     img.src = imageURL;
     h1.textContent = title;
@@ -22,24 +18,13 @@ function displayPost(title, author, summary, date, imageURL) {
     div.appendChild(h1);
     div.appendChild(p);
     div.appendChild(h5);
-    div.appendChild(btn);
 
     posCollection.appendChild(div);
     
 }
 
-function watchPost(){
-    db.collection('posts').doc().get().then((snapshot) => {
-        displayPost(
-            doc.data().title,
-            doc.data().author,
-            doc.data().summary,
-            doc.data().date,
-            doc.data().content
-        );
-    });
-};
-db.collection('posts').orderBy('date').get().then((snapshot) => {
+
+db.collection('posts').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         displayPost(
             
