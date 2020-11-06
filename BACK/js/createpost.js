@@ -30,6 +30,7 @@ function uploadImage(){
                 date: addpost.date.value,
                 content: addpost.content.value
             });
+            addpost.reset();
         });
     });
         
