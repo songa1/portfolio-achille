@@ -39,7 +39,7 @@ function watchPost(){
         );
     });
 };
-db.collection('posts').orderBy('date').get().then((snapshot) => {
+db.collection('posts').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         displayPost(
             
