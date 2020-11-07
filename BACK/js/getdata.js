@@ -28,17 +28,7 @@ function displayPost(title, author, summary, date, imageURL) {
     
 }
 
-function watchPost(){
-    db.collection('posts').doc().get().then((snapshot) => {
-        displayPost(
-            doc.data().title,
-            doc.data().author,
-            doc.data().summary,
-            doc.data().date,
-            doc.data().content
-        );
-    });
-};
+
 db.collection('posts').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         displayPost(

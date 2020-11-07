@@ -1,8 +1,10 @@
 let posCollection = document.querySelector('#postCollection');
 
-function displayPost(title, author, summary, date, imageURL) {
+// title, author, summary, date, imageURL, 
+function displayPost(doc) {
     let div = document.createElement('div');
     div.setAttribute('class','post-item');
+    div.setAttribute('data-id', doc.id);
 
     const img= document.createElement('img');
     let h1= document.createElement('h1');
@@ -63,10 +65,10 @@ function displayPost(title, author, summary, date, imageURL) {
 
 
 
-    img.src = imageURL;
-    h1.textContent = title;
-    p.textContent = author + ' - ' + date;
-    h5.textContent = summary;
+    img.src = doc.data().imageURL;
+    h1.textContent = doc.data().title;
+    p.textContent = doc.data().author + ' - ' + doc.data().date;
+    h5.textContent = doc.data().summary;
 
     div.appendChild(img);
     div.appendChild(h1);
@@ -74,29 +76,96 @@ function displayPost(title, author, summary, date, imageURL) {
     div.appendChild(h5);
     div.appendChild(edit);
 
-
     posCollection.appendChild(div);
 
     // Delete data
 
+    del.addEventListener('click', function (){
+        if (confirm("Do you want to delete this post?") == true) {
+            db.collection("posts").doc(doc.id).delete().then(function() {
+                alert('Post deleted successfuly!');
+            }).catch(function(error) {
+                console.error("Error removing document: ", error);
+            });
+        } else {
+            alert('Post not deleted!')
+        }
+    })
 
 
+    function editPost(title, author, summary, date, content, imageURL){
+        let updatePost = document.querySelector('#update-post');
 
+        updatePost.author.textContent = author;
+        updatePost.posttitle.textContent = title;
+        updatePost.summary.textContent = summary;
+        updatePost.date.textContent = date;
+        updatePost.image.src = imageURL;
+        updatePost.content.textContent = content;
+    }
 
+    // updating data
+    mod.addEventListener('click', function(){
+        if (confirm("Do you want to edit this post?") == true) {
+            window.location.href = "updatepost.html";
+            
+
+            db.collection('posts').doc(doc.id).update({
+                author: updatePost.author.value,
+                title: updatePost.title.value,
+                summary: updatePost.summary.value,
+                date: updatePost.date.date,
+                content: updatePost.content.value
+            })
+            
+            // get().then(function(doc){
+            //     editPost(
+            //         doc.data().title,
+            //         doc.data().author,
+            //         doc.data().summary,
+            //         doc.data().date,
+            //         doc.data().content,
+            //         doc.data().imageURL
+            //     )
+            // })
+        } else {
+            alert('You are not going to edit your post!')
+        }
+    })
     
 }
 
 
-db.collection('posts').get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-        displayPost(
+// db.collection('posts').get().then((snapshot) => {
+//     snapshot.docs.forEach(doc => {
+//         displayPost(
+//             doc.data().title,
+//             doc.data().author,
+//             doc.data().summary,
+//             doc.data().date,
+//             doc.data().imageURL
             
-            doc.data().title,
-            doc.data().author,
-            doc.data().summary,
-            doc.data().date,
-            doc.data().imageURL
-            
-        );
-    });
-});
+//         );
+//     });
+// });
+
+// get data with real time listener
+
+db.collection('posts').orderBy('date').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if(change.type == 'added'){
+            displayPost(change.doc
+                // change.doc.data().title,
+                // change.doc.data().author,
+                // change.doc.data().summary,
+                // change.doc.data().date,
+                // change.doc.data().imageURL
+                            
+            )
+        } else if (change.type == 'removed'){
+            let div = document.querySelector('[data-id' + change.doc.id + ']');
+            posCollection.removeChild(div);
+        }
+    })
+})

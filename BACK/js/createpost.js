@@ -5,9 +5,8 @@ const addpost = document.querySelector('#add-post');
 function uploadImage(){
     //get image
     const image = document.querySelector('#image').files[0];
-    //get image namne
     const imageName = image.name;
-    //ref to root storage
+    //ref to root storage + image storage
     var storageRef = firebase.storage().ref('images/'+imageName);
     //upload image to selected starage
     const uploadTask = storageRef.put(image);
@@ -31,6 +30,8 @@ function uploadImage(){
                 content: addpost.content.value
             });
             addpost.reset();
+            alert('Successfuly uploaded!');
+            window.location.href = "../blog/modify.html";
         });
     });
         
@@ -45,11 +46,5 @@ addpost.addEventListener('submit', (e) => {
     
     uploadImage();
 }, function(error){
-    if(error){
-        alert("Error while uploading!");
-    } else {
-        alert("Successfully uploaded!");
-        document.getElementById('add-post').reset();
-        console.log(downloadURL);
-    };
+    console.log('Error');
 });

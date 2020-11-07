@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 
 </head>
-<body>
+<body oncontextmenu="return false">
     
     <!--Blog page-->
     <div id="blog" class="blog">
@@ -34,13 +34,15 @@
         </h2>
         <div class="login">
             
-            <form>
+            <form id="logUser">
                 <h3>Log in to manage a blog</h3>
                 <label>E-mail</label>
-                <input type="email">
+                <input type="email" id="email">
+                
                 <label>Password</label>
-                <input type="password">
-                <input type="submit" value="Login" style="background-color:#008073;color: aliceblue;">
+                <input type="password" id="password">
+                <p id="email-feedback"></p>
+                <input type="submit" value="Login" style="background-color:#008073;color: aliceblue;" id="btnlog">
             </form>
         </div>
     
