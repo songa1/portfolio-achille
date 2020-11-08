@@ -129,7 +129,7 @@ function displayPost(doc) {
             //     )
             // })
         } else {
-            alert('You are not going to edit your post!')
+            alert('Your post will not be modified!');
         }
     })
     

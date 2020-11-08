@@ -109,6 +109,7 @@
         width: 100%;
         margin: 0;
         padding: 0;
+        z-index: 2;
     }
     .contact-1 div h5{
         display: flex;

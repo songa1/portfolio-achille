@@ -157,21 +157,24 @@
                      Kigali - Rwanda</h5>
                 </div>
             </div>
-            <div class="contact-2">
+            <div class="contact-2" id="contactFor">
                 <form id="contactForm">
                     <!--Name-->
                     <label>Name</label>
                     <input type="text" id="name">
+                    <p id="feedback-name">Name must be filled out!</p>
                     <!--Email-->
                     <label>E-mail</label>
                     <input type="email" id="email">
+                    <p id="feedback-email">Email must be filled out!</p>
                     <!--Message-->
                     <label>Message</label>
                     <textarea style="height: auto;font-family: roboto,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" id="message"></textarea>
+                    <p id="feedback-message">Name must be filled out!</p>
                     <!--Button-->
-                    <button type="submit" id="idbtn">Send</button>
+                    <button type="submit" id="idbtn" onclick="validateCont()">Send</button>
+                    <p id="feedback"></p>
                 </form>
-                <div id="feedback"><p>Thank you!<br><br>Please wait for a reply which will be delivered to your email very soon!</p></div>
                 <style>
                     #feedback {
                         display: none;
@@ -215,13 +218,13 @@
         
         <div class="nav-item links" id="mySidebar" style="background-color: #ffffff">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="closeButton">&times;</a>
-            <a href="#skills" onclick="hideDiv()" id="skillsection"><span><img src="../img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
-            <a href="#about" onclick="hideDiv()" id="aboutsection"><span><img src="../img/about.png"></span>  About me</a>
-            <a href="#projects" onclick="hideDiv()" id="projectsection"><span><img src="../img/project-xxl.png"></span>  Projects</a>
-            <a href="#experience"  onclick="hideDiv()"><span><img src="../img/experience.png" id="experiencesection"></span>  Experience</a>
-            <a href="blog/feeds.html" onclick="hideDiv()" id="blogsection"><span><img src="../img/google-news-xxl.png"></span>  Blog</a>
-            <a href="#contact" onclick="hideDiv()" id="li-1"><span><img src="../img/contacts-2-xxl.png" id="contactsection"></span>  Contact me</a>
-            <a href="user/login.html" onclick="hideDiv()" id="logsection"><span><img src="../img/login-xxl.png"></span>  Log in</a>
+            <a href="#skills" onclick="hideDiv()" id="skillsection"><span><img src="img/png-clipart-computer-icons-skill-skills-icon-angle-photography.png"></span>  Skills</a>
+            <a href="#about" onclick="hideDiv()" id="aboutsection"><span><img src="img/about.png"></span>  About me</a>
+            <a href="#projects" onclick="hideDiv()" id="projectsection"><span><img src="img/project-xxl.png"></span>  Projects</a>
+            <a href="#experience"  onclick="hideDiv()"><span><img src="img/experience.png" id="experiencesection"></span>  Experience</a>
+            <a href="blog/feeds.html" onclick="hideDiv()" id="blogsection"><span><img src="img/google-news-xxl.png"></span>  Blog</a>
+            <a href="#contact" id="li-1"><span><img src="img/contacts-2-xxl.png" id="contactsection"></span>  Contact me</a>
+            <a href="user/login.html" onclick="hideDiv()" id="logsection"><span><img src="img/login-xxl.png"></span>  Log in</a>
         </div>
     </section>
     <!--Contents and pages-->
