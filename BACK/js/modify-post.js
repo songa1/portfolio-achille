@@ -99,7 +99,7 @@ function displayPost(doc) {
         if (confirm("Do you want to modify this post?") == true) {
             document.getElementById('update-post').style.display = "block";
             
-        function updating(){
+        
             db.collection("posts").doc(doc.id).update({
                 title: 'My love for you',
                 author: 'Achille'
@@ -108,7 +108,7 @@ function displayPost(doc) {
             }).catch(function(error) {
                 console.error("Error updating document: ", error);
             });
-        }
+        
             
             let updateForm = document.querySelector('#updatepost');
             updateForm.addEventListener('click', function(){
