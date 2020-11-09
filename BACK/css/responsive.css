@@ -109,6 +109,7 @@
         width: 100%;
         margin: 0;
         padding: 0;
+        z-index: 2;
     }
     .contact-1 div h5{
         display: flex;
@@ -157,7 +158,14 @@
     #profile {
         text-align: center;
     }
-
+    .namepic {
+        display: flex;
+        color: #008073;
+        flex-wrap: wrap;
+        grid-gap: 20px;
+        text-align: center;
+        justify-content: center;
+    }
 
     /*responsiveness for blog watch page */
     .post {
@@ -260,6 +268,12 @@
     /*  responsiveness of additional pages on profile page */
     .man-nav {
         display: none;
+    }
+    .man-main-div1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
     }
     .man-nav div img{
         width: 40px;

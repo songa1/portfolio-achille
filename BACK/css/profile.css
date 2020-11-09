@@ -93,16 +93,24 @@
 .namepic {
     display: grid;
     color: #008073;
-    justify-items: center;
+    grid-template-columns: 20% 80%;
+    grid-gap: 20px;
+    text-align: center;
 }
 .namepic img {
-    width: 100px;
     grid-column: 1;
-    border-radius: 50%;
+    width: 100%;
+    margin-bottom: 10px;
 }
 .namepic h3 {
     grid-row: 2;
-    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.namepic p {
+    font-size: 25px;
+    text-decoration: underline;
+    color: #193835;
 }
 .namepic a {
     grid-row: 3;
@@ -115,10 +123,34 @@
     text-decoration: none;
     color: #008073;
 }
-.namepic button {
+.buttons {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    bottom: 0%;
+    grid-gap: 10%;
+} 
+.buttons button {
     background-color: #008073;
     border: 1px solid #008073;
     color: aliceblue;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    margin: 0;
+}
+.buttons button:hover {
+    background-color: rgb(0, 0, 0);
+}
+.buttons button a {
+    color: #fff;
+    text-decoration: none;
+}
+.buttons button a:hover {
+    text-decoration: none;
+    color: #fff;
 }
 .namepic h4 {
     grid-row: 4;
@@ -131,7 +163,7 @@
 }
 .man-nav {
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10%;
     justify-content: center;
     background-color:grey;
 }
