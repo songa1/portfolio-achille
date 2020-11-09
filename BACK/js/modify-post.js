@@ -1,5 +1,9 @@
 let posCollection = document.querySelector('#postCollection');
 
+function cancelOne() {
+    document.getElementById('update-post').style.display = "none";
+}
+
 // title, author, summary, date, imageURL, 
 function displayPost(doc) {
     let div = document.createElement('div');
@@ -60,11 +64,7 @@ function displayPost(doc) {
     mod.style.border = '1px solid #008073';
     view.style.border = '1px solid #008073';
     del.style.border = '1px solid #008073';
-
-
-
-
-
+    
     img.src = doc.data().imageURL;
     h1.textContent = doc.data().title;
     p.textContent = doc.data().author + ' - ' + doc.data().date;
@@ -93,79 +93,68 @@ function displayPost(doc) {
     })
 
 
-    function editPost(title, author, summary, date, content, imageURL){
-        let updatePost = document.querySelector('#update-post');
+    // update post
 
-        updatePost.author.textContent = author;
-        updatePost.posttitle.textContent = title;
-        updatePost.summary.textContent = summary;
-        updatePost.date.textContent = date;
-        updatePost.image.src = imageURL;
-        updatePost.content.textContent = content;
-    }
-
-    // updating data
-    mod.addEventListener('click', function(){
-        if (confirm("Do you want to edit this post?") == true) {
-            window.location.href = "updatepost.html";
+    mod.addEventListener('click', function(e){
+        if (confirm("Do you want to modify this post?") == true) {
+            document.getElementById('update-post').style.display = "block";
             
-
-            db.collection('posts').doc(doc.id).update({
-                author: updatePost.author.value,
-                title: updatePost.title.value,
-                summary: updatePost.summary.value,
-                date: updatePost.date.date,
-                content: updatePost.content.value
+        function updating(){
+            db.collection("posts").doc(doc.id).update({
+                title: 'My love for you',
+                author: 'Achille'
+            }).then(function() {
+                alert('Post updated successfully');
+            }).catch(function(error) {
+                console.error("Error updating document: ", error);
+            });
+        }
+            
+            let updateForm = document.querySelector('#updatepost');
+            updateForm.addEventListener('click', function(){
+                
+                // let auth = updateForm.author.value;
+                // let tit = updateForm.posttitle.value;
+                // let sum = updateForm.summary.value;
+                // let dat = updateForm.date.value;
+                // let cont = updateForm.content.value;
+                // db.collection('posts').doc(doc.id).update({
+                //     author: auth,
+                //     title: tit,
+                //     summary: sum,
+                //     date: dat,
+                //     content: cont
+                // }).then(function(){
+                //     alert('Successfully modified post!')
+                // }).catch(function(error) {
+                //     console.error("Error removing document: ", error);
+                // });
+                
+                updating();
+                
             })
-            
-            // get().then(function(doc){
-            //     editPost(
-            //         doc.data().title,
-            //         doc.data().author,
-            //         doc.data().summary,
-            //         doc.data().date,
-            //         doc.data().content,
-            //         doc.data().imageURL
-            //     )
-            // })
         } else {
-            alert('Your post will not be modified!');
+            alert('Post will not be modified!')
+            return false;
         }
     })
     
 }
-
-
-// db.collection('posts').get().then((snapshot) => {
-//     snapshot.docs.forEach(doc => {
-//         displayPost(
-//             doc.data().title,
-//             doc.data().author,
-//             doc.data().summary,
-//             doc.data().date,
-//             doc.data().imageURL
-            
-//         );
-//     });
-// });
-
 // get data with real time listener
-
 db.collection('posts').orderBy('date').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
         if(change.type == 'added'){
-            displayPost(change.doc
-                // change.doc.data().title,
-                // change.doc.data().author,
-                // change.doc.data().summary,
-                // change.doc.data().date,
-                // change.doc.data().imageURL
-                            
-            )
+            displayPost(change.doc)
         } else if (change.type == 'removed'){
             let div = document.querySelector('[data-id' + change.doc.id + ']');
             posCollection.removeChild(div);
         }
     })
 })
+
+db.collection('users').get().then(snap => {
+    size = snap.size // will return the collection size
+    let pla = document.getElementById('subcount');
+    pla.textContent = size;
+ });

@@ -1,8 +1,5 @@
 let posCollection = document.querySelector('#postCollection');
 
-// function displayPost(title, author, summary, date, imageURL) {
-//     let div = document.createElement('div');
-//     div.setAttribute('class','post-item');
 function displayPost(doc) {
     let div = document.createElement('div');
     div.setAttribute('class','post-item');
@@ -28,11 +25,33 @@ function displayPost(doc) {
     div.appendChild(h5);
     div.appendChild(btn);
 
-    posCollection.appendChild(div);
-   
-    
+    posCollection.appendChild(div);  
 
+
+    
 }
+db.collection('posts').orderBy('date').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if(change.type == 'added'){
+            displayPost(change.doc
+                
+            )
+        } else if (change.type == 'removed'){
+            let div = document.querySelector('[data-id' + change.doc.id + ']');
+            posCollection.removeChild(div);
+        }
+    })
+})
+
+async function getDoc(id) {
+    const snapshot = await db.collection('posts').doc(id).get();
+    const data = snapshot.data();
+}
+
+
+
+
 
 
 // db.collection('posts').get().then((snapshot) => {
@@ -48,27 +67,16 @@ function displayPost(doc) {
 //         );
 //     });
 // });
-db.collection('posts').orderBy('date').onSnapshot(snapshot => {
-    let changes = snapshot.docChanges();
-    changes.forEach(change => {
-        if(change.type == 'added'){
-            displayPost(change.doc
-                // change.doc.data().title,
+
+
+// change.doc.data().title,
                 // change.doc.data().author,
                 // change.doc.data().summary,
                 // change.doc.data().date,
                 // change.doc.data().imageURL
+
+
+                // function displayPost(title, author, summary, date, imageURL) {
+//     let div = document.createElement('div');
+//     div.setAttribute('class','post-item');
                             
-            )
-        } else if (change.type == 'removed'){
-            let div = document.querySelector('[data-id' + change.doc.id + ']');
-            posCollection.removeChild(div);
-        }
-    })
-})
-
-
-
-
-
-

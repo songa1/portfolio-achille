@@ -1,35 +1,35 @@
 // const postData = document.querySelector('#post-data');
 
-// function watchPost(title, author, date, content, imageURL, doc) {
-//     let div = document.createElement('div');
-//     let h1 = document.createElement('h1');
-//     let p = document.createElement('p');
-//     let line = document.createElement('hr');
-//     let partr = document.createElement('section');
-//     partr.setAttribute('class', 'post-details');
-//     let imgTwo = document.createElement('img');
-//     let details = document.createElement('p');
+function watchPost(title, author, date, content, imageURL, doc) {
+    let div = document.createElement('div');
+    let h1 = document.createElement('h1');
+    let p = document.createElement('p');
+    let line = document.createElement('hr');
+    let partr = document.createElement('section');
+    partr.setAttribute('class', 'post-details');
+    let imgTwo = document.createElement('img');
+    let details = document.createElement('p');
 
 
-//     imgTwo.src = imageURL;
-//     h1.textContent = title;
-//     p.textContent = 'Published by ' + author + ' | ' + ' on ' + date;
+    imgTwo.src = imageURL;
+    h1.textContent = title;
+    p.textContent = 'Published by ' + author + ' | ' + ' on ' + date;
     
-//     details.textContent = content;
+    details.textContent = content;
 
 
-//     div.appendChild(h1);
-//     div.appendChild(p);
-//     div.appendChild(line);
-//     div.appendChild(partr);
-//     partr.appendChild(imgTwo);
-//     partr.appendChild(details);
+    div.appendChild(h1);
+    div.appendChild(p);
+    div.appendChild(line);
+    div.appendChild(partr);
+    partr.appendChild(imgTwo);
+    partr.appendChild(details);
 
     
 
 
-//     postData.appendChild(div);
-// }
+    postData.appendChild(div);
+}
 
 
 // var docRef = db.collection("posts").doc(doc.id);
@@ -50,3 +50,5 @@
 // }).catch(function(error) {
 //     console.log("Error getting document:", error);
 // });
+
+

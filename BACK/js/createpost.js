@@ -28,19 +28,20 @@ function uploadImage(){
                 summary: addpost.summary.value,
                 date: addpost.date.value,
                 content: addpost.content.value
+            }).then(function(){
+                alert('Successfuly uploaded!');
+                addpost.reset();
+                window.location.href = "../blog/modify.html";
+            })
+            .catch(function(error) {
+                alert('Error uploading post, Try again!');
             });
-            addpost.reset();
-            alert('Successfuly uploaded!');
-            window.location.href = "../blog/modify.html";
+            
+            
         });
     });
-        
-
-
-    
+      
 };
-
-
 addpost.addEventListener('submit', (e) => {
     e.preventDefault();
     
