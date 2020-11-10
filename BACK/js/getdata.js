@@ -1,4 +1,5 @@
 let postCollection = document.querySelector('#postCollection');
+let postView = document.querySelector('#post-data');
 
 
 
@@ -29,49 +30,15 @@ function displayPost(doc) {
     div.appendChild(btn);
 
     postCollection.appendChild(div);  
-
-    function watchSingle(doc){
-        let postView = document.querySelector('#post-data');
-        let post = document.createElement('div');
-        let postTitle = document.createElement('h1');
-        let dateAuthor = document.createElement('p');
-        let lin = document.createElement ('hr');
-        let pictures = document.createElement('img');
-        let contents = document.querySelector('p');
-        
-        postTitle.textContent = doc.title;
-        postTitle.textContent = doc.title;
-        dateAuthor.textContent = doc.date + ' ' + doc.author;
-    
-        pictures.src = doc.imageURL;
-        contents.textContent = doc.content;
-    
-        post.appendChild(postTitle);
-        post.appendChild(dateAuthor);
-        post.appendChild(lin);
-        post.appendChild(pictures);
-        post.appendChild(contents);
-    
-        postView.appendChild(post);
-    }
     
     
     
     // display data as single
-    btn.addEventListener('click', function() {
-            
-        let docRef = db.collection('posts').doc(doc.id).get();
-        docRef.then(function(doc){
-            if(doc.exists){
-                console.log(doc.data())
-                
-                watchSingle(doc.data());
-                
-                location.assign(`watch.html#${doc.id}`);
-            }else{
-                alert('Post unavailable!');
-            }
-        })
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let id = e.target.parentElement.getAttribute('data-id'); 
+        location.assign(`watch.html#${doc.id}`); 
+        
     })
     
 }

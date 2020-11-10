@@ -26,30 +26,8 @@
         border-radius: 10px;
         
     }
-    .post p {
-        display: flex;
-        justify-content: start;
-        margin-top: 0;
-        padding: 0 5px 0 5px;
-        flex-wrap: wrap;
-    }
-    .post h1 {
-        margin-bottom: 15px;
-        padding: 0 15px 0 15px;
-        color: #008073;
-    }
-    .post-details {
-        padding: 10px;
-    }
-    .post-details img {
+    .article-image {
         width: 100%;
-    }
-    .post-details p {
-        text-align: start;
-        padding: 10px;
-        font-size: 25px;
-        text-decoration: wavy;
-        word-spacing: 2px;
     }
     .sh-buttons input {
         width: 80px;
@@ -178,9 +156,6 @@
     margin-bottom: 15px;
     padding: 0 15px 0 15px;
     color: #008073;
-}
-.post-details {
-    padding: 10px;
 }
 .post-details img {
     width: 100%;

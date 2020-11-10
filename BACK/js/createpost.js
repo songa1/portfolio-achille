@@ -44,7 +44,6 @@ function uploadImage(){
 };
 addpost.addEventListener('submit', (e) => {
     e.preventDefault();
-    
     uploadImage();
 }, function(error){
     console.log('Error');
