@@ -1,6 +1,11 @@
-let posCollection = document.querySelector('#postCollection');
+let postCollection = document.querySelector('#postCollection');
+let postView = document.querySelector('#post-data');
+
+
+
 
 function displayPost(doc) {
+    
     let div = document.createElement('div');
     div.setAttribute('class','post-item');
     div.setAttribute('data-id', doc.id);
@@ -12,7 +17,6 @@ function displayPost(doc) {
     let btn = document.createElement('button')
     btn.setAttribute('class','btnreadmore');
     btn.innerHTML ='Read more';
-    btn.onclick = 'watchPost()';
 
     img.src = doc.data().imageURL;
     h1.textContent = doc.data().title;
@@ -25,18 +29,24 @@ function displayPost(doc) {
     div.appendChild(h5);
     div.appendChild(btn);
 
-    posCollection.appendChild(div);  
-
-
+    postCollection.appendChild(div);  
+    
+    
+    
+    // display data as single
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let id = e.target.parentElement.getAttribute('data-id'); 
+        location.assign(`watch.html#${doc.id}`); 
+        
+    })
     
 }
 db.collection('posts').orderBy('date').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
         if(change.type == 'added'){
-            displayPost(change.doc
-                
-            )
+            displayPost(change.doc)
         } else if (change.type == 'removed'){
             let div = document.querySelector('[data-id' + change.doc.id + ']');
             posCollection.removeChild(div);
@@ -50,33 +60,3 @@ async function getDoc(id) {
 }
 
 
-
-
-
-
-// db.collection('posts').get().then((snapshot) => {
-//     snapshot.docs.forEach(doc => {
-//         displayPost(
-            
-//             doc.data().title,
-//             doc.data().author,
-//             doc.data().summary,
-//             doc.data().date,
-//             doc.data().imageURL
-            
-//         );
-//     });
-// });
-
-
-// change.doc.data().title,
-                // change.doc.data().author,
-                // change.doc.data().summary,
-                // change.doc.data().date,
-                // change.doc.data().imageURL
-
-
-                // function displayPost(title, author, summary, date, imageURL) {
-//     let div = document.createElement('div');
-//     div.setAttribute('class','post-item');
-                            

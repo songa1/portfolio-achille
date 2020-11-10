@@ -85,6 +85,7 @@
     margin: 10px;
     border: 1px solid #008073;
     border-radius: 10px;
+    white-space: pre;
 }
 .post form {
     width: 80%;
