@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../css/newpost.css">
     <link rel="stylesheet" type="text/css" href="../css/feeds.css">
     <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+   
 
 </head>
 <body>
@@ -34,17 +35,30 @@
         </h2>
         <div class="post">
             
-            <form method="POST">
+            <form id="add-post">
                 <h3>Add new post</h3>
+                <!--Post author-->
+                <label>Author</label>
+                <input type="text" maxlength="50" id="author" value="Achille Songa">
+                <!--Post Title-->
                 <label>Post title</label>
-                <input type="text" maxlength="50">
+                <input type="text" maxlength="50" id="post-title" name="title">
+                <!--Post Summary-->
                 <label>Add summary</label>
-                <input type="text" maxlength="300">
+                <input type="text" maxlength="300" id="post-summary" name="summary">
+                <!--Post date-->
+                <label>Date</label>
+                <input type="date" maxlength="300" id="date">
+                <!--Post picture-->
                 <label>Add picture</label>
-                <input type="file" >
+                <input type="file" id="image" name="image">
+                <!--Post Content-->
                 <label>Content</label>
-                <article><textarea style="height: 300px;"></textarea></article>
-                <input type="submit" value="Publish" style="background-color:#008073;color: aliceblue;margin-top: 10px;">
+                <article>
+                    <textarea style="height: 300px;" id="post-content" name="content"></textarea>
+                </article>
+        
+                <center><button style="background-color:#008073;color: aliceblue;margin-top: 10px;width: 60%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="submitpost">Publish</button></center>
             </form>
         </div>
     
@@ -52,7 +66,7 @@
         <div class="footer">
             <div class="foot">
                 <div class="copyright">
-                    <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">Achille Songa</a></p>
+                    <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">&#169;  Achille Songa</a></p>
                 </div>
                 <div class="sms">
                     <a href="https://instagram.com/achille_songa">Instagram</a>
@@ -63,5 +77,11 @@
             </div>
         </div>
     </div>
+    <!--Reference to my firebase console-->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/createpost.js"></script>
 </body>
 </html>

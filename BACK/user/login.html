@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 
 </head>
-<body>
+<body oncontextmenu="return true">
     
     <!--Blog page-->
     <div id="blog" class="blog">
@@ -34,13 +34,15 @@
         </h2>
         <div class="login">
             
-            <form method="POST" action="profile.html">
+            <form id="logUser">
                 <h3>Log in to manage a blog</h3>
                 <label>E-mail</label>
-                <input type="email">
+                <input type="email" id="email">
+                <p id="email-feedback"></p>
                 <label>Password</label>
-                <input type="password">
-                <input type="submit" value="Login" style="background-color:#008073;color: aliceblue;">
+                <input type="password" id="password">
+                <p id="pass-feedback"></p>
+                <input type="submit" value="Login" style="background-color:#008073;color: aliceblue;" id="btnlog">
             </form>
         </div>
     
@@ -48,16 +50,20 @@
         <div class="footer" style="position: absolute;bottom: 0;">
             <div class="foot">
                 <div class="copyright">
-                    <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">Achille Songa</a></p>
+                    <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">&copy; Achille Songa</a></p>
                 </div>
                 <div class="sms">
                     <a href="https://instagram.com/achille_songa">Instagram</a>
                     <a href="https://fb.me/songa.achille.9">Facebook</a>
-                    <a href="https://twitter.com/mindinmiddle">Twitter</a>
+                    <a href="https://twitter.com/achille_songa">Twitter</a>
                 </div>
                 
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script  src="../js/login.js"></script>
 </body>
 </html>

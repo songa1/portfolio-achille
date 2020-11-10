@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[post-title]</title>
+    <title>Post | Achille Songa Lab</title>
     <link
       rel="icon"
       type="image/png"
@@ -34,20 +34,18 @@
         </h2>
         <div class="post">
             
-            <h1>This is a post title</h1>
-            <p>Published on<p><u>10 october 2020</u></p><p style="border-left: 1px solid black;">by <u>Achille Songa</u></p><p style="border-left: 1px solid black;"><u>Leave a comment</u></p></p>
-            <hr>
-            <div class="post-details">
-                <center><img src="../img/andela.png"></center>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum, consequuntur laudantium architecto quae mollitia exercitationem praesentium sit dolor accusantium amet voluptatibus sint nobis quos, debitis magni earum a eveniet quis aut voluptas! Asperiores soluta perspiciatis impedit vero excepturi? Totam doloribus voluptate maiores tempora reiciendis mollitia sit atque dicta minima autem iste est at quaerat, repellat numquam ex voluptatum? Eum velit doloribus quidem tempore perferendis minus tenetur facere repellendus voluptatem, eaque molestias ullam officiis aperiam, ipsum vel tempora corporis numquam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum, consequuntur laudantium architecto quae mollitia exercitationem praesentium sit dolor accusantium amet voluptatibus sint nobis quos, debitis magni earum a eveniet quis aut voluptas! Asperiores soluta perspiciatis impedit vero excepturi? Totam doloribus voluptate maiores tempora reiciendis mollitia sit atque dicta minima autem iste est at quaerat, repellat numquam ex voluptatum? Eum velit doloribus quidem tempore perferendis minus tenetur facere repellendus voluptatem, eaque molestias ullam officiis aperiam, ipsum vel tempora corporis numquam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum, consequuntur laudantium architecto quae mollitia exercitationem praesentium sit dolor accusantium amet voluptatibus sint nobis quos, debitis magni earum a eveniet quis aut voluptas! Asperiores soluta perspiciatis impedit vero excepturi? Totam doloribus voluptate maiores tempora reiciendis mollitia sit atque dicta minima autem iste est at quaerat, repellat numquam ex voluptatum? Eum velit doloribus quidem tempore perferendis minus tenetur facere repellendus voluptatem, eaque molestias ullam officiis aperiam, ipsum vel tempora corporis numquam.</p>
+            <div  class="post-container" id="post-data">
+                <h1 class="posttitle"></h1>
+                <p>Published on <u class="dateof"></u> by <u class="authorOf"></u></p>
+                <hr>
+                <center><img src="" class="article-image" alt="Cover Image" width="100%" style="margin-bottom: 20px;"></center>
+                <p class="post-content"></p>
             </div>
             <hr>
             <div class="sh-buttons">
                 <input type="button" value="Share" id="share"><input type="button" value="Like" id="like"> <p>Tags: <u style="color: #008073;">javascript</u>, <u style="color: #008073;">andela</u>, <u style="color: #008073;">stackup</u>, <u style="color: #008073;">html</u>, <u style="color: #008073;">css</u></p>
             </div>
-            <div id="comments-pub">
+            <!-- <div id="comments-pub">
                 <h2>Comments</h2>
                 <div class="comment">
                     <h4>Jane Doe</h4>&nbsp;<h4>10 october 2020</h4>
@@ -62,29 +60,12 @@
                     </p>
                 </div>
                 <h5><a href="#newcomment" id="gotocomment">Add new comment</a></h5>
-            </div>
-            <hr>
+            </div> -->
+            <!-- <hr>
             <h2>Related posts</h2>
-            <div class="post-wrapper">
-                <div class="post-item">
-                    <img src="../img/andela.png">
-                    <h1><a href="#" style="color: #008073;">Post title</a></h1>
-                    <p>10 october 2020  |  Achille Songa</p>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                </div>
-                <div class="post-item">
-                    <img src="../img/andela.png">
-                    <h1><a href="#" style="color: #008073;">Post title</a></h1>
-                    <p>10 october 2020  |  Achille Songa</p>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                </div>
-                <div class="post-item">
-                    <img src="../img/andela.png">
-                    <h1><a href="#" style="color: #008073;">Post title</a></h1>
-                    <p>10 october 2020  |  Achille Songa</p>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                </div>
-            </div>
+             <div class="post-wrapper" id="postCollection">
+                
+            </div> -->
             <hr>
             <h2>Leave a comment</h2>
             <form class="comment-form" id="newcomment">
@@ -114,5 +95,11 @@
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script  src="../js/getdata.js"></script>
+    <script  src="../js/watch.js"></script>
+    
 </body>
 </html>

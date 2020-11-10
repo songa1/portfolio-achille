@@ -130,3 +130,47 @@
 .goto a:hover {
     color: rgb(161, 59, 59);
 }
+#update-post {
+    width: 40%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 2;
+    margin: 10px 30% 10px 30%;
+    display: none;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+}
+#update-post div {
+    display: block;
+    
+}
+#author, #post-title, #date, #image, #post-summary {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #008073;
+    margin: 10px 0 10px 0;
+}
+.texta {
+    width: 100%;
+}
+.texta textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #008073;
+}
+#update-post div label {
+    width: 100%;
+    color: #008073;
+}
+.texta, .inputt {
+    display: grid;
+}
+@media(max-width: 1000px){
+    #update-post {
+        margin: 10px 10% 10px 10%;
+        width: 80%;
+    }
+}

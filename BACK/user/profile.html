@@ -33,10 +33,16 @@
         </h2>
         <div class="profile" id="profile">
             <div class="namepic">
-                <h3>Cishahayo Songa Achille</h3>
-                <img src="../img/songa.jpg">
-                <button>Log out</button>
-                <h4>Views: 67      |      Visitors: 10</h4>
+                <div>
+                    <img src="../img/songa.jpg">
+                </div>
+                <div>
+                    <h3>Achille Songa   |  Full stack Web Developer</h3>
+                    <p><i>I want to make life more easier!</i></p>
+                    <h4>Views: 67      |      Visitors: 10</h4>
+                    <div class="buttons"><button>Manage a blog</button><button>Log out</button></div>
+                </div>
+                
                 
             </div>
             <div class="hhh">
@@ -47,18 +53,15 @@
                     <a href="#man-about" onclick="aboutPage()" id="aboutpage">About</a>
                     <a href="#man-project" onclick="projectPage()" id="projectpage">Projects</a>
                     <a href="#man-experience" onclick="expertPage()" id="expertpage">Experience</a>
-                    <a href="#man-contact" onclick="contactPage()" id="contactpage">Contacts</a>
-                    <a href="../blog/modify.html" onclick="contactPage()" id="managepage">Manage a blog</a>
+                    <a href="#man-contact" onclick="contactPage()" id="contactpage">Queries</a>
                 </div>
                 <h2 id="main-titles">Manage main page</h2>  
                 <section id="man-main">           
                     <div style="display: flex;flex-wrap: wrap;" class="man-main-div1">
-                        <img src="../img/songa.jpg">
                         <div style="padding: 10px;width: 80%;">
                         <label>Update the image</label><input type="file"><button id="update-text" style="padding: 10px;">Update Image</button></div>
                     </div>
                     <div class="man-main-div1">
-                        <h4 style="padding: 0px;"><i>"Imagination is more important than knowledge."</i></h4>
                         <div style="padding: 10px;width: 100%;display: inline-block;">
                         <input type="text" style="padding: 10px;width: 100%;"><button id="update-text" style="padding: 10px;">Update text</button></div>
                     </div>
@@ -209,69 +212,16 @@
                         </form>
                     </div>
                 </section>
-                <h2 id="contact-titles">Manage contacts</h2> 
+                <h2 id="contact-titles">View queries</h2> 
                 <section id="man-contact">             
-                    <div style="display: flex;flex-wrap: wrap;" class="man-project-div4">
-                        <div class="contact-added">
-                            <p><b>1</b></p>
-                            <p><b>Jane Doe</b></p>
-                            <p><b>janedoe@example.com</b></p>
-                            <p><button>Check</button></p>
-                        </div>
-                        <div class="contact-added">
-                            <p><b>2</b></p>
-                            <p><b>Jane Doe</b></p>
-                            <p><b>janedoe@example.com</b></p>
-                            <p><button>Check</button></p>
-                        </div>
-                        <div class="contact-added">
-                            <p><b>3</b></p>
-                            <p><b>Jane Doe</b></p>
-                            <p><b>janedoe@example.com</b></p>
-                            <p><button>Check</button></p>
-                        </div>
-                        <div class="contact-added">
-                            <p><b>4</b></p>
-                            <p><b>Jane Doe</b></p>
-                            <p><b>janedoe@example.com</b></p>
-                            <p><button>Check</button></p>
-                        </div>
-                        <div class="contact-added">
-                            <p><b>5</b></p>
-                            <p><b>Jane Doe</b></p>
-                            <p><b>janedoe@example.com</b></p>
-                            <p><button>Check</button></p>
-                        </div>
-                        <div class="contact-added">
-                            <p><b>6</b></p>
-                            <p><b>Jane Doe</b></p>
-                            <p><b>janedoe@example.com</b></p>
-                            <p><button>Check</button></p>
-                        </div>
-                        <div class="contact-added">
-                            <p><b>7</b></p>
-                            <p><b>Jane Doe</b></p>
-                            <p><b>janedoe@example.com</b></p>
-                            <p><button>Check</button></p>
-                        </div>
-                        <div class="contact-added">
-                            <p><b>8</b></p>
-                            <p><b>Jane Doe</b></p>
-                            <p><b>janedoe@example.com</b></p>
-                            <p><button>Check</button></p>
-                        </div>
-                    </div>
-                    <div class="man-project-div4">
+                    <div class="man-project-div4" id="cont-div4">
                         <div class="message-con">
-                            <div class="name-date"><p>Jane Doe &nbsp; - &nbsp; 10 october 2020</p></div>
+                            <!--<div class="name-date"><p>Jane Doe &nbsp; - &nbsp; 10 october 2020</p></div>
                             <hr>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem porro aperiam asperiores accusamus maiores iusto?</p>
+                            <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem porro aperiam asperiores accusamus maiores iusto?</h5>-->
+                            
                         </div>
-                        <div class="message-con">
-                            <div class="name-date"><p>Jane Doe &nbsp; - &nbsp; 10 october 2020</p></div>
-                            <hr>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem porro aperiam asperiores accusamus maiores iusto?</p>
-                        </div>
+                        
                     </div>
                 </section>
             </div>
@@ -281,7 +231,7 @@
         <div class="footer" style="position: fixed;bottom: 0;">
             <div class="foot">
                 <div class="copyright">
-                    <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">Achille Songa</a></p>
+                    <p><a href="../index.html" style="text-decoration: none;color: aliceblue;">&copy;  Achille Songa</a></p>
                 </div>
                 <div class="sms">
                     <a href="https://instagram.com/achille_songa">Instagram</a>
@@ -292,5 +242,11 @@
             </div>
         </div>
     </div>
+    <!--Reference to my firebase console-->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/dashboard.js"></script>
 </body>
 </html>

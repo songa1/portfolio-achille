@@ -93,16 +93,24 @@
 .namepic {
     display: grid;
     color: #008073;
-    justify-items: center;
+    grid-template-columns: 20% 80%;
+    grid-gap: 20px;
+    text-align: center;
 }
 .namepic img {
-    width: 100px;
     grid-column: 1;
-    border-radius: 50%;
+    width: 100%;
+    margin-bottom: 10px;
 }
 .namepic h3 {
     grid-row: 2;
-    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.namepic p {
+    font-size: 25px;
+    text-decoration: underline;
+    color: #193835;
 }
 .namepic a {
     grid-row: 3;
@@ -115,10 +123,34 @@
     text-decoration: none;
     color: #008073;
 }
-.namepic button {
+.buttons {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    bottom: 0%;
+    grid-gap: 10%;
+} 
+.buttons button {
     background-color: #008073;
     border: 1px solid #008073;
     color: aliceblue;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    margin: 0;
+}
+.buttons button:hover {
+    background-color: rgb(0, 0, 0);
+}
+.buttons button a {
+    color: #fff;
+    text-decoration: none;
+}
+.buttons button a:hover {
+    text-decoration: none;
+    color: #fff;
 }
 .namepic h4 {
     grid-row: 4;
@@ -131,7 +163,7 @@
 }
 .man-nav {
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10%;
     justify-content: center;
     background-color:grey;
 }
@@ -411,9 +443,8 @@
 /*css for contacts managements page */
 #man-contact {
     width: 100%;
-    display: grid;
-    grid-template-columns: 45% 45%;
-    margin-top: 10px;
+    display: block;
+    margin-top:0px;
     justify-content: center;
     background-color: #ffffff;
     box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
@@ -423,21 +454,31 @@
 }
 .message-con {
     width: fit-content;
-    padding: 20px;
-    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
-        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
-        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
-        0 100px 80px rgba(59, 59, 59, 0.12);
+    padding: 10px;
     margin-top: 1em;
     border-radius: 1em;
 }
-.name-date {
-    display: inline-block;
+#cont-div4 {
+    height: 350px;
+    scroll-behavior: auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-shadow-color: aqua;
+    background-color: rgb(231, 228, 228);
+    scrollbar-highlight-color: black;
 }
 .message-con p {
     padding: 10px;
     text-align: start;
     margin: 0;
+    text-decoration: underline;
+    color: #008073;
+}
+.message-con h5 {
+    padding: 10px;
+    text-align: start;
+    margin: 0;
+    font-size: 20px;
 }
 .contact-added {
     display: grid;
