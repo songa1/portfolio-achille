@@ -137,16 +137,12 @@
     padding: 10px;
     z-index: 2;
     margin: 10px 30% 10px 30%;
-    display: none;
     height: fit-content;
     position: absolute;
     top: 0;
 }
-#update-post div {
-    display: block;
-    
-}
-#author, #post-title, #date, #image, #post-summary {
+
+#author, #post-title, #date, #image, #summary {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
