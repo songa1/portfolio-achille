@@ -6,9 +6,22 @@
     <title>Update the post</title>
     <link rel="stylesheet" type="text/css" href="../css/modify-style.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/mylogo.png"
+    />
 </head>
 <body>
+    <style>
+        #feedMessage {
+            display: none;
+        }
+    </style>
     <form id="update-post">
+        
+        <p style="background-color: rgb(109, 146, 109);color: #fff;padding: 10px;text-align: center;" id="feedMessage">Your changes are saved! <a href="modify.html" style="color: aliceblue;">Go to dashboard!</a> or <a href="#" onclick="lost()" style="color: #fff;">Stay here</a></p>
         <h3 style="text-align: center;color: #008073;font-size: 30px;">Update the post</h3>
         <div class="inputt">
             <!--Post author-->
@@ -37,8 +50,9 @@
         </div>
         
             
-                <button style="background-color:rgb(36, 59, 57));margin-top: 10px;width: 30%;padding:10px;border-radius: 10px;border: 1px solid #008073;"onclick="cancel()">Cancel</button>
-                <button style="background-color:#008073;color: aliceblue;margin-top: 10px;width: 30%;padding:10px;border-radius: 10px;border: 1px solid #008073;" onclick="update()">Update</button>
+                <button style="background-color:rgb(36, 59, 57));margin-top: 10px;width: 30%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="cancelUpdate"><a href="modify.html" style="color: #008073;text-decoration: none;padding: 10px;">Cancel</a></button>
+                <button style="background-color:#008073;color: aliceblue;margin-top: 10px;width: 30%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="updateButton">Update</button>
+                
                
     </form>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
