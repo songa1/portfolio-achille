@@ -25,7 +25,7 @@ if(confirm("Do you want to save changes?") == true){
         author: updateForm.author.value,
         title: updateForm.title.value,
         summary: updateForm.summary.value,
-        date: updateForm.date.value,
+        date: updateForm.date.value.split(/\n{2,}/),
         content: updateForm.content.value
     }).catch(function(error){
         console.log(error.message);
