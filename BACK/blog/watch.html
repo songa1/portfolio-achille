@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><p id="post-title"></p>></title>
+    <title><p id="topTitle"></p>></title>
     <link
       rel="icon"
       type="image/png"
@@ -32,23 +32,14 @@
                 <a href="feeds.html" style="text-decoration: none;color:aliceblue;"><span><img src="../img/arrow-91-xl.png"></span> &nbsp;&nbsp;&nbsp;Back</a>
             </div>
         </h2>
-        <div class="post">
-        
-           <div id="post-data"><!--
-            <h1>This is a post title</h1>
-            <p>Published on<p><u>10 october 2020</u></p><p style="border-left: 1px solid black;">by <u>Achille Songa</u></p><p style="border-left: 1px solid black;"><u>Leave a comment</u></p></p>
-            <hr>
-            <div class="post-details">
-                
-                
-                
-            </div> -->
-          </div>
+        <div class="post" id="post-data">
+            
+    
             <hr>
             <div class="sh-buttons">
                 <input type="button" value="Share" id="share"><input type="button" value="Like" id="like"> <p>Tags: <u style="color: #008073;">javascript</u>, <u style="color: #008073;">andela</u>, <u style="color: #008073;">stackup</u>, <u style="color: #008073;">html</u>, <u style="color: #008073;">css</u></p>
             </div>
-            <div id="comments-pub">
+            <!-- <div id="comments-pub">
                 <h2>Comments</h2>
                 <div class="comment">
                     <h4>Jane Doe</h4>&nbsp;<h4>10 october 2020</h4>
@@ -63,28 +54,11 @@
                     </p>
                 </div>
                 <h5><a href="#newcomment" id="gotocomment">Add new comment</a></h5>
-            </div>
+            </div> -->
             <hr>
             <h2>Related posts</h2>
-            <div class="post-wrapper">
-                <div class="post-item">
-                    <img src="../img/andela.png">
-                    <h1><a href="#" style="color: #008073;">Post title</a></h1>
-                    <p>10 october 2020  |  Achille Songa</p>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                </div>
-                <div class="post-item">
-                    <img src="../img/andela.png">
-                    <h1><a href="#" style="color: #008073;">Post title</a></h1>
-                    <p>10 october 2020  |  Achille Songa</p>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                </div>
-                <div class="post-item">
-                    <img src="../img/andela.png">
-                    <h1><a href="#" style="color: #008073;">Post title</a></h1>
-                    <p>10 october 2020  |  Achille Songa</p>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, saepe.</h5>
-                </div>
+            <div class="post-wrapper" id="postCollection">
+                
             </div>
             <hr>
             <h2>Leave a comment</h2>
@@ -118,7 +92,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="../js/firebase.js"></script>
+    <script  src="../js/getdata.js"></script>
     <script  src="../js/watch.js"></script>
-    <script src="../js/getdata.js"></script>
+    
 </body>
 </html>

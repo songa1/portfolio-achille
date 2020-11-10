@@ -1,54 +1,32 @@
-// const postData = document.querySelector('#post-data');
 
-function watchPost(title, author, date, content, imageURL, doc) {
-    let div = document.createElement('div');
-    let h1 = document.createElement('h1');
-    let p = document.createElement('p');
-    let line = document.createElement('hr');
-    let partr = document.createElement('section');
-    partr.setAttribute('class', 'post-details');
-    let imgTwo = document.createElement('img');
-    let details = document.createElement('p');
+// function watch(doc){
+//     let postTitle = document.querySelector('.posttitle');
+//     let dateOf = document.querySelector('.dateof');
+//     let authorOf = document.querySelector('.authorOf');
 
+//     postTitle.innerHTML = doc.data().title;
+//     dateOf.innerHTML = doc.data().date;
+//     authorOf.innerHTML = doc.data().author;
 
-    imgTwo.src = imageURL;
-    h1.textContent = title;
-    p.textContent = 'Published by ' + author + ' | ' + ' on ' + date;
-    
-    details.textContent = content;
+//     let pictures = document.querySelector('.article-image');
+//     let contents = document.querySelector('.post-content');
+
+//     pictures.src = doc.data().imageURL;
+//     contents.textContent = doc.data().content;
+// }
 
 
-    div.appendChild(h1);
-    div.appendChild(p);
-    div.appendChild(line);
-    div.appendChild(partr);
-    partr.appendChild(imgTwo);
-    partr.appendChild(details);
+// db.collection('posts').orderBy('date').onSnapshot(snapshot => {
+//     let changes = snapshot.docChanges();
+//     changes.forEach(change => {
+//         if(change.type == 'added'){
+//             watch(change.doc)
+//         } else if (change.type == 'removed'){
+//             let div = document.querySelector('[data-id' + change.doc.id + ']');
+//             posCollection.removeChild(div);
+//         }
+//     })
+// })
 
-    
-
-
-    postData.appendChild(div);
-}
-
-
-// var docRef = db.collection("posts").doc(doc.id);
-
-// docRef.get().then(function(doc) {
-//     if (doc.exists) {
-//         watchPost(
-//             doc.data().title,
-//             doc.data().author,
-//             doc.data().date,
-//             doc.data().content,
-//             doc.data().imageURL
-//         )
-//     } else {
-//         // doc.data() will be undefined in this case
-//         console.log("No such document!");
-//     }
-// }).catch(function(error) {
-//     console.log("Error getting document:", error);
-// });
 
 
