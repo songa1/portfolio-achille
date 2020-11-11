@@ -47,7 +47,7 @@ function landingPage(doc){
 
 
 
-db.collection('landing-page').doc('GvsCpto5XsDyhf0lpMaP').get().then((doc)=>{
+db.collection('profile').doc('homepage').get().then((doc)=>{
     landingPage(doc.data())
 })
 
@@ -59,7 +59,7 @@ function aboutme(doc){
     heading.textContent = doc.heading;
     about.textContent = doc.about;
 }
-db.collection('my-about').doc('aboutme').get().then((doc)=>{
+db.collection('profile').doc('aboutme').get().then((doc)=>{
     aboutme(doc.data())
 })
  
@@ -77,7 +77,7 @@ function aboutInDash(doc){
     editAbout.value = doc.about;
 }
 
-db.collection('my-about').doc('aboutme').get().then((doc)=>{
+db.collection('profile').doc('aboutme').get().then((doc)=>{
     aboutInDash(doc.data())
 })
 
@@ -86,7 +86,7 @@ db.collection('my-about').doc('aboutme').get().then((doc)=>{
 //update about
 function aboutUpdate(){
     console.log('Done');
-    db.collection('my-about').doc('aboutme').update({
+    db.collection('profile').doc('aboutme').update({
         heading: aboutheadingEdit.value,
         about: mainaboutEdit.value
     })

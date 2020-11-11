@@ -51,7 +51,7 @@
                         slogan.textContent= doc.landingtext;
 
                     }
-                    db.collection('landing-page').doc('GvsCpto5XsDyhf0lpMaP').get().then((doc)=>{
+                    db.collection('profile').doc('homepage').get().then((doc)=>{
                         inDash(doc.data())
                     })
 
@@ -126,7 +126,7 @@
 
                                     let dateOfToday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
                                     uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
-                                    db.collection('landing-page').doc('GvsCpto5XsDyhf0lpMaP').update({
+                                    db.collection('profile').doc('homepage').update({
                                         image: downloadURL,
                                         myName: landingUpdateForm.myName.value,
                                         myRole: landingUpdateForm.myRole.value,
