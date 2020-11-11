@@ -109,7 +109,7 @@ function displayPost(doc) {
     
 }
 // get data with real time listener
-db.collection('posts').orderBy('date').onSnapshot(snapshot => {
+db.collection('posts').orderBy('date', 'asc').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
         if(change.type == 'added'){
