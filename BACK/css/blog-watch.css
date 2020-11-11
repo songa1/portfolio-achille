@@ -208,12 +208,13 @@
     font-family: roboto, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .comment-form button {
-    margin-left: 0%;
-    width: 20%;
+    margin: 10px 0px 10px 0px;
+    width: 50%;
     background-color: #008073;
     color: #ffffff;
     border: 1px solid #008073;
     border-radius: 10px;
+    padding: 10px;
 }
 .post-item {
     box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
@@ -248,4 +249,29 @@
 #comments-pub h5 {
     text-decoration: none;
     margin-top: 10px;
+}
+
+.comment-div {
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 5px;
+}
+.comment-div h4 {
+    color: #008073;
+    padding: 0% 10px 0% 10px;
+
+}
+.comment-div p {
+    margin: 0;
+}
+.comment-div a {
+    width: 0;
+    bottom: 0;
+    padding: 10px;
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
+    position: relative;
+    top: 20px;
+
 }
