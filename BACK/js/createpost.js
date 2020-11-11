@@ -20,13 +20,16 @@ function uploadImage(){
         console.log(error.message);
     }, function(){
         //handle successful upload
+        let today = new Date();
+
+        let dateOfToday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
         uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
             db.collection('posts').add({
                 imageURL: downloadURL,
                 author: addpost.author.value,
                 title: addpost.title.value,
                 summary: addpost.summary.value,
-                date: addpost.date.value,
+                date: dateOfToday,
                 content: addpost.content.value
             }).then(function(){
                 alert('Successfuly uploaded!');
