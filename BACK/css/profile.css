@@ -94,8 +94,9 @@
     display: grid;
     color: #008073;
     grid-template-columns: 20% 80%;
-    grid-gap: 20px;
-    text-align: center;
+    grid-gap: 100px;
+    text-align: start;
+    margin-bottom: 20px;
 }
 .namepic img {
     grid-column: 1;
@@ -106,6 +107,7 @@
     grid-row: 2;
     font-weight: bolder;
     font-size: 30px;
+    margin-top: 0;
 }
 .namepic p {
     font-size: 25px;
@@ -127,7 +129,7 @@
     display: grid;
     grid-template-columns: 40% 40%;
     margin: 0;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     bottom: 0%;
     grid-gap: 10%;
@@ -179,8 +181,7 @@
 }
 #man-main {
     width: 100%;
-    display: grid;
-    grid-template-columns: 45% 45%;
+    display: flex;
     margin-top: 10px;
     justify-content: center;
     background-color: #ffffff;
@@ -190,15 +191,9 @@
         0 100px 80px rgba(59, 59, 59, 0.12);
 }
 .man-main-div1 {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-}
-#man-main img {
-    width: 20%;
+    padding: 20px;
+    width: 60%;
+    margin: 0 20% 0 20%
 }
 .man-main-div1 label {
     width: 100%;
@@ -214,21 +209,17 @@
 
 }
 .man-main-div1 button {
-    padding: 0;
+    padding: 10px;
     text-align: center;
     margin: 0%;
     width: 50%;
+    margin-top: 10px;
+    border: 1px solid #008073;
+    background-color: #008073;
+    color: #fff;
 }
 * {
     background-origin: border-box;
-}
-#update-text {
-    margin: 5px;
-    padding: 20px;
-    border: 1px solid #008073;
-    background-color: #008073;
-    color: #ffffff;
-    border-radius: 10px;
 }
 /*css for skills management*/
 #man-skills {

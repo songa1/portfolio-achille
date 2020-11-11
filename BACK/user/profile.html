@@ -18,6 +18,11 @@
     <link rel="stylesheet" type="text/css" href="../css/responsive.css">
     <link rel="stylesheet" type="text/css" href="../css/blog-watch.css">
     <script src="../js/profile-sections.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/dashboard.js"></script>
     
 </head>
 <body>
@@ -32,13 +37,32 @@
             </div>
         </h2>
         <div class="profile" id="profile">
+
+            <!--Making the dynamic landing page-->
             <div class="namepic">
+                <script>
+                    function inDash(doc){
+                        let myNameRole = document.querySelector('.myNameRole');
+                        let imginDash = document.querySelector('.imgInDash');
+                        let slogan = document.querySelector('#mySlogan');
+
+                        imginDash.src = doc.image;
+                        myNameRole.textContent = doc.myName+' | '+doc.myRole;
+                        slogan.textContent= doc.landingtext;
+
+                    }
+                    db.collection('landing-page').doc('GvsCpto5XsDyhf0lpMaP').get().then((doc)=>{
+                        inDash(doc.data())
+                    })
+
+
+                </script>
                 <div>
-                    <img src="../img/songa.jpg">
+                    <img src="" class="imgInDash">
                 </div>
                 <div>
-                    <h3>Achille Songa   |  Full stack Web Developer</h3>
-                    <p><i>I want to make life more easier!</i></p>
+                    <h3 class="myNameRole"></h3>
+                    <p id="mySlogan"></p>
                     <h4>Views: 67      |      Visitors: 10</h4>
                     <div class="buttons"><button><a href="../blog/modify.html">Manage a blog</a></button><button>Log out</button></div>
                 </div>
@@ -54,16 +78,72 @@
                     <a href="#man-project" onclick="projectPage()" id="projectpage">Projects</a>
                     <a href="#man-experience" onclick="expertPage()" id="expertpage">Experience</a>
                     <a href="#man-contact" onclick="contactPage()" id="contactpage">Queries</a>
-                </div>
-                <h2 id="main-titles">Manage main page</h2>  
-                <section id="man-main">           
+                </div> 
+                <section id="man-main">          
                     <div style="display: flex;flex-wrap: wrap;" class="man-main-div1">
-                        <div style="padding: 10px;width: 80%;">
-                        <label>Update the image</label><input type="file"><button id="update-text" style="padding: 10px;">Update Image</button></div>
-                    </div>
-                    <div class="man-main-div1">
-                        <div style="padding: 10px;width: 100%;display: inline-block;">
-                        <input type="text" style="padding: 10px;width: 100%;"><button id="update-text" style="padding: 10px;">Update text</button></div>
+                        <form id="updateLanding">
+                            <h2>Updating Landing page</h2>
+                            <label for="myName">Change my Name</label>
+                            <input type="text" id="myName">
+                            <label for="myRole">Change the role</label>
+                            <input type="text" id="myRole">
+                            <label for="mySlogan">Change my slogan</label>
+                            <input type="text" id="mySlogan">
+                            <label for="myPicture">Change my profile image</label>
+                            <input type="file" id="myPicture">
+                            <center><button>Update</button></center>
+                            
+                        </form>
+                        <script>
+                            // uploading data for homepage to database
+                            const landingUpdateForm = document.querySelector('#updateLanding');
+
+
+                            function updateProfileDetails(){
+                                //get image
+                                const image = document.querySelector('#myPicture').files[0];
+                                const imageName = image.name;
+                                //ref to root storage + image storage
+                                var storageRef = firebase.storage().ref('images/profile/'+imageName);
+                                //upload image to selected storage
+                                const uploadTask = storageRef.put(image);
+                                //get upload progress
+                                uploadTask.on('state_changed', function(snapshot){
+                                //get progress
+                                const progress = snapshot.bytestransferred/snapshot.totalBytes *100;
+                                    console.log("Upload is " +progress+ " done");
+                                }, function(error){
+                                    //handle errors
+                                    console.log(error.message);
+                                }, function(){
+                                    //handle successful upload
+                                    let today = new Date();
+
+                                    let dateOfToday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                                    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
+                                    db.collection('landing-page').doc('GvsCpto5XsDyhf0lpMaP').update({
+                                        image: downloadURL,
+                                        myName: landingUpdateForm.myName.value,
+                                        myRole: landingUpdateForm.myRole.value,
+                                        landingtext: landingUpdateForm.mySlogan.value,
+                                        date: dateOfToday
+                                    }).then(function(){
+                                        alert('Successfuly updated!');
+                                        landingUpdateForm.reset();
+                                        return false;
+                                    })
+            
+            
+                                });
+                            });
+      
+                            };
+                            landingUpdateForm.addEventListener('submit', (e)=>{
+                                e.preventDefault();
+                                console.log|("It's working");
+                                updateProfileDetails();
+                            })
+                            </script>
                     </div>
                 </section>
                 <h2 id="skills-titles">Manage skills</h2> 
@@ -76,44 +156,9 @@
                             <img src="../img/javascript.png">
                             <p><button>Edit</button></p>
                         </div>
-                        <div class="skill-added">
-                            <p><b>2</b></p>
-                            <p><b>HTML</b></p>
-                            <p><b>Front-end</b></p>
-                            <img src="../img/html (1).png">
-                            <p><button>Edit</button></p>
-                        </div>
-                        <div class="skill-added">
-                            <p><b>1</b></p>
-                            <p><b>JS</b></p>
-                            <p><b>Front-end</b></p>
-                            <img src="../img/javascript.png">
-                            <p><button>Edit</button></p>
-                        </div>
-                        <div class="skill-added">
-                            <p><b>2</b></p>
-                            <p><b>HTML</b></p>
-                            <p><b>Front-end</b></p>
-                            <img src="../img/html (1).png">
-                            <p><button>Edit</button></p>
-                        </div>
-                        <div class="skill-added">
-                            <p><b>1</b></p>
-                            <p><b>JS</b></p>
-                            <p><b>Front-end</b></p>
-                            <img src="../img/javascript.png">
-                            <p><button>Edit</button></p>
-                        </div>
-                        <div class="skill-added">
-                            <p><b>2</b></p>
-                            <p><b>HTML</b></p>
-                            <p><b>Front-end</b></p>
-                            <img src="../img/html (1).png">
-                            <p><button>Edit</button></p>
-                        </div>
                     </div>
                     <div class="man-skills-div2">
-                        <form>
+                        <form id="">
                             <label>Skills title</label>
                             <input type="text">
                             <label>Choose category</label>
@@ -243,10 +288,6 @@
         </div>
     </div>
     <!--Reference to my firebase console-->
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
-    <script src="../js/firebase.js"></script>
-    <script src="../js/dashboard.js"></script>
+    
 </body>
 </html>
