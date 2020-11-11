@@ -65,6 +65,10 @@
                     <p id="mySlogan"></p>
                     <h4>Views: 67      |      Visitors: 10</h4>
                     <div class="buttonss"><button><a href="../blog/modify.html">Manage a blog</a></button><button>Log out</button></div>
+                    <p id="aboutDemo"> ABOUT ME:
+                        <h5 id="aboutHeadingDash"></h5><br>
+                        <p id="aboutContentDash"></p><br>
+                    </p>
                 </div>
                 
                 
@@ -79,10 +83,11 @@
                     <a href="#man-experience" onclick="expertPage()" id="expertpage">Experience</a>
                     <a href="#man-contact" onclick="contactPage()" id="contactpage">Queries</a>
                 </div> 
-                <section id="man-main">          
+                <section id="man-main">      
+                    <h2>Homepage appearance</h2>    
                     <div style="display: flex;flex-wrap: wrap;" class="man-main-div1">
                         <form id="updateLanding">
-                            <h2>Updating Landing page</h2>
+                            
                             <label for="myName">Change my Name</label>
                             <input type="text" id="myName">
                             <label for="myRole">Change the role</label>
@@ -174,22 +179,15 @@
                         </form>
                     </div>
                 </section>
-                <h2 id="about-titles">Manage about</h2> 
                 <section id="man-about">             
-                    <div style="display: flex;flex-wrap: wrap;" class="man-about-div3">
-                        <div class="about-added">
-                            <h1>This is the heading</h1>
-                            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum rem nam sed, deleniti assumenda, enim esse ipsa incidunt voluptas reprehenderit earum alias, facere quis! Distinctio exercitationem dolorum nulla! Facere fugiat error totam. Odit eius temporibus dicta atque, incidunt illo eos!</h4>
-                            <p>Edit</p>
-                        </div>
-                    </div>
+                    <h2>Update my About</h2>
                     <div class="man-about-div3">
-                        <form>
+                        <form id="addabout">
                             <label>Heading</label>
-                            <input type="text">
+                            <input type="text" id="aboutheadingEdit">
                             <label>Main about</label>
-                            <textarea></textarea>
-                            <button id="skill-add">Update about</button>
+                            <textarea id="mainaboutEdit"></textarea>
+                            <button id="about-add" onclick="aboutUpdate()">Update about</button>
                         </form>
                     </div>
                 </section>

@@ -93,8 +93,8 @@
 .namepic {
     display: grid;
     color: #008073;
-    grid-template-columns: 20% 80%;
-    grid-gap: 100px;
+    grid-template-columns: 20% 75%;
+    grid-gap: 5%;
     text-align: start;
     margin-bottom: 20px;
 }
@@ -159,6 +159,12 @@
 }
 .namepic h4 {
     grid-row: 4;
+}
+#aboutContentDash {
+    margin: 0;
+}
+#aboutHeadingDash {
+    margin: 0;
 }
 /*css for page manage landing page*/
 .manageweb {
@@ -291,15 +297,13 @@
 }
 /* css for about management */
 .man-about-div3 {
-    width: 90%;
+    width: 60%;
     padding: 10px;
+    margin: 0 20% 0 20%;
 }
 #man-about {
     width: 100%;
-    display: grid;
-    grid-template-columns: 45% 45%;
     margin-top: 10px;
-    justify-content: center;
     background-color: #ffffff;
     box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
         0 22.3px 17.9px rgba(110, 110, 110, 0.072),
@@ -334,25 +338,12 @@
     margin: 0%;
     width: 100%;
 }
-.about-added {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
-}
-.about-added h1 {
-    border-bottom: 1px solid #008073;
-    padding: 10px;
-}
-.about-added h4 {
-    word-wrap: break-word;
-    padding: 10px;
-}
-.about-added p {
+#about-add {
+    margin-top: 5px;
+    padding: 20px;
+    border: 1px solid #008073;
     background-color: #008073;
     color: #ffffff;
-    padding: 10px;
     border-radius: 10px;
 }
 /*css for project management page */

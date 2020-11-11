@@ -297,6 +297,10 @@
                 0 41.8px 33.4px rgba(110, 110, 110, 0.086),
                 0 100px 80px rgba(59, 59, 59, 0.12);
         }
+        .man-about-div3 {
+            width: 90%;
+            margin: 0 5% 0 5%;
+        }
         .man-main-div1 {
             margin: 0 10% 0 10%;
             width: 80%;
