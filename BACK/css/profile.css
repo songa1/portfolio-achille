@@ -125,26 +125,29 @@
     text-decoration: none;
     color: #008073;
 }
-.buttons {
-    display: grid;
-    grid-template-columns: 40% 40%;
-    margin: 0;
-    justify-content: start;
-    align-items: center;
-    bottom: 0%;
-    grid-gap: 10%;
+.buttonss {
+    width: fit-content;
+    display: inline-block;
 } 
-.buttons button {
+.buttonss button {
+    width: 200px;
+    margin: 5px;
+    padding: 10px;
+    outline: none;
+    color: #fff;
     background-color: #008073;
     border: 1px solid #008073;
-    color: aliceblue;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 30% 30%;
-    margin: 0;
+    font-family: Comfortaa;
 }
-.buttons button:hover {
-    background-color: rgb(0, 0, 0);
+.buttonss button a {
+    color: #fff;
+    text-decoration: none;
+}
+.buttonss button a:hover {
+    color: #fff;
+}
+.buttonss button:hover {
+    background-color: rgb(24, 52, 85);
 }
 .buttons button a {
     color: #fff;
