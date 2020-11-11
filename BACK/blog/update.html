@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update the post</title>
+    <link rel="stylesheet" type="text/css" href="../css/modify-style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/mylogo.png"
+    />
+</head>
+<body>
+    <style>
+        #feedMessage {
+            display: none;
+        }
+    </style>
+    <form id="update-post">
+        
+        <p style="background-color: rgb(109, 146, 109);color: #fff;padding: 10px;text-align: center;" id="feedMessage">Your changes are saved! <a href="modify.html" style="color: aliceblue;">Go to dashboard!</a> or <a href="#" onclick="lost()" style="color: #fff;">Stay here</a></p>
+        <h3 style="text-align: center;color: #008073;font-size: 30px;">Update the post</h3>
+        <div class="inputt">
+            <!--Post author-->
+            <label for="author">Author</label><br>
+            <input type="text" maxlength="50" name="author" id="author">
+        </div>
+        <div class="inputt">
+            <!--Post Title-->
+            <label for="post-title">Post title</label><br>
+            <input type="text" maxlength="50" name="title" id="post-title">
+        </div>
+        <div class="inputt">
+            <!--Post Summary-->
+            <label for="post-summary">Update summary</label><br>
+            <textarea id="summary"></textarea>
+        </div>
+        <div class="inputt">
+            <!--Post date-->
+            <label for="date">Update Date</label><br>
+            <input type="date" maxlength="300" name="date" id="date">
+        </div>
+        <div class="texta">
+            <!--Post Content-->
+            <label for="post-content">Update content</label><br>
+            <article><textarea style="height: 300px;" name="content"></textarea></article>
+        </div>
+        
+            
+                <button style="background-color:rgb(36, 59, 57));margin-top: 10px;width: 30%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="cancelUpdate"><a href="modify.html" style="color: #008073;text-decoration: none;padding: 10px;">Cancel</a></button>
+                <button style="background-color:#008073;color: aliceblue;margin-top: 10px;width: 30%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="updateButton">Update</button>
+                
+               
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/updatepost.js"></script>
+</body>
+</html>

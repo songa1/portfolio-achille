@@ -95,44 +95,12 @@ function displayPost(doc) {
 
     // update post
 
-    mod.addEventListener('click', function(e){
+    mod.addEventListener('click', (e) => {
+        e.stopPropagation();
         if (confirm("Do you want to modify this post?") == true) {
-            document.getElementById('update-post').style.display = "block";
-            
-        function updating(){
-            db.collection("posts").doc(doc.id).update({
-                title: 'My love for you',
-                author: 'Achille'
-            }).then(function() {
-                alert('Post updated successfully');
-            }).catch(function(error) {
-                console.error("Error updating document: ", error);
-            });
-        }
-            
-            let updateForm = document.querySelector('#updatepost');
-            updateForm.addEventListener('click', function(){
-                
-                // let auth = updateForm.author.value;
-                // let tit = updateForm.posttitle.value;
-                // let sum = updateForm.summary.value;
-                // let dat = updateForm.date.value;
-                // let cont = updateForm.content.value;
-                // db.collection('posts').doc(doc.id).update({
-                //     author: auth,
-                //     title: tit,
-                //     summary: sum,
-                //     date: dat,
-                //     content: cont
-                // }).then(function(){
-                //     alert('Successfully modified post!')
-                // }).catch(function(error) {
-                //     console.error("Error removing document: ", error);
-                // });
-                
-                updating();
-                
-            })
+            let id = e.target.parentElement.getAttribute('data-id');
+            location.assign(`update.html#${doc.id}`); 
+           
         } else {
             alert('Post will not be modified!')
             return false;

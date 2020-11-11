@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 * {
     box-sizing: border-box;
 }
 body, html {
     width: 100%;
-    font-family: roboto,ubuntu, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Comfortaa,'Fredoka One',roboto,ubuntu, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: 100%;
     scroll-behavior: smooth;
     margin: 0;
