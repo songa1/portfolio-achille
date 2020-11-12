@@ -415,7 +415,7 @@
 /* managing experience*/
 #man-experience {
     width: 100%;s
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     justify-content: center;
     background-color: #ffffff;
     box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
@@ -447,9 +447,7 @@
 /*css for contacts managements page */
 #man-contact {
     width: 100%;
-    display: block;
     margin-top:0px;
-    justify-content: center;
     background-color: #ffffff;
     box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
         0 22.3px 17.9px rgba(110, 110, 110, 0.072),
@@ -457,19 +455,20 @@
         0 100px 80px rgba(59, 59, 59, 0.12);
 }
 .message-con {
-    width: fit-content;
+    width: 70%;
     padding: 10px;
     margin-top: 1em;
     border-radius: 1em;
+    margin: 0 15% 0 15%;
 }
 #cont-div4 {
-    height: 350px;
+    height: 550px;
     scroll-behavior: auto;
     overflow: scroll;
-    overflow-x: hidden;
     scrollbar-shadow-color: aqua;
     background-color: rgb(231, 228, 228);
     scrollbar-highlight-color: black;
+    width: 100%;
 }
 .message-con p {
     padding: 10px;
