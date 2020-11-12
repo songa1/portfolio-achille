@@ -411,10 +411,10 @@
     color: #ffffff;
     border-radius: 10px;
 }
+
+/* managing experience*/
 #man-experience {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 45% 45%;
+    width: 100%;s
     margin-top: 10px;
     justify-content: center;
     background-color: #ffffff;
@@ -422,6 +422,27 @@
         0 22.3px 17.9px rgba(110, 110, 110, 0.072),
         0 41.8px 33.4px rgba(110, 110, 110, 0.086),
         0 100px 80px rgba(59, 59, 59, 0.12);
+}
+#expert-add {
+    margin-top: 5px;
+    padding: 20px;
+    border: 1px solid #008073;
+    background-color: #008073;
+    color: #ffffff;
+    border-radius: 10px;
+}
+#manageExpert {
+    width: 50%;
+    margin: 0 25% 0 25%;
+}
+#manageExpert input, button, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #008073;
+}
+#manageExpert label {
+    color: #008073;
 }
 /*css for contacts managements page */
 #man-contact {

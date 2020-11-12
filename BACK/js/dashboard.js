@@ -151,3 +151,66 @@ db.collection('projects').get().then((snapshot)=>{
     })
 })
 
+// Experience section edit
+
+function experienceAtHome(doc){
+    let container = document.querySelector('#experience');
+    let expertdiv = document.createElement('div');
+    expertdiv.setAttribute('class','expert');
+    let expertImage = document.createElement('img');
+    let expertTitle = document.createElement('h1');
+    let nameCont = document.createElement('div');
+    let description = document.createElement('p');
+    let line = document.createElement('hr');
+
+    expertImage.src = doc.image; 
+    expertTitle.textContent = doc.title;
+    description.textContent = doc.description;
+
+    //appending children
+    nameCont.appendChild(expertImage);
+    nameCont.appendChild(expertTitle);
+
+    // styling name container
+    nameCont.style.display = "grid";
+    nameCont.style.gridTemplateColumns = "15% 80%";
+    nameCont.style.alignItems = "center";
+
+    expertImage.style.width = "100%";
+
+    expertdiv.appendChild(nameCont);
+    expertdiv.appendChild(line);
+    expertdiv.appendChild(description);
+
+    container.appendChild(expertdiv);
+
+}
+
+db.collection('experience').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if(change.type == 'added'){
+            experienceAtHome(change.doc.data())
+        }
+         
+    })
+  })
+
+  //show experience in dashboard
+function expertInDash(doc){
+    let projectImage = document.querySelector('#expertImageInDash');
+    let projectName = document.querySelector('#expertNameDash');
+    let description = document.querySelector('#descDashExpert');
+
+    projectImage.src = doc.image; 
+    projectName.textContent = doc.title;
+    description.textContent = doc.description;
+    
+
+}
+
+db.collection('experience').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        expertInDash(doc.data())
+    })
+})
