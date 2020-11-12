@@ -433,5 +433,8 @@
             word-wrap: break-word;
             scrollbar-width: 20px;
         }
-    
+    .message-con {
+        width: 90%;
+        margin: 0 5% 0 5%;
+    }
 }

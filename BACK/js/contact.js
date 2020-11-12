@@ -4,6 +4,7 @@
     let feedName = document.querySelector('#feedback-name');
     let feedEmail = document.querySelector('#feedback-email');
     let feedMessage = document.querySelector('#feedback-message');
+    let submitQury = document.querySelector('#idbtn');
 
     feedName.style.color = 'red';
     feedEmail.style.color = 'red';
@@ -35,6 +36,7 @@
                 feedEmail.style.display = 'none', 5000;
             return false;
         } else {
+
             db.collection('queries').add({
                 name: contactForm.name.value,
                 email: contactForm.email.value,
@@ -48,7 +50,9 @@
 
     }
         
-
+ submitQury.addEventListener('click', (e)=>{
+     e.preventDefault();
+ })
 
 
 // Login form 
