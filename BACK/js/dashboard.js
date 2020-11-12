@@ -97,24 +97,40 @@ function aboutUpdate(){
 
 // projects section manage dynamically
 function projectAtHome(doc){
-    let projectImage = document.querySelector('#projectImage');
-    let projectName = document.querySelector('#projectName');
-    let description = document.querySelector('#proDescription');
+    let wrapper = document.querySelector('.wrapper');
+    let projectdiv = document.createElement('div');
+    projectdiv.setAttribute('class','wrap-item');
+    let projectImage = document.createElement('img');
+    let projectName = document.createElement('h1');
+    let projectNameLink = document.createElement('a');
+    let description = document.createElement('h5');
 
     projectImage.src = doc.image; 
-    projectName.textContent = doc.projectName;
+    projectNameLink.textContent = doc.projectName;
     description.textContent = doc.description;
     
-    projectName.href = doc.link;
+    projectNameLink.href = doc.link;
+
+    //appending children
+    projectName.appendChild(projectNameLink);
+
+    projectdiv.appendChild(projectImage);
+    projectdiv.appendChild(projectName);
+    projectdiv.appendChild(description);
+
+    wrapper.appendChild(projectdiv);
 
 }
 
-db.collection('projects').get().then((snapshot)=>{
-    snapshot.docs.forEach(doc => {
-        console.log(doc);
-        projectAtHome(doc.data())
+db.collection('projects').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if(change.type == 'added'){
+            projectAtHome(change.doc.data())
+        }
+         
     })
-})
+  })
 //show projects in dashboard
 function projectInDash(doc){
     let projectImage = document.querySelector('#proImageInDash');
