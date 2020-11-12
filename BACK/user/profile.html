@@ -69,6 +69,42 @@
                         <h5 id="aboutHeadingDash"></h5><br>
                         <p id="aboutContentDash"></p><br>
                     </p>
+                    <p>PROJECTS:
+                        <div id="projectsInDash" class="projects">
+                            <div class="dash-wrapper">
+                                <div class="dashwrap-item">
+                                    <img src="" id="proImageInDash">
+                                    <a href="../index.html#projects" style="background-color: #008073;padding: 10px;color: aliceblue;width: 100%;" target="_blank">View more Projects</a>
+                                    <div>
+                                        <h1><a href=""  id="proNameDash"></a></h1>
+                                        <h5 id="descDashPro"></h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </p>
+                    <p>EXPERIENCE:
+                        <div id="projectsInDash" class="projects">
+                            <div class="dash-wrapper">
+                                <div class="dashwrap-item">
+                                    <img src="" id="expertImageInDash">
+                                    <a href="../index.html#experience" style="background-color: #008073;padding: 10px;color: aliceblue;width: 100%;" target="_blank">Check more experience</a>
+                                    <div>
+                                        <h1 id="expertNameDash"></h1>
+                                        <h5 id="descDashExpert"></h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </p>
                 </div>
                 
                 
@@ -191,70 +227,158 @@
                         </form>
                     </div>
                 </section>
-                <h2 id="project-titles">Manage projects</h2> 
-                <section id="man-project">             
-                    <div style="display: flex;flex-wrap: wrap;" class="man-project-div4">
-                        <div class="project-added">
-                            <p><b>1</b></p>
-                            <p><b><a href="#">Manwel</a></b></p>
-                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error repellat aliquid libero exercitationem rerum similique non deserunt, vitae quam, ea maxime voluptates quod veniam tenetur culpa sequi eligendi magni!</b></p>
-                            <img src="../img/andela.png">
-                            <p><button>Edit</button></p>
-                        </div>
-                        <div class="project-added">
-                            <p><b>2</b></p>
-                            <p><b><a href="#">Manwel</a></b></p>
-                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error repellat aliquid libero exercitationem rerum similique non deserunt, vitae quam, ea maxime voluptates quod veniam tenetur culpa sequi eligendi magni!</b></p>
-                            <img src="../img/andela.png">
-                            <p><button>Edit</button></p>
-                        </div>
-                    </div>
+                <!--PROJECT MANAGEMENT-->
+                <section id="man-project">    
+                    <h2>Manage Projects</h2>         
                     <div class="man-project-div4">
-                        <form>
+                        <form id="projectAddFrorm">
                             <label>Project title</label>
-                            <input type="text">
+                            <input type="text" id="proName">
                             <label>Project link</label>
-                            <input type="url">
+                            <input type="url" id="proLink">
                             <label>Add an image</label>
-                            <input type="file">
+                            <input type="file" id="proImage">
                             <label>Description</label>
-                            <textarea></textarea>
-                            <button id="skill-add">Add a project</button>
+                            <textarea id="proDesc"></textarea>
+                            <button id="project-add">Add a project</button>
                         </form>
                     </div>
+
+
+
+
+
+                    <script>
+                    // add mew project
+let projectUpdateButton = document.getElementById('project-add');
+let projectNameAdd = document.getElementById('proName');
+let projectLinkAdd = document.getElementById('proLink');
+let projectDescAdd = document.getElementById('proDesc');
+let projectUpdateForm = document.getElementById('projectAddForm');
+
+
+
+    function addNewProject(){
+        //get image
+        const image = document.querySelector('#proImage').files[0];
+        const imageName = image.name;
+        //ref to root storage + image storage
+        var storageRef = firebase.storage().ref('images/projects/'+imageName);
+        //upload image to selected storage
+        const uploadTask = storageRef.put(image);
+        //get upload progress
+        uploadTask.on('state_changed', function(snapshot){
+        //get progress
+        const progress = snapshot.bytestransferred/snapshot.totalBytes *100;
+            console.log("Upload is " +progress+ " done");
+        }, function(error){
+            //handle errors
+            console.log(error.message);
+        }, function(){
+            //handle successful upload
+            let today = new Date();
+
+            let dateOfToday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
+                    db.collection('projects').add({
+                        image: downloadURL,
+                        projectName: projectNameAdd.value,
+                        link: projectLinkAdd.value,
+                        description: projectDescAdd.value,
+                        date: dateOfToday
+                    }).then(function(){
+                        alert('Successfuly added!');
+                        return false;
+                    })
+            
+            
+                });
+        });
+      
+    };
+        projectUpdateButton.addEventListener('click', (e)=>{
+            e.preventDefault();
+            console.log("It's working");
+            addNewProject();
+            projectUpdateForm.reset();
+        })
+
+    </script>
                 </section>
-                <h2 id="expert-titles">Manage experience</h2> 
-                <section id="man-experience">             
-                    <div style="display: flex;flex-wrap: wrap;" class="man-project-div4">
-                        <div class="project-added">
-                            <p><b>1</b></p>
-                            <p><b><a href="#">Software engineer</a></b></p>
-                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error repellat aliquid libero exercitationem rerum similique non deserunt, vitae quam, ea maxime voluptates quod veniam tenetur culpa sequi eligendi magni!</b></p>
-                            <img src="../img/andela.png">
-                            <p><button>Edit</button></p>
-                        </div>
-                        <div class="project-added">
-                            <p><b>2</b></p>
-                            <p><b><a href="#">Graphic designer</a></b></p>
-                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error repellat aliquid libero exercitationem rerum similique non deserunt, vitae quam, ea maxime voluptates quod veniam tenetur culpa sequi eligendi magni!</b></p>
-                            <img src="../img/andela.png">
-                            <p><button>Edit</button></p>
-                        </div>
-                    </div>
-                    <div class="man-project-div4">
-                        <form>
-                            <label>Experience heading</label>
-                            <input type="text">
-                            <label>A link if any</label>
-                            <input type="url">
+
+
+
+                <!--Manage experience-->
+                <section id="man-experience"> 
+                    <h2>Manage experience</h2>            
+                        <form id="manageExpert">
+                            <label>Experience Title</label>
+                            <input type="text" id="experttitle">
                             <label>Add an image</label>
-                            <input type="file">
+                            <input type="file" id="expertImage">
                             <label>Description</label>
-                            <textarea></textarea>
-                            <button id="skill-add">Add experience</button>
+                            <textarea id="expertDesc"></textarea>
+                            <button id="expert-add">Add experience</button>
                         </form>
-                    </div>
                 </section>
+                <script>
+                    // add mew project
+let expertUpdateButton = document.getElementById('expert-add');
+let experttitle = document.getElementById('experttitle');
+let expertimage = document.getElementById('expertImage');
+let expertdesc = document.getElementById('expertDesc');
+let expertUpdateForm = document.getElementById('manageExpert');
+
+
+
+    function addNewExpert(){
+        //get image
+        const image = document.querySelector('#expertImage').files[0];
+        const imageName = image.name;
+        //ref to root storage + image storage
+        var storageRef = firebase.storage().ref('images/experience/'+imageName);
+        //upload image to selected storage
+        const uploadTask = storageRef.put(image);
+        //get upload progress
+        uploadTask.on('state_changed', function(snapshot){
+        //get progress
+        const progress = snapshot.bytestransferred/snapshot.totalBytes *100;
+            console.log("Upload is " +progress+ " done");
+        }, function(error){
+            //handle errors
+            console.log(error.message);
+        }, function(){
+            //handle successful upload
+            let today = new Date();
+
+            let dateOfToday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
+                    db.collection('experience').add({
+                        image: downloadURL,
+                        title: experttitle.value,
+                        description: expertdesc.value,
+                        date: dateOfToday
+                    }).then(function(){
+                        alert('Successfuly added!');
+                        expertUpdateForm.reset();
+                        return false;
+                    })
+            
+            
+                });
+        });
+      
+    };
+        expertUpdateButton.addEventListener('click', (e)=>{
+            e.preventDefault();
+            console.log("It's working");
+            addNewExpert();
+        })
+
+    </script>
+
+
+
                 <h2 id="contact-titles">View queries</h2> 
                 <section id="man-contact">             
                     <div class="man-project-div4" id="cont-div4">
