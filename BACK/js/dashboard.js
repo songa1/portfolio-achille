@@ -91,3 +91,47 @@ function aboutUpdate(){
         about: mainaboutEdit.value
     })
 }
+
+
+
+
+// projects section manage dynamically
+function projectAtHome(doc){
+    let projectImage = document.querySelector('#projectImage');
+    let projectName = document.querySelector('#projectName');
+    let description = document.querySelector('#proDescription');
+
+    projectImage.src = doc.image; 
+    projectName.textContent = doc.projectName;
+    description.textContent = doc.description;
+    
+    projectName.href = doc.link;
+
+}
+
+db.collection('projects').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        console.log(doc);
+        projectAtHome(doc.data())
+    })
+})
+//show projects in dashboard
+function projectInDash(doc){
+    let projectImage = document.querySelector('#proImageInDash');
+    let projectName = document.querySelector('#proNameDash');
+    let description = document.querySelector('#descDashPro');
+
+    projectImage.src = doc.image; 
+    projectName.textContent = doc.projectName;
+    description.textContent = doc.description;
+    
+    projectName.href = doc.link;
+
+}
+
+db.collection('projects').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        projectInDash(doc.data())
+    })
+})
+
