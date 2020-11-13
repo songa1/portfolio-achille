@@ -51,3 +51,4 @@ addpost.addEventListener('submit', (e) => {
 }, function(error){
     console.log('Error');
 });
+

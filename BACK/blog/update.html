@@ -40,8 +40,9 @@
         </div>
         <div class="inputt">
             <!--Post image-->
-            <label for="date">Update Date</label><br>
+            <label for="date">Update Image</label><br>
             <input type="file" name="image" id="image">
+            <img src="" id="displayUpdateImage" style="width: 100%;margin-bottom: 20px;">
         </div>
         <div class="texta">
             <!--Post Content-->
@@ -50,7 +51,7 @@
         </div>
         
             
-                <button style="background-color:rgb(36, 59, 57));margin-top: 10px;width: 30%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="cancelUpdate"><a href="modify.html" style="color: #008073;text-decoration: none;padding: 10px;">Cancel</a></button>
+                <button style="background-color:rgb(36, 59, 57);margin-top: 10px;width: 30%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="cancelUpdate"><a href="modify.html" style="color: #fff;text-decoration: none;padding: 10px;">Cancel</a></button>
                 <button style="background-color:#008073;color: aliceblue;margin-top: 10px;width: 30%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="updateButton">Update</button>
                 
                
@@ -58,7 +59,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="../js/firebase.js"></script>
     <script src="../js/updatepost.js"></script>
+    <script src="../js/observer.js"></script>
 </body>
 </html>

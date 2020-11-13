@@ -47,6 +47,7 @@ function edit(doc){
     updateForm.title.value = doc.title;
     updateForm.summary.value = doc.summary;
     updateForm.content.value = doc.content;
+    updateForm.displayUpdateImage.src = doc.imageURL;
 }
 
 
@@ -68,3 +69,4 @@ function lost(){
                 }
         
             })
+

@@ -48,3 +48,10 @@
 .contact {
     height: 100%;
 }
+.contact-1 div a {
+    text-decoration: none;
+    color: #008073;
+}
+.contact-1 div a:hover {
+    color: #324442;
+}
