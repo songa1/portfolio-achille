@@ -247,10 +247,7 @@
 /*css for skills management*/
 #man-skills {
     width: 100%;
-    display: grid;
-    grid-template-columns: 45% 45%;
     margin-top: 10px;
-    justify-content: center;
     background-color: #ffffff;
     box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
         0 22.3px 17.9px rgba(110, 110, 110, 0.072),
@@ -273,18 +270,10 @@
     color: #ffffff;
     border-radius: 10px;
 }
-.skill-added {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #008073;
-    margin: 0;
-}
-.skill-added img {
-    width: 100%;
-    padding: 10px;
+#skillsAddForm {
+    width: 50%;
+    margin: 0 25% 0 25%;
+    padding: 20px;
 }
 .man-skills-div2 label {
     width: 100%;
@@ -304,10 +293,6 @@
     text-align: center;
     margin: 0%;
     width: 100%;
-}
-.man-skills-div2 {
-    width: 90%;
-    padding: 10px;
 }
 /* css for about management */
 .man-about-div3 {
