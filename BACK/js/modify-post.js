@@ -126,3 +126,12 @@ db.collection('users').get().then(snap => {
     let pla = document.getElementById('subcount');
     pla.textContent = size;
  });
+
+ const auth = firebase.auth();
+
+auth.onAuthStateChanged(user =>{
+    if(user){
+    }else{
+        location.assign('../user/login.html');
+    }
+})

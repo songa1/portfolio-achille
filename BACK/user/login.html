@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 
 </head>
-<body oncontextmenu="return true">
+<body oncontextmenu="return false">
     
     <!--Blog page-->
     <div id="blog" class="blog">
@@ -35,13 +35,12 @@
         <div class="login">
             
             <form id="logUser">
-                <h3>Log in to manage a blog</h3>
+                <h3>Log in</h3>
+                <p id="loginError"></p>
                 <label>E-mail</label>
                 <input type="email" id="email">
-                <p id="email-feedback"></p>
                 <label>Password</label>
                 <input type="password" id="password">
-                <p id="pass-feedback"></p>
                 <input type="submit" value="Login" style="background-color:#008073;color: aliceblue;" id="btnlog">
             </form>
         </div>
@@ -63,6 +62,7 @@
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="../js/firebase.js"></script>
     <script  src="../js/login.js"></script>
 </body>

@@ -15,17 +15,21 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/profile.css">
     <link rel="stylesheet" type="text/css" href="../css/feeds.css">
-    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    
     <link rel="stylesheet" type="text/css" href="../css/blog-watch.css">
     <script src="../js/profile-sections.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <!--Reference to my firebase console-->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="../js/firebase.js"></script>
     <script src="../js/dashboard.js"></script>
-    
+    <script  src="../js/auth.js"></script>
 </head>
 <body>
+    <div id="profileFile">
     <!--Profile page-->
     <div id="blog" class="blog">
         <div class="top">
@@ -64,13 +68,41 @@
                     <h3 class="myNameRole"></h3>
                     <p id="mySlogan"></p>
                     <h4>Views: 67      |      Visitors: 10</h4>
-                    <div class="buttonss"><button><a href="../blog/modify.html">Manage a blog</a></button><button>Log out</button></div>
+                    <div class="buttonss"><button><a href="../blog/modify.html">Manage a blog</a></button><button><a id="logOutButton">Log out</a></button></div>
                     <p id="aboutDemo"> ABOUT ME:
                         <h5 id="aboutHeadingDash"></h5><br>
                         <p id="aboutContentDash"></p><br>
                     </p>
+                    <script>
+                        // logout functionality
+                        const logOut = document.querySelector('#logOutButton');
+
+                        logOut.addEventListener('click', (e)=>{
+                            e.preventDefault();
+                            auth.signOut();
+                            window.location.href = "login.html";
+                        })
+                    </script>
+                    <p>SKILLS:
+                        <!-- <div id="skillsInDash" class="skills">
+                            <div class="dash-wrapper">
+                                <div class="dashwrap-item">
+                                    <img src="" id="proImageInDash">
+                                    <a href="../index.html#projects" style="background-color: #008073;padding: 10px;color: aliceblue;width: 100%;" target="_blank">View more Projects</a>
+                                    <div>
+                                        <h1><a href=""  id="proNameDash"></a></h1>
+                                        <h5 id="descDashPro"></h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div> -->
+                        
+                    </p>
                     <p>PROJECTS:
-                        <div id="projectsInDash" class="projects">
+                        <div id="projectsInDash">
                             <div class="dash-wrapper">
                                 <div class="dashwrap-item">
                                     <img src="" id="proImageInDash">
@@ -88,7 +120,7 @@
                         
                     </p>
                     <p>EXPERIENCE:
-                        <div id="projectsInDash" class="projects">
+                        <div id="projectsInDash">
                             <div class="dash-wrapper">
                                 <div class="dashwrap-item">
                                     <img src="" id="expertImageInDash">
@@ -408,7 +440,7 @@ let expertUpdateForm = document.getElementById('manageExpert');
             </div>
         </div>
     </div>
-    <!--Reference to my firebase console-->
-    
+</div>
+<div id="loginMessage"></div>
 </body>
 </html>

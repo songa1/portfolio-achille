@@ -93,6 +93,10 @@
     #main {
         padding: 10px;
     }
+    .wrapcmsskills {
+        display: flex;
+        flex-wrap: wrap;
+    }
     /* global content configuration */
     #content {
         margin-left: 0%;

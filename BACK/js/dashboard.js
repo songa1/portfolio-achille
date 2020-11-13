@@ -218,3 +218,154 @@ db.collection('experience').get().then((snapshot)=>{
                                 displayQuery(doc.data())
                             })
                         })
+
+
+// Skills management section 
+
+// displaying Front End skills
+function displayFront(doc){
+    let mediaQuery = window.matchMedia("(max-width: 960px)");
+    let frontSkills = document.querySelector('.wrapFrontskills');
+    let skillCont = document.createElement('div');
+    let imgFront = document.createElement('img');
+    let paraFront = document.createElement('p');
+
+    frontSkills.style.display = "grid";
+    frontSkills.style.gridTemplateColumns = "20% 20% 20% 20%";
+    frontSkills.style.gridGap = "5%";
+    frontSkills.style.justifyContents = "center";
+    imgFront.style.width = "100%";
+    imgFront.src = doc.image;
+    paraFront.textContent = doc.title;
+
+    skillCont.appendChild(imgFront); 
+    skillCont.appendChild(paraFront);
+
+    if(mediaQuery.matches){
+        frontSkills.style.display = "flex";
+        frontSkills.style.flexWrap = "wrap";
+    }
+
+    frontSkills.appendChild(skillCont);
+}
+
+db.collection('skills').where('category','==','Front-End').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if(change.type == 'added'){
+            displayFront(change.doc.data())
+        }
+         
+    })
+  })
+
+// displaying back end skills
+  function displayBack(doc){
+    let mediaQuery = window.matchMedia("(max-width: 960px)");
+    let backSkills = document.querySelector('.wrapBackskills');
+    let skillCont = document.createElement('div');
+    let imgBack = document.createElement('img');
+    let paraBack = document.createElement('p');
+
+    backSkills.style.display = "grid";
+    backSkills.style.gridTemplateColumns = "20% 20% 20% 20%";
+    backSkills.style.gridGap = "5%";
+    backSkills.style.justifyContents = "center";
+    imgBack.style.width = "100%";
+    imgBack.src = doc.image;
+    paraBack.textContent = doc.title;
+
+    skillCont.appendChild(imgBack); 
+    skillCont.appendChild(paraBack);
+
+    if(mediaQuery.matches){
+        backSkills.style.display = "flex";
+        backSkills.style.flexWrap = "wrap";
+    }
+
+    backSkills.appendChild(skillCont);
+}
+
+db.collection('skills').where('category','==','Back-End').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if(change.type == 'added'){
+            displayBack(change.doc.data())
+        }
+         
+    })
+  })
+
+  // displaying CMS skills
+  function displaycms(doc){
+    let mediaQuery = window.matchMedia("(max-width: 960px)");
+    let cmsSkills = document.querySelector('.wrapcmsskills');
+    let skillCont = document.createElement('div');
+    let imgcms = document.createElement('img');
+    let paracms = document.createElement('p');
+
+    cmsSkills.style.display = "grid";
+    cmsSkills.style.gridTemplateColumns = "20% 20% 20% 20%";
+    cmsSkills.style.gridGap = "5%";
+    cmsSkills.style.justifyContents = "center";
+    imgcms.style.width = "100%";
+    imgcms.src = doc.image;
+    paracms.textContent = doc.title;
+
+    skillCont.appendChild(imgcms); 
+    skillCont.appendChild(paracms);
+
+    if(mediaQuery.matches){
+        cmsSkills.style.display = "flex";
+        cmsSkills.style.flexWrap = "wrap";
+    }
+
+    cmsSkills.appendChild(skillCont);
+}
+
+db.collection('skills').where('category','==','CMS').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if(change.type == 'added'){
+            displaycms(change.doc.data())
+        }
+         
+    })
+  })
+
+    // displaying other skills
+    function displayother(doc){
+        let mediaQuery = window.matchMedia("(max-width: 960px)");
+        let otherSkills = document.querySelector('.wrapotherskills');
+        let skillCont = document.createElement('div');
+        let imgother = document.createElement('img');
+        let paraother = document.createElement('p');
+    
+        otherSkills.style.display = "grid";
+        otherSkills.style.gridTemplateColumns = "20% 20% 20% 20%";
+        otherSkills.style.gridGap = "5%";
+        otherSkills.style.justifyContents = "center";
+        imgother.style.width = "100%";
+        imgother.src = doc.image;
+        paraother.textContent = doc.title;
+    
+        skillCont.appendChild(imgother); 
+        skillCont.appendChild(paraother);
+
+        if(mediaQuery.matches){
+            otherSkills.style.display = "flex";
+            otherSkills.style.flexWrap = "wrap";
+        }
+    
+        otherSkills.appendChild(skillCont);
+    }
+    
+    db.collection('skills').where('category','==','Other').onSnapshot(snapshot => {
+        let changes = snapshot.docChanges();
+        changes.forEach(change => {
+            if(change.type == 'added'){
+                displayother(change.doc.data())
+            }
+             
+        })
+      })

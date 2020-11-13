@@ -11,6 +11,6 @@ const configFb = {
 }
 
 firebase.initializeApp(configFb);
- 
+
 
 const db = firebase.firestore();
