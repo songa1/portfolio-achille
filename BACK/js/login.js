@@ -112,3 +112,12 @@ function loginError(){
 
     loginErrno.appendChild(didd);
 }
+
+
+auth.onAuthStateChanged(function(user){
+    if(user){
+        location.assign('profile.html');
+    }else{
+        
+    }
+})

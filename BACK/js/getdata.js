@@ -60,3 +60,14 @@ async function getDoc(id) {
 }
 
 
+// authentication
+
+const auth = firebase.auth();
+
+auth.onAuthStateChanged(user =>{
+    if(user){
+        document.getElementById('pro').style.display = "block";
+    }else{
+        document.getElementById('log').style.display = "block";
+    }
+})
