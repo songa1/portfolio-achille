@@ -73,55 +73,34 @@
                         <h5 id="aboutHeadingDash"></h5><br>
                         <p id="aboutContentDash"></p><br>
                     </p>
-                    <p>SKILLS:
-                        <div id="skillsInDash">
-                        <style>
-                            #skillsInDash{
-                                display: grid;
-                                grid-template-columns: 25% 25% 25%;
-                                grid-gap: 8%;
-                                justify-content: center;
-                            }
-                            @media(max-width:960px){
-                                #skillsInDash{
-                                display: flex;
-                                flex-wrap: wrap;
-                                justify-content: space-between;
-                                }
-                            }
-                        </style>
-                        <script>
-                            function skillsInDash(doc){
-                            let skillDashContainer = document.querySelector('#skillsInDash');
-                            let skillWrap = document.createElement('div');
-                            let skillImage = document.createElement('img');
-                            let skillTitle = document.createElement('h1');
+                    <script>
+                        // logout functionality
+                        const logOut = document.querySelector('#logOutButton');
 
-                            skillImage.src = doc.image;
-                            skillTitle.textContent = doc.title;
-
-                            skillWrap.appendChild(skillImage);
-                            skillWrap.appendChild(skillTitle);
-
-                            skillDashContainer.appendChild(skillWrap);
-
-                            //styling div
-
-                            skillWrap.style.width = "100%";
-                            skillWrap.style.border = "1px solid #008073";
-                            skillWrap.style.padding = "10px";
-                            skillWrap.style.textAlign = "center";
-
-                        }
-
-                        db.collection('skills').get().then((snapshot)=> {
-                                snapshot.docs.forEach(doc=>{
-                                skillsInDash(doc.data())
-                            })
+                        logOut.addEventListener('click', (e)=>{
+                            e.preventDefault();
+                            auth.signOut();
+                            window.location.href = "login.html";
                         })
-                        </script>
-                        </div>
-                    </p><br><br>
+                    </script>
+                    <p>SKILLS:
+                        <!-- <div id="skillsInDash" class="skills">
+                            <div class="dash-wrapper">
+                                <div class="dashwrap-item">
+                                    <img src="" id="proImageInDash">
+                                    <a href="../index.html#projects" style="background-color: #008073;padding: 10px;color: aliceblue;width: 100%;" target="_blank">View more Projects</a>
+                                    <div>
+                                        <h1><a href=""  id="proNameDash"></a></h1>
+                                        <h5 id="descDashPro"></h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div> -->
+                        
+                    </p>
                     <p>PROJECTS:
                         <div id="projectsInDash">
                             <div class="dash-wrapper">
@@ -240,72 +219,32 @@
                             </script>
                     </div>
                 </section>
-                <section id="man-skills">  
-                    <h2>Add or Update skills</h2>           
+                <section id="man-skills">             
+                    <div style="display: flex;flex-wrap: wrap;" class="man-skills-div2">
+                        <div class="skill-added">
+                            <p><b>1</b></p>
+                            <p><b>JS</b></p>
+                            <p><b>Front-end</b></p>
+                            <img src="../img/javascript.png">
+                            <p><button>Edit</button></p>
+                        </div>
+                    </div>
                     <div class="man-skills-div2">
-                        <form id="skillsAddForm">
+                        <form id="">
                             <label>Skills title</label>
-                            <input type="text" id="skillTitle">
+                            <input type="text">
                             <label>Choose category</label>
-                            <select id="categorySkill">
-                                <option>Front-End</option>
-                                <option>Back-End</option>
+                            <select>
+                                <option>Front-end</option>
+                                <option>Back-end</option>
                                 <option>CMS</option>
-                                <option>Other</option>
+                                <option>Other skills</option>
                             </select>
                             <label>Add an image</label>
-                            <input type="file" id="skillImage">
+                            <input type="file">
                             <button id="skill-add">Add skill</button>
                         </form>
                     </div>
-                    <script>
-                    // Add new skills
-                    let formAddSkill = document.querySelector('#skillsAddForm');
-function addSkillDetails(){
-    //get image
-    
-    const image = document.querySelector('#skillImage').files[0];
-    const imageName = image.name;
-    //ref to root storage + image storage
-    var storageRef = firebase.storage().ref('images/skills/'+imageName);
-    //upload image to selected storage
-    const uploadTask = storageRef.put(image);
-    //get upload progress
-    uploadTask.on('state_changed', function(snapshot){
-    //get progress
-    const progress = snapshot.bytestransferred/snapshot.totalBytes *100;
-        console.log("Upload is " +progress+ " done");
-    }, function(error){
-        //handle errors
-        console.log(error.message);
-    }, function(){
-        //handle successful upload
-        let today = new Date();
-
-        let dateOfToday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
-        db.collection('skills').add({
-            image: downloadURL,
-            title: formAddSkill.skillTitle.value,
-            category: skillsAddForm.categorySkill.value,
-            date: dateOfToday
-        }).then(function(){
-            alert('Successfuly Added!');
-            formAddSkill.reset();
-            return false;
-        })
-
-
-    });
-});
-
-};
-formAddSkill.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    console.log("It's working");
-    addSkillDetails();
-})
-</script>
                 </section>
                 <section id="man-about">             
                     <h2>Update my About</h2>
