@@ -15,21 +15,17 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/profile.css">
     <link rel="stylesheet" type="text/css" href="../css/feeds.css">
-    
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
     <link rel="stylesheet" type="text/css" href="../css/blog-watch.css">
     <script src="../js/profile-sections.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
-    <!--Reference to my firebase console-->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="../js/firebase.js"></script>
     <script src="../js/dashboard.js"></script>
-    <script  src="../js/auth.js"></script>
+    
 </head>
 <body>
-    <div id="profileFile">
     <!--Profile page-->
     <div id="blog" class="blog">
         <div class="top">
@@ -63,71 +59,67 @@
                 </script>
                 <div>
                     <img src="" class="imgInDash">
-                    <div class="man-nav">
-                        <a href="#man-main" onclick="mainPage()" id="mainpage">Update main page</a>
-                        <a href="#man-skills" onclick="skillsPage()" id="skillpage">Update or add skills</a>
-                        <a href="#man-about" onclick="aboutPage()" id="aboutpage">Update about</a>
-                        <a href="#man-project" onclick="projectPage()" id="projectpage">Update or add projects</a>
-                        <a href="#man-experience" onclick="expertPage()" id="expertpage">Update or add experience</a>
-                        <a href="#man-contact" onclick="contactPage()" id="contactpage">View queries</a>
-                    </div> 
                 </div>
-                <script>
-                    const modal = document.querySelector('.mainpagemodal');
-
-                    const mainbtn = document.getElementById('mainpage');
-
-
-                    mainbtn.addEventListener('click', function() {
-                        console.log('butn working');
-                        modal.style.display = "block";
-                    })
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                </script>
-
                 <div>
                     <h3 class="myNameRole"></h3>
                     <p id="mySlogan"></p>
                     <h4>Views: 67      |      Visitors: 10</h4>
-                    <div class="buttonss"><button><a href="../blog/modify.html">Manage a blog</a></button><button><a id="logOutButton">Log out</a></button></div>
+                    <div class="buttonss"><button><a href="../blog/modify.html">Manage a blog</a></button><button>Log out</button></div>
                     <p id="aboutDemo"> ABOUT ME:
                         <h5 id="aboutHeadingDash"></h5><br>
                         <p id="aboutContentDash"></p><br>
                     </p>
-                    <script>
-                        // logout functionality
-                        const logOut = document.querySelector('#logOutButton');
-
-                        logOut.addEventListener('click', (e)=>{
-                            e.preventDefault();
-                            auth.signOut();
-                            window.location.href = "login.html";
-                        })
-                    </script>
                     <p>SKILLS:
-                        <!-- <div id="skillsInDash" class="skills">
-                            <div class="dash-wrapper">
-                                <div class="dashwrap-item">
-                                    <img src="" id="proImageInDash">
-                                    <a href="../index.html#projects" style="background-color: #008073;padding: 10px;color: aliceblue;width: 100%;" target="_blank">View more Projects</a>
-                                    <div>
-                                        <h1><a href=""  id="proNameDash"></a></h1>
-                                        <h5 id="descDashPro"></h5>
-                                        
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div> -->
-                        
-                    </p>
+                        <div id="skillsInDash">
+                        <style>
+                            #skillsInDash{
+                                display: grid;
+                                grid-template-columns: 25% 25% 25%;
+                                grid-gap: 8%;
+                                justify-content: center;
+                            }
+                            @media(max-width:960px){
+                                #skillsInDash{
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                                }
+                            }
+                        </style>
+                        <script>
+                            function skillsInDash(doc){
+                            let skillDashContainer = document.querySelector('#skillsInDash');
+                            let skillWrap = document.createElement('div');
+                            let skillImage = document.createElement('img');
+                            let skillTitle = document.createElement('h1');
+
+                            skillImage.src = doc.image;
+                            skillTitle.textContent = doc.title;
+
+                            skillWrap.appendChild(skillImage);
+                            skillWrap.appendChild(skillTitle);
+
+                            skillDashContainer.appendChild(skillWrap);
+
+                            //styling div
+
+                            skillWrap.style.width = "100%";
+                            skillWrap.style.border = "1px solid #008073";
+                            skillWrap.style.padding = "10px";
+                            skillWrap.style.textAlign = "center";
+
+                        }
+
+                        db.collection('skills').get().then((snapshot)=> {
+                                snapshot.docs.forEach(doc=>{
+                                skillsInDash(doc.data())
+                            })
+                        })
+                        </script>
+                        </div>
+                    </p><br><br>
                     <p>PROJECTS:
-                        <div id="projectsInDash">
+                        <div id="projectsInDash" class="projects">
                             <div class="dash-wrapper">
                                 <div class="dashwrap-item">
                                     <img src="" id="proImageInDash">
@@ -145,7 +137,7 @@
                         
                     </p>
                     <p>EXPERIENCE:
-                        <div id="projectsInDash">
+                        <div id="projectsInDash" class="projects">
                             <div class="dash-wrapper">
                                 <div class="dashwrap-item">
                                     <img src="" id="expertImageInDash">
@@ -168,8 +160,14 @@
             </div>
             <div class="hhh">
             <div class="manageweb">
-                <!--Making modals for my edit main page-->
-            <div class="mainpagemodal">
+                <div class="man-nav">
+                    <a href="#man-main" onclick="mainPage()" id="mainpage">Main page</a>
+                    <a href="#man-skills" onclick="skillsPage()" id="skillpage">Skills</a>
+                    <a href="#man-about" onclick="aboutPage()" id="aboutpage">About</a>
+                    <a href="#man-project" onclick="projectPage()" id="projectpage">Projects</a>
+                    <a href="#man-experience" onclick="expertPage()" id="expertpage">Experience</a>
+                    <a href="#man-contact" onclick="contactPage()" id="contactpage">Queries</a>
+                </div> 
                 <section id="man-main">      
                     <h2>Homepage appearance</h2>    
                     <div style="display: flex;flex-wrap: wrap;" class="man-main-div1">
@@ -238,23 +236,72 @@
                             </script>
                     </div>
                 </section>
-                <section id="man-skills">             
+                <section id="man-skills">  
+                    <h2>Add or Update skills</h2>           
                     <div class="man-skills-div2">
-                        <form id="">
+                        <form id="skillsAddForm">
                             <label>Skills title</label>
-                            <input type="text">
+                            <input type="text" id="skillTitle">
                             <label>Choose category</label>
-                            <select>
-                                <option>Front-end</option>
-                                <option>Back-end</option>
+                            <select id="categorySkill">
+                                <option>Front-End</option>
+                                <option>Back-End</option>
                                 <option>CMS</option>
-                                <option>Other skills</option>
+                                <option>Other</option>
                             </select>
                             <label>Add an image</label>
-                            <input type="file">
+                            <input type="file" id="skillImage">
                             <button id="skill-add">Add skill</button>
                         </form>
                     </div>
+                    <script>
+                    // Add new skills
+                    let formAddSkill = document.querySelector('#skillsAddForm');
+function addSkillDetails(){
+    //get image
+    
+    const image = document.querySelector('#skillImage').files[0];
+    const imageName = image.name;
+    //ref to root storage + image storage
+    var storageRef = firebase.storage().ref('images/skills/'+imageName);
+    //upload image to selected storage
+    const uploadTask = storageRef.put(image);
+    //get upload progress
+    uploadTask.on('state_changed', function(snapshot){
+    //get progress
+    const progress = snapshot.bytestransferred/snapshot.totalBytes *100;
+        console.log("Upload is " +progress+ " done");
+    }, function(error){
+        //handle errors
+        console.log(error.message);
+    }, function(){
+        //handle successful upload
+        let today = new Date();
+
+        let dateOfToday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
+        db.collection('skills').add({
+            image: downloadURL,
+            title: formAddSkill.skillTitle.value,
+            category: skillsAddForm.categorySkill.value,
+            date: dateOfToday
+        }).then(function(){
+            alert('Successfuly Added!');
+            formAddSkill.reset();
+            return false;
+        })
+
+
+    });
+});
+
+};
+formAddSkill.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    console.log("It's working");
+    addSkillDetails();
+})
+</script>
                 </section>
                 <section id="man-about">             
                     <h2>Update my About</h2>
@@ -433,7 +480,6 @@ let expertUpdateForm = document.getElementById('manageExpert');
                     </div>
                 </section>
             </div>
-            </div>
         </div>   
     </div>
         <!--Footer section-->
@@ -451,7 +497,7 @@ let expertUpdateForm = document.getElementById('manageExpert');
             </div>
         </div>
     </div>
-</div>
-<div id="loginMessage"></div>
+    <!--Reference to my firebase console-->
+    
 </body>
 </html>
