@@ -82,7 +82,7 @@
 }
 .post textarea {
     margin-left: 0%;
-    margin: 10px;
+    margin: 10px auto;
     border: 1px solid #008073;
     border-radius: 10px;
     white-space: pre;
@@ -93,7 +93,7 @@
 .post form input {
     width: 100%;
     border: 1px solid #008073;
-    margin: 10px;
+    margin: 10px auto;
     border-radius: 10px;
     padding: 10px;
     word-wrap: normal;

@@ -125,7 +125,7 @@
                         })
                         </script>
                         </div>
-                    </p><br><br>
+                    </p>
                     <p>PROJECTS:
                         <div id="projectsInDash" class="projects">
                             <div class="dash-wrapper">
@@ -311,9 +311,23 @@ formAddSkill.addEventListener('submit', (e)=>{
                             <input type="text" id="aboutheadingEdit">
                             <label>Main about</label>
                             <textarea id="mainaboutEdit"></textarea>
-                            <button id="about-add" onclick="aboutUpdate()">Update about</button>
+                            <button id="about-add">Update about</button>
                         </form>
                     </div>
+<script>
+//update about
+let updateAboutButton = document.querySelector("#about-add");
+
+updateAboutButton.addEventListener('click', (e)=>{
+    e.preventDefault();
+    console.log('Done');
+    db.collection('profile').doc('aboutme').update({
+        heading: aboutheadingEdit.value,
+        about: mainaboutEdit.value
+    })
+    alert('Successfuly updated!');
+})
+</script>
                 </section>
                 <!--PROJECT MANAGEMENT-->
                 <section id="man-project">    

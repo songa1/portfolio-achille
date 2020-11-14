@@ -55,17 +55,6 @@ db.collection('profile').doc('aboutme').get().then((doc)=>{
 
 
 
-//update about
-function aboutUpdate(){
-    console.log('Done');
-    db.collection('profile').doc('aboutme').update({
-        heading: aboutheadingEdit.value,
-        about: mainaboutEdit.value
-    })
-}
-
-
-
 
 // projects section manage dynamically
 function projectAtHome(doc){

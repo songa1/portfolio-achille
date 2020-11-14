@@ -62,23 +62,23 @@ function displayComments(doc){
   
 
   //edit comment
-  deletecomment.innerHTML = "Delete";
-  editComment.appendChild(deletecomment);
+//   deletecomment.innerHTML = "Reply";
+//   editComment.appendChild(deletecomment);
 
-  //making deletecomment function
-  deletecomment.addEventListener('click', function (){
-    if (confirm("Do you want to delete this comment?") == true) {
-        db.collection("comments").doc(doc.id).delete().then(function() {
-            alert('Successfully deleted a comment!');
-        }).catch(function(error) {
-            console.error("Error removing comment: ", error);
-        });
-    } else {
-        alert('Comment not deleted!')
-        return false;
-    }
+//   //making deletecomment function
+//   deletecomment.addEventListener('click', function (){
+//     if (confirm("Do you want to delete this comment?") == true) {
+//         db.collection("comments").doc(doc.id).delete().then(function() {
+//             alert('Successfully deleted a comment!');
+//         }).catch(function(error) {
+//             console.error("Error removing comment: ", error);
+//         });
+//     } else {
+//         alert('Comment not deleted!')
+//         return false;
+//     }
     
-})
+// })
 
   //set comment values
   commenterNameTime.textContent = doc.data().name + ' - ' + doc.data().time;
@@ -89,7 +89,6 @@ function displayComments(doc){
   commentDiv.appendChild(commenterNameTime);
   commentDiv.appendChild(lin);
   commentDiv.appendChild(actualComment);
-  commentDiv.appendChild(editComment);
 
   commentCollection.appendChild(commentDiv);
 

@@ -23,9 +23,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="../js/firebase.js"></script>
-    <script src="../js/createpost.js"></script>
     <script src="../js/observer.js"></script>
-    
 </head>
 <body>
     <!--Blog page-->
@@ -53,10 +51,6 @@
                 <!--Post Summary-->
                 <label>Add summary</label>
                 <input type="text" maxlength="300" id="post-summary" name="summary">
-                <!-- Post date
-                <label>Date</label>
-                <input type="date" maxlength="300" id="date"> -->
-                <!--Post picture-->
                 <label>Add picture</label>
                 <input type="file" id="image" name="image">
                 <!--Post Content-->
@@ -65,7 +59,7 @@
                     <textarea style="height: 300px;" id="post-content" name="content"></textarea>
                 </article>
         
-                <center><button style="background-color:#008073;color: aliceblue;margin-top: 10px;width: 60%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="submitpost">Publish</button></center>
+                <center><button style="background-color:#008073;color: aliceblue;margin-top: 10px;width: 60%;padding:10px;border-radius: 10px;border: 1px solid #008073;" id="submitpost" type="submit">Publish</button></center>
             </form>
         </div>
     
@@ -84,5 +78,60 @@
             </div>
         </div>
     </div>
+    <script>
+
+const addpost = document.querySelector('#add-post');
+const uploadButton = document.querySelector('#submitpost');
+
+function uploadImage(){
+    //get image
+    const image = document.querySelector('#image').files[0];
+    const imageName = image.name;
+    //ref to root storage + image storage
+    var storageRef = firebase.storage().ref('images/'+imageName);
+    //upload image to selected starage
+    const uploadTask = storageRef.put(image);
+    //get upload progress
+    uploadTask.on('state_changed', function(snapshot){
+        //get progress
+        const progress = snapshot.bytestransferred/snapshot.totalBytes *100;
+        console.log("Upload is " +progress+ " done");
+    }, function(error){
+        //handle errors
+        console.log(error.message);
+    }, function(){
+        //handle successful upload
+        let today = new Date();
+
+        let dateOfToday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
+            db.collection('posts').add({
+                imageURL: downloadURL,
+                author: addpost.author.value,
+                title: addpost.title.value,
+                summary: addpost.summary.value,
+                date: dateOfToday,
+                content: addpost.content.value.split(/\n{2,}/)
+            }).then(function(){
+                alert('Successfuly uploaded!');
+                addpost.reset();
+                window.location.href = "../blog/modify.html";
+            })
+            .catch(function(error) {
+                alert('Error uploading post, Try again!');
+            });
+            
+            
+        });
+    });
+      
+};
+addpost.addEventListener('submit', (e) => {
+    e.preventDefault();
+    uploadImage();
+}, function(error){
+    console.log('Error');
+});
+    </script>
 </body>
 </html>
