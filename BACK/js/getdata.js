@@ -67,7 +67,9 @@ const auth = firebase.auth();
 auth.onAuthStateChanged(user =>{
     if(user){
         document.getElementById('pro').style.display = "block";
+        document.getElementById('log').style.display = "none";
     }else{
         document.getElementById('log').style.display = "block";
+        document.getElementById('pro').style.display = "block";
     }
 })
