@@ -63,7 +63,32 @@
                 </script>
                 <div>
                     <img src="" class="imgInDash">
+                    <div class="man-nav">
+                        <a href="#man-main" onclick="mainPage()" id="mainpage">Update main page</a>
+                        <a href="#man-skills" onclick="skillsPage()" id="skillpage">Update or add skills</a>
+                        <a href="#man-about" onclick="aboutPage()" id="aboutpage">Update about</a>
+                        <a href="#man-project" onclick="projectPage()" id="projectpage">Update or add projects</a>
+                        <a href="#man-experience" onclick="expertPage()" id="expertpage">Update or add experience</a>
+                        <a href="#man-contact" onclick="contactPage()" id="contactpage">View queries</a>
+                    </div> 
                 </div>
+                <script>
+                    const modal = document.querySelector('.mainpagemodal');
+
+                    const mainbtn = document.getElementById('mainpage');
+
+
+                    mainbtn.addEventListener('click', function() {
+                        console.log('butn working');
+                        modal.style.display = "block";
+                    })
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+
                 <div>
                     <h3 class="myNameRole"></h3>
                     <p id="mySlogan"></p>
@@ -143,14 +168,8 @@
             </div>
             <div class="hhh">
             <div class="manageweb">
-                <div class="man-nav">
-                    <a href="#man-main" onclick="mainPage()" id="mainpage">Main page</a>
-                    <a href="#man-skills" onclick="skillsPage()" id="skillpage">Skills</a>
-                    <a href="#man-about" onclick="aboutPage()" id="aboutpage">About</a>
-                    <a href="#man-project" onclick="projectPage()" id="projectpage">Projects</a>
-                    <a href="#man-experience" onclick="expertPage()" id="expertpage">Experience</a>
-                    <a href="#man-contact" onclick="contactPage()" id="contactpage">Queries</a>
-                </div> 
+                <!--Making modals for my edit main page-->
+            <div class="mainpagemodal">
                 <section id="man-main">      
                     <h2>Homepage appearance</h2>    
                     <div style="display: flex;flex-wrap: wrap;" class="man-main-div1">
@@ -220,15 +239,6 @@
                     </div>
                 </section>
                 <section id="man-skills">             
-                    <div style="display: flex;flex-wrap: wrap;" class="man-skills-div2">
-                        <div class="skill-added">
-                            <p><b>1</b></p>
-                            <p><b>JS</b></p>
-                            <p><b>Front-end</b></p>
-                            <img src="../img/javascript.png">
-                            <p><button>Edit</button></p>
-                        </div>
-                    </div>
                     <div class="man-skills-div2">
                         <form id="">
                             <label>Skills title</label>
@@ -422,6 +432,7 @@ let expertUpdateForm = document.getElementById('manageExpert');
                         
                     </div>
                 </section>
+            </div>
             </div>
         </div>   
     </div>

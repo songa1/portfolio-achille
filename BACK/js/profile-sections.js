@@ -101,3 +101,6 @@ function openBar() {
     document.getElementById("contactpage").style.display ="block";
     document.getElementById("managepage").style.display ="block";
 }
+
+
+
