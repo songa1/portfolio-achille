@@ -75,9 +75,9 @@
 }
 .post {
     display: flex;
-    margin: 0 10px 0 10px;
+    margin: 0 20% 0 20%;
     justify-content: center;
-    width: 100%;
+    width: 60%;
     flex-wrap: wrap;
 }
 .post textarea {

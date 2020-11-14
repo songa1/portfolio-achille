@@ -204,6 +204,10 @@
         margin: 10px;
     }
     /*responsiveness for new post page */
+    .post {
+        width: 90%;
+        margin: 0 5% 0 5%;
+    }
     .post form {
         width: 90%;
         margin: 0%;
