@@ -219,7 +219,7 @@ db.collection('experience').get().then((snapshot)=>{
 
 // displaying Front End skills
 function displayFront(doc){
-    let mediaQuery = window.matchMedia("(max-width: 960px)");
+    let mediaQuery = window.matchMedia("(max-width: 850px)");
     let frontSkills = document.querySelector('.wrapFrontskills');
     let skillCont = document.createElement('div');
     let imgFront = document.createElement('img');
@@ -239,6 +239,8 @@ function displayFront(doc){
     if(mediaQuery.matches){
         frontSkills.style.display = "flex";
         frontSkills.style.flexWrap = "wrap";
+        imgFront.style.width = "100%";
+        frontSkills.style.justifyContents = "center";
     }
 
     frontSkills.appendChild(skillCont);
@@ -276,6 +278,8 @@ db.collection('skills').where('category','==','Front-End').onSnapshot(snapshot =
     if(mediaQuery.matches){
         backSkills.style.display = "flex";
         backSkills.style.flexWrap = "wrap";
+        imgBack.style.width = "100%";
+        backSkills.style.justifyContents = "center";
     }
 
     backSkills.appendChild(skillCont);

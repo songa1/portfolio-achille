@@ -41,8 +41,6 @@
         0 100px 80px rgba(59, 59, 59, 0.12);
 }
 .skill div {
-    display: inline-block;
-    flex-direction: row;
     padding: 20px;
     
 }
@@ -57,3 +55,5 @@
     padding: 20px;
     margin: 0;
 }
+
+
