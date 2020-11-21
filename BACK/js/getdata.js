@@ -70,6 +70,6 @@ auth.onAuthStateChanged(user =>{
         document.getElementById('log').style.display = "none";
     }else{
         document.getElementById('log').style.display = "block";
-        document.getElementById('pro').style.display = "block";
+        document.getElementById('pro').style.display = "none";
     }
 })
