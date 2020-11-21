@@ -120,28 +120,34 @@ function experienceAtHome(doc){
     expertdiv.setAttribute('class','expert');
     let expertImage = document.createElement('img');
     let expertTitle = document.createElement('h1');
+    let expertRole = document.createElement('p');
     let nameCont = document.createElement('div');
     let description = document.createElement('p');
     let line = document.createElement('hr');
+    let period = document.createElement('p');
 
     expertImage.src = doc.image; 
     expertTitle.textContent = doc.title;
     description.textContent = doc.description;
+    period.textContent = "16 nov 2017" + " " + "-"+ " " + "Today" + " | " + " " + "Kigali, Rwanda";
 
     //appending children
     nameCont.appendChild(expertImage);
     nameCont.appendChild(expertTitle);
+    nameCont.appendChild(expertRole);
 
-    // styling name container
-    nameCont.style.display = "grid";
-    nameCont.style.gridTemplateColumns = "15% 80%";
-    nameCont.style.alignItems = "center";
+    period.setAttribute('class', 'expertPeriod');
+    expertRole.setAttribute('class', 'expertRole');
+    nameCont.setAttribute('class', 'nameCont');
 
     expertImage.style.width = "100%";
+    expertRole.style.alignItems = "center";
+    expertRole.textContent = "Full Stack web developer";
 
     expertdiv.appendChild(nameCont);
     expertdiv.appendChild(line);
     expertdiv.appendChild(description);
+    expertdiv.appendChild(period);
 
     container.appendChild(expertdiv);
 
@@ -220,8 +226,8 @@ function displayFront(doc){
     let paraFront = document.createElement('p');
 
     frontSkills.style.display = "grid";
-    frontSkills.style.gridTemplateColumns = "20% 20% 20% 20%";
-    frontSkills.style.gridGap = "5%";
+    frontSkills.style.gridTemplateColumns = "13% 13% 13% 13% 13% 13%";
+    frontSkills.style.gridGap = "3.6%";
     frontSkills.style.justifyContents = "center";
     imgFront.style.width = "100%";
     imgFront.src = doc.image;
@@ -257,8 +263,8 @@ db.collection('skills').where('category','==','Front-End').onSnapshot(snapshot =
     let paraBack = document.createElement('p');
 
     backSkills.style.display = "grid";
-    backSkills.style.gridTemplateColumns = "20% 20% 20% 20%";
-    backSkills.style.gridGap = "5%";
+    backSkills.style.gridTemplateColumns = "13% 13% 13% 13% 13% 13%";
+    backSkills.style.gridGap = "3.6%";
     backSkills.style.justifyContents = "center";
     imgBack.style.width = "100%";
     imgBack.src = doc.image;
@@ -294,8 +300,8 @@ db.collection('skills').where('category','==','Back-End').onSnapshot(snapshot =>
     let paracms = document.createElement('p');
 
     cmsSkills.style.display = "grid";
-    cmsSkills.style.gridTemplateColumns = "20% 20% 20% 20%";
-    cmsSkills.style.gridGap = "5%";
+    cmsSkills.style.gridTemplateColumns = "13% 13% 13% 13% 13% 13%";
+    cmsSkills.style.gridGap = "3.6%";
     cmsSkills.style.justifyContents = "center";
     imgcms.style.width = "100%";
     imgcms.src = doc.image;
@@ -331,8 +337,8 @@ db.collection('skills').where('category','==','CMS').onSnapshot(snapshot => {
         let paraother = document.createElement('p');
     
         otherSkills.style.display = "grid";
-        otherSkills.style.gridTemplateColumns = "20% 20% 20% 20%";
-        otherSkills.style.gridGap = "5%";
+        otherSkills.style.gridTemplateColumns = "13% 13% 13% 13% 13% 13%";
+        otherSkills.style.gridGap = "3.6%";
         otherSkills.style.justifyContents = "center";
         imgother.style.width = "100%";
         imgother.src = doc.image;

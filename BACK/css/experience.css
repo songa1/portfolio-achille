@@ -10,7 +10,7 @@
 .expert {
     width: 80%;
     margin: 25px 10% 25px 10%;
-    padding: 10px;
+    padding-top: 10px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
@@ -26,9 +26,32 @@
 .expert p {
     text-align: start;
     padding: 10px;
-    font-size: 20px;
     margin-top: 0%;
 }
 .expert hr {
     color: #008073;
+}
+
+.expertPeriod {
+    width: 100%;
+    background-color: rgba(241, 236, 236, 0.966);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: rgb(97, 105, 114);
+}
+.expertRole {
+    color: #795548;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px;
+}
+.nameCont {
+    display: grid;
+    grid-template-columns: 7% 68% 25%;
+    justify-content: start;
+    align-items: center;
 }
