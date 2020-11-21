@@ -94,6 +94,9 @@ body, html {
     padding: 10px;
     color: aliceblue;
 }
+#myRole {
+    color: #795548;
+}
 /* css for pages */
 
 .content {
