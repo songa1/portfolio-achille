@@ -122,7 +122,6 @@
     height: auto;
     align-items: center;
     word-wrap: normal;
-    position: relative;
 }
 .copyright {
     color: aliceblue;
@@ -229,7 +228,4 @@
     .post-item h5 {
         font-size: 15px;
     }
-}
-#post-data p {
-    text
 }

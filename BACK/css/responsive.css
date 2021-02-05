@@ -63,7 +63,7 @@
         position: relative;
     }
     #landing img {
-        /* width: auto; */
+        height: 100%;
     }
     .nav-item {
         position: absolute;

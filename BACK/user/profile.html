@@ -89,6 +89,10 @@
                     </p>
                     <p>SKILLS:
                         <div id="skillsInDash">
+                            <div class="skillWrap">
+                                <img src='#' class="skillImage">
+                                <h1 class='skillTitle'></h1>
+                            </div>
                         <style>
                             #skillsInDash{
                                 display: grid;
@@ -106,25 +110,21 @@
                         </style>
                         <script>
                             function skillsInDash(doc){
-                            let skillDashContainer = document.querySelector('#skillsInDash');
-                            let skillWrap = document.createElement('div');
-                            let skillImage = document.createElement('img');
-                            let skillTitle = document.createElement('h1');
+                            let skillWrap = document.querySelector('.skillWrap');
+                            let skillImage = document.querySelector('.skillImage');
+                            let skillTitle = document.querySelector('.skillTitle');
 
                             skillImage.src = doc.image;
                             skillTitle.textContent = doc.title;
 
-                            skillWrap.appendChild(skillImage);
-                            skillWrap.appendChild(skillTitle);
 
-                            skillDashContainer.appendChild(skillWrap);
 
                             //styling div
 
-                            skillWrap.style.width = "100%";
-                            skillWrap.style.border = "1px solid #008073";
-                            skillWrap.style.padding = "10px";
-                            skillWrap.style.textAlign = "center";
+                            // skillWrap.style.width = "100%";
+                            // skillWrap.style.border = "1px solid #008073";
+                            // skillWrap.style.padding = "10px";
+                            // skillWrap.style.textAlign = "center";
 
                         }
 

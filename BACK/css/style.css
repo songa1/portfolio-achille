@@ -18,13 +18,17 @@ body, html {
 /* css for navigation */
 
 .navigation {
-    width: 15%;
+    width: 10%;
     float: left;
     height: 100%;
     margin: 0;
     position: fixed;
     border-right: #f1f1f1;
     box-sizing: border-box;
+    box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
+        0 22.3px 17.9px rgba(110, 110, 110, 0.072),
+        0 41.8px 33.4px rgba(110, 110, 110, 0.086),
+        0 100px 80px rgba(59, 59, 59, 0.12);
 }
 .navigation a {
     text-decoration: none;
@@ -33,6 +37,7 @@ body, html {
 .branding {
     background-color: #f1f1f1;
     padding: 25px;
+    border-bottom: 1px solid rgb(211, 203, 203);
 }
 .branding p {
     text-align: start;
@@ -52,6 +57,7 @@ body, html {
 .links a:hover {
     border-left: 5px solid #008073;
     background-color: #f1f1f1;
+    transition:1s;
 }
 .links a.active {
     border-left: 5px solid #008073;
@@ -77,6 +83,10 @@ body, html {
     bottom: 0;
     width: 100%;
     height: 100%;
+    top: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
 }
 .landing img {
     width: 100%;
@@ -100,8 +110,8 @@ body, html {
 /* css for pages */
 
 .content {
-    width: 85%;
-    margin-left: 15%;
+    width: 90%;
+    margin-left: 10%;
 
 }
 .active-pro {

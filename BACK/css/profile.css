@@ -364,6 +364,7 @@
 /*css for project management page */
 
 #man-project {
+    position: relative;
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0 2.8px 2.2px rgba(27, 27, 27, 0.034), 0 6.7px 5.3px rgba(110, 110, 110, 0.048), 0 12.5px 10px rgba(117, 116, 116, 0.06),
@@ -415,7 +416,7 @@
 
 /* managing experience*/
 #man-experience {
-    width: 100%;s
+    width: 100%;
     margin: 10px 0 0 0;
     justify-content: center;
     background-color: #ffffff;
