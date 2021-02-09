@@ -99,10 +99,11 @@ body, html {
     top: 17px; 
     left: 50px;
     width: auto;
-    background-color: #008073;
-    opacity: 60%;
+    background-color: rgb(21, 24, 24);
+    opacity: 40%;
     padding: 10px;
-    color: aliceblue;
+    color: white;
+    border-bottom: 5px solid teal;
 }
 #myRole {
     color: #795548;
