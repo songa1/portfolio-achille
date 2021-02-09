@@ -5,10 +5,12 @@ function watch(doc){
     let postTitle = document.querySelector('.posttitle');
     let dateOf = document.querySelector('.dateof');
     let authorOf = document.querySelector('.authorOf');
+    let title = document.querySelector('title');
     
     postTitle.innerHTML = doc.title;
     dateOf.innerHTML = doc.date;
     authorOf.innerHTML = doc.author;
+    title.innerHTML = doc.title+ ' - Achille Songa Blog';
 
     let pictures = document.querySelector('.article-image');
     let contents = document.querySelector('.post-content');
