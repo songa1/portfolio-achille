@@ -1,5 +1,5 @@
 # portfolio-achille
-This is my official personal website
 
+Nowadays, it is not a good idea to have a brand which is not available on the internet. Yeah, every brand needs to have online presence. Be a person or a business.
 
-It is made using HTML, CSS. Javascript and Firebase, you can visit is through https://songa1.github.io/portfolio-achille/BACK
+That's why I am making this website which is my personal website and contains a blog as a part of learning in [Andela Tecnical Learning Program(ATLP)].
